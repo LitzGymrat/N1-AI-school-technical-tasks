@@ -129,23 +129,23 @@ MoE 的最终 train loss 低 0.01，valid loss 低 0.01。曲线直接使用原�
 
 按[原论文 §3.2，Definition 3.1](https://proceedings.iclr.cc/paper_files/paper/2024/file/448fc91f669c15d10364ee01d512cc10-Paper-Conference.pdf#page=5)，给定输入序列：
 
-$$
+```math
 x=(x_0,\ldots,x_{N-1})\in\mathcal C^N,\qquad |\mathcal C|=c.
-$$
+```
 
-对于每个查询位置$i$，在前面找相同的token，输出它后面的token：
+对于每个查询位置`i`，在前面找相同的token，输出它后面的token：
 
-$$
+```math
 1\le i<N,\quad \exists\,0\le j<i:\ x_i=x_j
 \quad\Longrightarrow\quad y_i=x_{j+1}.
-$$
+```
 
-我们这里取$N=512$、$c=8192$、$D=64$，把键值对放在前缀，query放在后面的$q_r$位置：
+我们这里取`N=512`、`c=8192`、`D=64`，把键值对放在前缀，query放在后面的`q_r`位置：
 
-$$
+```math
 x_{2r}=k_r,\quad x_{2r+1}=v_r,\quad x_{q_r}=k_r,
 \quad y_{q_r}=v_r,\qquad r=0,\ldots,D-1.
-$$
+```
 
 每条样本重新随机配对，key和value分别无放回采样。query位置按幂律采样（α=0.01），其余位置填0，只在query位置算loss。
 
@@ -193,10 +193,10 @@ $$
 因此我选择构造这个任务，认为其可以测评模型是否在训练过后学会Long-range information利用。
 首先为了清楚说明，我们定义Long-range information为：
 
-$$
-d=\text{训练时的 context\_len}=512,\qquad
+```math
+d=\text{训练时的 }\mathtt{context\_len}=512,\qquad
 \Delta=\text{query位置}-\text{对应key首次出现的位置}.
-$$
+```
 
 这里把距离Δ≥d/2的信息定义为long-range information。
 
@@ -228,9 +228,9 @@ $$
 
 准确率只统计query位置：
 
-$$
+```math
 \mathrm{Accuracy}=\frac{\text{回答正确的query数}}{\text{全部query数}}.
-$$
+```
 
 
 实验结果(各项细粒度也给出，附上图注)：

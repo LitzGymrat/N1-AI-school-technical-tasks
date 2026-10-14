@@ -1,6 +1,10 @@
 {
   "files": [
     {
+      "file": ".gitignore",
+      "bytes": 202
+    },
+    {
       "file": "1_代码/decoding/decode.py",
       "bytes": 3903
     },
@@ -191,6 +195,10 @@
     {
       "file": "1_代码/optimizer/AdamW.py",
       "bytes": 2712
+    },
+    {
+      "file": "1_代码/references/zoology-de4e25878422/LICENSE.md",
+      "bytes": 11346
     },
     {
       "file": "1_代码/references/zoology-de4e25878422/README.md",
@@ -637,6 +645,10 @@
       "bytes": 110
     },
     {
+      "file": "2_实验和训练数据/training_data/README.md",
+      "bytes": 264
+    },
+    {
       "file": "2_实验和训练数据/training_data/mqar_512/manifest.json",
       "bytes": 3936
     },
@@ -882,11 +894,11 @@
     },
     {
       "file": "2_实验和训练数据/整理核对.json",
-      "bytes": 405
+      "bytes": 350
     },
     {
       "file": "README.md",
-      "bytes": 13184
+      "bytes": 13336
     }
   ]
 }
