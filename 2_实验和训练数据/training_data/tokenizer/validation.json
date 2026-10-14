@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "checks": [
+    "requested vocabulary size and contiguous IDs",
+    "unique token bytes, base bytes and special IDs",
+    "merge count, parent availability and vocabulary order",
+    "special tokens excluded from learned merges",
+    "input hash matches verified download",
+    "all chunk boundaries begin at the special token",
+    "from_files preserves vocabulary and merge order",
+    "empty, ASCII, Unicode and special token roundtrips",
+    "malformed UTF-8 replacement"
+  ],
+  "roundtrip_sample_count": 4,
+  "vocab_sha256": "d579c23aac60baa0167c53bed5ee4fda2137390d788559b11b8fb41a1a8496cf",
+  "merges_sha256": "ea0b685677c5e4d311679412415c56c39d669935aacc9902676fc7538df7901b",
+  "longest_token_bytes": 64,
+  "longest_tokens": [
+    {
+      "id": 25822,
+      "bytes": 64,
+      "hex": "c383c382c383c382c383c382c383c382c383c382c383c382c383c382c383c382c383c382c383c382c383c382c383c382c383c382c383c382c383c382c383c382",
+      "repr": "b'\\xc3\\x83\\xc3\\x82\\xc3\\x83\\xc3\\x82\\xc3\\x83\\xc3\\x82\\xc3\\x83\\xc3\\x82\\xc3\\x83\\xc3\\x82\\xc3\\x83\\xc3\\x82\\xc3\\x83\\xc3\\x82\\xc3\\x83\\xc3\\x82\\xc3\\x83\\xc3\\x82\\xc3\\x83\\xc3\\x82\\xc3\\x83\\xc3\\x82\\xc3\\x83\\xc3\\x82\\xc3\\x83\\xc3\\x82\\xc3\\x83\\xc3\\x82\\xc3\\x83\\xc3\\x82\\xc3\\x83\\xc3\\x82'"
+    },
+    {
+      "id": 25836,
+      "bytes": 64,
+      "hex": "2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d",
+      "repr": "b'----------------------------------------------------------------'"
+    }
+  ],
+  "scope": "Structural and small roundtrip checks. Full-corpus IDs are not compared to an independent reference tokenizer."
+}

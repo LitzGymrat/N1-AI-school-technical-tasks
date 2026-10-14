@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "all_local_non_checkpoint_hashes_verified": true,
+  "all_retained_source_hashes_verified": true,
+  "all_shared_dense_source_hashes_identical": true,
+  "all_non_moe_configuration_fields_identical": true,
+  "all_controlled_prediction_counts_verified": true,
+  "padding_prediction_changes": 0,
+  "model_artifacts": "best.pt and checkpoint.pt complete and hash-verified on connect.bjb1.seetacloud.com:23265; optional local model transfer interrupted due bandwidth; partial file is not a checkpoint"
+}

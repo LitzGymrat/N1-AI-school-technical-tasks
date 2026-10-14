@@ -1,0 +1,19 @@
+{
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "torch": "2.12.1+cu130",
+  "precision": "fp32",
+  "tf32": false,
+  "parameter_count": 10422784,
+  "batch_size": 128,
+  "attention": "efficient",
+  "optimization": {
+    "query_head_only": true,
+    "compile": true,
+    "compile_mode": "default",
+    "fused_adamw": true,
+    "fixed_data_cache": true,
+    "pinned_async_prefetch": true,
+    "sync_at_log_window_only": true
+  },
+  "pid": 3462
+}

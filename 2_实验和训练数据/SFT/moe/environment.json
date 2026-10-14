@@ -1,0 +1,13 @@
+{
+  "gpu": "NVIDIA A800-SXM4-80GB",
+  "torch": "2.11.0+cu128",
+  "parent_step": 160000,
+  "parent_sha256": "fa410208b22a6aca870fe0a7efc5d185799f44ba406023626eeeade0848b1610",
+  "parameter_count": 63851008,
+  "model_type": "moe",
+  "moe_backend": "grouped",
+  "train_examples": 226891,
+  "validation_examples": 23897,
+  "batch_size": 64,
+  "grad_accum_steps": 1
+}

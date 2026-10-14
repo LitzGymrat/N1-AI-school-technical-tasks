@@ -1,0 +1,10 @@
+{
+  "delivery_code_has_no_course_names": true,
+  "tokenizer_is_one_self_contained_file": true,
+  "plotting_kept_outside_delivery": true,
+  "standalone_imports_passed": 57,
+  "tokenizer_roundtrips_passed": true,
+  "moe_reference_output_and_gradients_passed": true,
+  "historical_training_records_preserved": true,
+  "result_figures_preserved": true
+}

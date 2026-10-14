@@ -1,0 +1,10 @@
+torch
+numpy
+einops
+jaxtyping
+regex
+wandb
+pyarrow
+requests
+psutil
+tqdm

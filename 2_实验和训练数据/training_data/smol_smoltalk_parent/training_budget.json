@@ -1,0 +1,73 @@
+{
+  "training_started": false,
+  "train_original_conversations": 460341,
+  "train_examples_after_length_filter": 453783,
+  "validation_original_conversations": 24229,
+  "validation_examples_after_length_filter": 23897,
+  "epochs": 2,
+  "effective_batch_size": 16,
+  "batch_size": 16,
+  "grad_accum_steps": 1,
+  "epoch_budgets": [
+    {
+      "epoch": 1,
+      "updates": 28362,
+      "padded_input_positions": 696760685,
+      "useful_input_positions": 376625220,
+      "supervised_tokens": 304751643
+    },
+    {
+      "epoch": 2,
+      "updates": 28362,
+      "padded_input_positions": 696770828,
+      "useful_input_positions": 376625220,
+      "supervised_tokens": 304751643
+    }
+  ],
+  "total_padded_training_positions_per_model": 1393531513,
+  "total_validation_positions_per_model": 73427070,
+  "estimates": {
+    "dense": {
+      "dense_full_batch_measurement": "outputs/microbatch-20261013/micro-16-accum-1/metrics.jsonl",
+      "measured_dense_batch_size": 16,
+      "measured_dense_context_len": 2048,
+      "measured_dense_positions_per_second": 129739.96952816169,
+      "measured_dense_seconds_per_step": 0.25256673112511635,
+      "historical_same_batch1_moe_slowdown_ratio": 1.6657769018841813,
+      "estimated_batch16_positions_per_second": 129739.96952816169,
+      "pure_training_hours_by_positions": 2.983599336058278,
+      "pure_training_hours_by_fixed_step": 3.979609793428083,
+      "planning_wall_hours_low": 3.4548901655804696,
+      "planning_wall_hours_high": 4.757342653627584,
+      "boundary": "Dense uses existing full-batch16 measurement. MoE batch16 has no prior measurement: extrapolate the observed same-batch1 Dense/MoE slowdown ratio, which may change with batch size. Token and fixed-step estimates are planning scenarios, not bounds. Validation allowance and 10-15% margin are estimates."
+    },
+    "moe": {
+      "dense_full_batch_measurement": "outputs/microbatch-20261013/micro-16-accum-1/metrics.jsonl",
+      "measured_dense_batch_size": 16,
+      "measured_dense_context_len": 2048,
+      "measured_dense_positions_per_second": 129739.96952816169,
+      "measured_dense_seconds_per_step": 0.25256673112511635,
+      "historical_same_batch1_moe_slowdown_ratio": 1.6657769018841813,
+      "estimated_batch16_positions_per_second": 77885.56161477037,
+      "pure_training_hours_by_positions": 4.970010858482859,
+      "pure_training_hours_by_fixed_step": 6.629142072404579,
+      "planning_wall_hours_low": 5.75507623637076,
+      "planning_wall_hours_high": 7.924671506761227,
+      "boundary": "Dense uses existing full-batch16 measurement. MoE batch16 has no prior measurement: extrapolate the observed same-batch1 Dense/MoE slowdown ratio, which may change with batch size. Token and fixed-step estimates are planning scenarios, not bounds. Validation allowance and 10-15% margin are estimates."
+    }
+  },
+  "memory": {
+    "dense_parameter_count": 51452416,
+    "moe_parameter_count": 63851008,
+    "dense_fp32_weights_gradients_adam_bytes": 823238656,
+    "moe_fp32_weights_gradients_adam_bytes": 1021616128,
+    "max_actual_input_length": 2046,
+    "full_batch_bf16_logits_bytes": 2095104000,
+    "existing_dense_batch16_context2048_peak_allocated_gib": 20.34242820739746,
+    "rough_moe_batch16_peak_extrapolated_gib": 21.331472396850586,
+    "rough_moe_formula": "Dense measured batch16 peak + extra weights/grad/Adam bytes +16*(observed MoE-Dense batch1 peak difference minus extra weights/grad/Adam bytes).",
+    "boundary": "Static tensor bytes and existing Dense full-batch measurement. MoE peak assumes batch-dependent memory scales linearly and is only a rough planning estimate; no new MoE batch16 runtime-memory measurement."
+  },
+  "sequential_planning_wall_hours_low": 9.20996640195123,
+  "sequential_planning_wall_hours_high": 12.68201416038881
+}

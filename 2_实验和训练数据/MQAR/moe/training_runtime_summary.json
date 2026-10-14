@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "step": 12512,
+  "epochs": 16,
+  "stable_train_seconds_per_step_median": 0.11179506458342076,
+  "formal_peak_allocated_gib": 6.914829730987549,
+  "logged_update_steps": 12512,
+  "measured_forward_backward_update_seconds_total": 1420.7942218258977,
+  "padding_control_prediction_changes": 0,
+  "abandoned_attempt_updates": 13,
+  "abandoned_attempt_reason": "empty-expert compiler error, archived separately"
+}

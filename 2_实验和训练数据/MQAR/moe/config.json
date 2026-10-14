@@ -1,0 +1,100 @@
+{
+  "status": "author_aligned_fp32_512",
+  "reference": {
+    "repository": "HazyResearch/zoology",
+    "commit": "de4e258784224e09909c257ff3ea040f089ed660"
+  },
+  "task": {
+    "name": "zoology_mqar",
+    "input_seq_len": 512,
+    "vocab_size": 8192,
+    "num_kv_pairs": 64,
+    "power_a": 0.01,
+    "random_non_queries": false,
+    "labels_already_aligned": true
+  },
+  "model": {
+    "vocab_size": 8192,
+    "d_model": 512,
+    "num_heads": 1,
+    "d_ff": 1344,
+    "num_layers": 2,
+    "context_len": 512,
+    "rope_theta": 10000,
+    "norm_position": "pre",
+    "use_rope": true,
+    "ffn_type": "swiglu"
+  },
+  "regularization": {
+    "embedding_dropout": 0.1,
+    "attention_dropout": 0.1,
+    "residual_dropout": 0.0
+  },
+  "initialization": {
+    "std": 0.02,
+    "rescale_residual_outputs": true,
+    "tie_word_embeddings": true
+  },
+  "data": {
+    "train_samples": 100000,
+    "valid_samples": 3000,
+    "test_samples": 3000,
+    "train_seed": 0,
+    "valid_seed": 10,
+    "test_seed": 20,
+    "shuffle_train_each_epoch": true,
+    "drop_last": false,
+    "require_zero_cross_split_sequence_overlap": true
+  },
+  "training": {
+    "model_seed": 123,
+    "max_epochs": 64,
+    "batch_size": 128,
+    "optimizer": "torch.AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.1,
+    "initial_lr": 0.002154434690031882,
+    "lr_schedule": "cosine_per_epoch",
+    "lr_t_max_epochs": 64,
+    "min_lr": 0.0,
+    "warmup_steps": 0,
+    "max_grad_norm": null,
+    "supervision": "query_positions_only",
+    "early_stopping_threshold": 0.99,
+    "log_every_steps": 50
+  },
+  "evaluation": {
+    "primary_metric": "query_accuracy",
+    "report_far_query_accuracy_and_count": false,
+    "final_test_used_for_model_selection": false
+  },
+  "optimization": {
+    "query_head_only": true,
+    "compile": true,
+    "compile_mode": "default",
+    "fused_adamw": true,
+    "fixed_data_cache": true,
+    "pinned_async_prefetch": true,
+    "sync_at_log_window_only": true
+  },
+  "wandb": {
+    "entity": "litzgymrat-nanjing-university",
+    "project": "n1-long-range",
+    "mode": "online"
+  },
+  "attention": "efficient",
+  "precision": "fp32",
+  "tf32": false,
+  "moe": {
+    "num_experts": 4,
+    "top_k": 2,
+    "expert_d_ff": 672,
+    "balance_loss_coef": 0.01,
+    "expert_backend": "compiled_fp32_sparse_fused_gate_up",
+    "aux_reduction": "mean across layers; all full-context tokens"
+  }
+}

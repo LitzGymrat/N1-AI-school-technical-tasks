@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "updates": 10,
+  "parameter_tensors": 20,
+  "maximum_absolute_error": 7.152557373046875e-07,
+  "maximum_relative_l2_error": 5.09835615503107e-07,
+  "rtol": 1e-05,
+  "atol": 1e-06,
+  "boundary": "Same actual gradients for fused and unfused torch AdamW; reference tensors are not used to compute training loss."
+}

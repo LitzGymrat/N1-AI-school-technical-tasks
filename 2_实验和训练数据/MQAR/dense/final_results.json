@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "step": 15640,
+  "epochs_completed": 20,
+  "best_valid_accuracy": 0.9951927083333333,
+  "test": {
+    "loss": 0.03597872629761696,
+    "query_accuracy": 0.995453125,
+    "correct": 191127,
+    "queries": 192000,
+    "samples": 3000
+  },
+  "wall_seconds": 978.954673267901
+}

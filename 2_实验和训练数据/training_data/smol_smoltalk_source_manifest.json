@@ -1,0 +1,46 @@
+{
+  "dataset": "HuggingFaceTB/smol-smoltalk",
+  "revision": "f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc",
+  "files": [
+    {
+      "path": "source/test-00000-of-00001.parquet",
+      "original_path": "data/test-00000-of-00001.parquet",
+      "bytes": 48177022,
+      "sha256": "be6773dcce145f3918ff14237b1f765affa427b0b13f6a02d397e665ac908b9a",
+      "rows": 24229,
+      "original_split": "test"
+    },
+    {
+      "path": "source/train-00000-of-00004.parquet",
+      "original_path": "data/train-00000-of-00004.parquet",
+      "bytes": 229710350,
+      "sha256": "498cd4580014f42c40cfde066573564ed28e3e1548a5566715b615f5ea932856",
+      "rows": 115086,
+      "original_split": "train"
+    },
+    {
+      "path": "source/train-00001-of-00004.parquet",
+      "original_path": "data/train-00001-of-00004.parquet",
+      "bytes": 230298184,
+      "sha256": "5412c03df579fc7dd7d06c7f5249627d99d0621882fb8f2cd5c13582eb2a80f6",
+      "rows": 115085,
+      "original_split": "train"
+    },
+    {
+      "path": "source/train-00002-of-00004.parquet",
+      "original_path": "data/train-00002-of-00004.parquet",
+      "bytes": 230587255,
+      "sha256": "aefcac6571abf275b4e1629baa01f326c0fe279d35cd0349b7439319923815a7",
+      "rows": 115085,
+      "original_split": "train"
+    },
+    {
+      "path": "source/train-00003-of-00004.parquet",
+      "original_path": "data/train-00003-of-00004.parquet",
+      "bytes": 231879938,
+      "sha256": "c15edfca888c9924a626dad7b7f4e9f08d8f406f997ac13be46bc9be0a6192db",
+      "rows": 115085,
+      "original_split": "train"
+    }
+  ]
+}

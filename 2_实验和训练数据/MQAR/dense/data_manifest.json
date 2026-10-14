@@ -1,0 +1,152 @@
+{
+  "status": "verified",
+  "task": {
+    "name": "zoology_mqar",
+    "input_seq_len": 512,
+    "vocab_size": 8192,
+    "num_kv_pairs": 64,
+    "power_a": 0.01,
+    "random_non_queries": false,
+    "labels_already_aligned": true
+  },
+  "data_config": {
+    "train_samples": 100000,
+    "valid_samples": 3000,
+    "test_samples": 3000,
+    "train_seed": 0,
+    "valid_seed": 10,
+    "test_seed": 20,
+    "shuffle_train_each_epoch": true,
+    "drop_last": false,
+    "require_zero_cross_split_sequence_overlap": true
+  },
+  "reference": {
+    "repository": "HazyResearch/zoology",
+    "commit": "de4e258784224e09909c257ff3ea040f089ed660"
+  },
+  "splits": {
+    "train": {
+      "samples": 100000,
+      "seed": 0,
+      "unique_inputs": 100000,
+      "files": {
+        "inputs": {
+          "path": "train_inputs.npy",
+          "shape": [
+            100000,
+            512
+          ],
+          "sha256": "d809139b1347d5d5aaa601181a018b6416f45b384fb5de3ba9e9a61c47f94430"
+        },
+        "positions": {
+          "path": "train_positions.npy",
+          "shape": [
+            100000,
+            64
+          ],
+          "sha256": "eecabb0fa65320d79f8c80d2d57a8590c246d299be74c3849b3fc3057ff7e46e"
+        },
+        "targets": {
+          "path": "train_targets.npy",
+          "shape": [
+            100000,
+            64
+          ],
+          "sha256": "972066b2926e3291deba03420b3061f54874a07b98ee1828d9b3258ad6ca6e04"
+        },
+        "distances": {
+          "path": "train_distances.npy",
+          "shape": [
+            100000,
+            64
+          ],
+          "sha256": "0f77faf89d60d6eda76030dc4f3d3c886dc24fca8bd14751a746642e1a746509"
+        }
+      }
+    },
+    "valid": {
+      "samples": 3000,
+      "seed": 10,
+      "unique_inputs": 3000,
+      "files": {
+        "inputs": {
+          "path": "valid_inputs.npy",
+          "shape": [
+            3000,
+            512
+          ],
+          "sha256": "8d674f0871214ec0fb70723ca64f732a88a0129e86f046519d1e56974a9c2afa"
+        },
+        "positions": {
+          "path": "valid_positions.npy",
+          "shape": [
+            3000,
+            64
+          ],
+          "sha256": "8ffd5a56904cc42230c1781ed195c813e5d024db101503baeb6001bba7b89ad4"
+        },
+        "targets": {
+          "path": "valid_targets.npy",
+          "shape": [
+            3000,
+            64
+          ],
+          "sha256": "7a84cb96c2d76ab82b55285417f25520c1c8d5b4b1c9345e11ab6cc3d0ea1740"
+        },
+        "distances": {
+          "path": "valid_distances.npy",
+          "shape": [
+            3000,
+            64
+          ],
+          "sha256": "d270ae3ae26d4ee7c56e7082b3038d6e208e0d6ae4a444a34265a353d495937c"
+        }
+      }
+    },
+    "test": {
+      "samples": 3000,
+      "seed": 20,
+      "unique_inputs": 3000,
+      "files": {
+        "inputs": {
+          "path": "test_inputs.npy",
+          "shape": [
+            3000,
+            512
+          ],
+          "sha256": "3fde1e6ebaa6630731e8daef6db8700719d6f5a3695872e346de40e601a5db09"
+        },
+        "positions": {
+          "path": "test_positions.npy",
+          "shape": [
+            3000,
+            64
+          ],
+          "sha256": "adb3da94fba4cffb099ca1b26a8d3ae3890658e54fe96316fb72064bee560ad4"
+        },
+        "targets": {
+          "path": "test_targets.npy",
+          "shape": [
+            3000,
+            64
+          ],
+          "sha256": "27077b6159459d8460775f6dcd94954f93c898b45a54caf915a7d66b60e0baef"
+        },
+        "distances": {
+          "path": "test_distances.npy",
+          "shape": [
+            3000,
+            64
+          ],
+          "sha256": "7a1c75c0821d2308bb02ddeba5e9c4cd01ebc0632419f604e0577a1b1de981c5"
+        }
+      }
+    }
+  },
+  "cross_split_overlap": {
+    "train_valid": 0,
+    "train_test": 0,
+    "valid_test": 0
+  },
+  "layout": "first symbol associations followed by scattered queries; labels aligned at query positions"
+}

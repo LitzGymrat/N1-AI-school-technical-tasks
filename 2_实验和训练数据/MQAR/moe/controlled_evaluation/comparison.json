@@ -1,0 +1,309 @@
+{
+  "status": "complete",
+  "training": {
+    "status": "complete",
+    "step": 12512,
+    "epochs_completed": 16,
+    "best_valid_accuracy": 0.9926927083333333,
+    "test": {
+      "loss": 0.05994361541668574,
+      "query_accuracy": 0.992515625,
+      "correct": 190563,
+      "queries": 192000,
+      "samples": 3000
+    },
+    "wall_seconds": 1429.2303443402052
+  },
+  "checkpoint_step": 12512,
+  "best_sha256": "58c819c765a1df608b84b66af3f3cf37a4a9436ef6f2d65e83303719ac25e3ce",
+  "moe": {
+    "num_experts": 4,
+    "top_k": 2,
+    "expert_d_ff": 672,
+    "balance_loss_coef": 0.01,
+    "expert_backend": "compiled_fp32_sparse_fused_gate_up",
+    "aux_reduction": "mean across layers; all full-context tokens"
+  },
+  "comparisons": {
+    "far_512": {
+      "dense": {
+        "query_accuracy": 0.99203125,
+        "correct": 6349,
+        "all_correct_samples": 59,
+        "distance_bands": {
+          "[256,320)": {
+            "correct": 1590,
+            "queries": 1600,
+            "accuracy": 0.99375
+          },
+          "[320,384)": {
+            "correct": 1595,
+            "queries": 1600,
+            "accuracy": 0.996875
+          },
+          "[384,448)": {
+            "correct": 1594,
+            "queries": 1600,
+            "accuracy": 0.99625
+          },
+          "[448,512)": {
+            "correct": 1570,
+            "queries": 1600,
+            "accuracy": 0.98125
+          }
+        }
+      },
+      "moe": {
+        "samples": 100,
+        "queries": 6400,
+        "correct": 6317,
+        "query_accuracy": 0.98703125,
+        "all_correct_samples": 49,
+        "all_queries_correct_sample_fraction": 0.49,
+        "distance_bands": {
+          "[256,320)": {
+            "queries": 1600,
+            "correct": 1590,
+            "accuracy": 0.99375
+          },
+          "[320,384)": {
+            "queries": 1600,
+            "correct": 1588,
+            "accuracy": 0.9925
+          },
+          "[384,448)": {
+            "queries": 1600,
+            "correct": 1586,
+            "accuracy": 0.99125
+          },
+          "[448,512)": {
+            "queries": 1600,
+            "correct": 1553,
+            "accuracy": 0.970625
+          }
+        },
+        "ce_loss": 0.11032795161008835,
+        "balance_loss": 1.0585498809814453,
+        "expert_loads": [
+          [
+            0.4511035084724426,
+            0.27461913228034973,
+            0.04969726502895355,
+            0.2245800793170929
+          ],
+          [
+            0.2636132836341858,
+            0.22209960222244263,
+            0.2633007764816284,
+            0.2509863078594208
+          ]
+        ],
+        "samples_sha256": "ee65459fe45a6f441f2282084a6c1f637a9dddc6ce54d715cb569ab6d9af42d6",
+        "predictions_sha256": "03bb05bfcd51a92c7104a2c1b97c086bf79aec14b3998c967715448f9d6ae2ca"
+      },
+      "moe_minus_dense_percentage_points": -0.5000000000000004
+    },
+    "near_1024": {
+      "dense": {
+        "query_accuracy": 0.99203125,
+        "correct": 6349,
+        "all_correct_samples": 59,
+        "distance_bands": {
+          "[256,320)": {
+            "correct": 1590,
+            "queries": 1600,
+            "accuracy": 0.99375
+          },
+          "[320,384)": {
+            "correct": 1595,
+            "queries": 1600,
+            "accuracy": 0.996875
+          },
+          "[384,448)": {
+            "correct": 1594,
+            "queries": 1600,
+            "accuracy": 0.99625
+          },
+          "[448,512)": {
+            "correct": 1570,
+            "queries": 1600,
+            "accuracy": 0.98125
+          }
+        }
+      },
+      "moe": {
+        "samples": 100,
+        "queries": 6400,
+        "correct": 6317,
+        "query_accuracy": 0.98703125,
+        "all_correct_samples": 49,
+        "all_queries_correct_sample_fraction": 0.49,
+        "distance_bands": {
+          "[256,320)": {
+            "queries": 1600,
+            "correct": 1590,
+            "accuracy": 0.99375
+          },
+          "[320,384)": {
+            "queries": 1600,
+            "correct": 1588,
+            "accuracy": 0.9925
+          },
+          "[384,448)": {
+            "queries": 1600,
+            "correct": 1586,
+            "accuracy": 0.99125
+          },
+          "[448,512)": {
+            "queries": 1600,
+            "correct": 1553,
+            "accuracy": 0.970625
+          }
+        },
+        "ce_loss": 0.11032798141241074,
+        "balance_loss": 1.0060219764709473,
+        "expert_loads": [
+          [
+            0.2918652296066284,
+            0.1463330090045929,
+            0.19951172173023224,
+            0.36229002475738525
+          ],
+          [
+            0.24609375,
+            0.2464892566204071,
+            0.2722509801387787,
+            0.2351660132408142
+          ]
+        ],
+        "samples_sha256": "beb8bec53e376a7fee5da95acde175078d592ec10db168652e757c71d53dbfda",
+        "predictions_sha256": "03bb05bfcd51a92c7104a2c1b97c086bf79aec14b3998c967715448f9d6ae2ca"
+      },
+      "moe_minus_dense_percentage_points": -0.5000000000000004
+    },
+    "far_1024": {
+      "dense": {
+        "query_accuracy": 0.3678125,
+        "correct": 2354,
+        "all_correct_samples": 0,
+        "distance_bands": {
+          "[512,640)": {
+            "correct": 1378,
+            "queries": 1600,
+            "accuracy": 0.86125
+          },
+          "[640,768)": {
+            "correct": 616,
+            "queries": 1600,
+            "accuracy": 0.385
+          },
+          "[768,896)": {
+            "correct": 283,
+            "queries": 1600,
+            "accuracy": 0.176875
+          },
+          "[896,1024)": {
+            "correct": 77,
+            "queries": 1600,
+            "accuracy": 0.048125
+          }
+        }
+      },
+      "moe": {
+        "samples": 100,
+        "queries": 6400,
+        "correct": 4364,
+        "query_accuracy": 0.681875,
+        "all_correct_samples": 0,
+        "all_queries_correct_sample_fraction": 0.0,
+        "distance_bands": {
+          "[512,640)": {
+            "queries": 1600,
+            "correct": 1501,
+            "accuracy": 0.938125
+          },
+          "[640,768)": {
+            "queries": 1600,
+            "correct": 920,
+            "accuracy": 0.575
+          },
+          "[768,896)": {
+            "queries": 1600,
+            "correct": 1207,
+            "accuracy": 0.754375
+          },
+          "[896,1024)": {
+            "queries": 1600,
+            "correct": 736,
+            "accuracy": 0.46
+          }
+        },
+        "ce_loss": 4.562874794006348,
+        "balance_loss": 0.9977219104766846,
+        "expert_loads": [
+          [
+            0.20073240995407104,
+            0.13820312917232513,
+            0.2980029284954071,
+            0.3630615174770355
+          ],
+          [
+            0.2517626881599426,
+            0.248779296875,
+            0.2735351622104645,
+            0.2259228527545929
+          ]
+        ],
+        "samples_sha256": "aea01e3c0812d2814c2225d58541802588358c512089e032bcbe95f693334861",
+        "predictions_sha256": "384dc1adad29e9975dab5029863e173e17046cb8141aa2493975f40b39f1855a"
+      },
+      "moe_minus_dense_percentage_points": 31.406250000000004
+    }
+  },
+  "same_exact_dense_samples": true,
+  "task1_independence": {
+    "train": {
+      "samples_checked": 100000,
+      "full_input_overlap": 0,
+      "full_kv_binding_overlap_order_independent": 0
+    },
+    "valid": {
+      "samples_checked": 3000,
+      "full_input_overlap": 0,
+      "full_kv_binding_overlap_order_independent": 0
+    },
+    "test": {
+      "samples_checked": 3000,
+      "full_input_overlap": 0,
+      "full_kv_binding_overlap_order_independent": 0
+    }
+  },
+  "task2_independence": {
+    "train": {
+      "samples_checked": 100000,
+      "near_full_input_overlap": 0,
+      "far_full_input_overlap": 0,
+      "full_kv_binding_overlap_order_independent": 0
+    },
+    "valid": {
+      "samples_checked": 3000,
+      "near_full_input_overlap": 0,
+      "far_full_input_overlap": 0,
+      "full_kv_binding_overlap_order_independent": 0
+    },
+    "test": {
+      "samples_checked": 3000,
+      "near_full_input_overlap": 0,
+      "far_full_input_overlap": 0,
+      "full_kv_binding_overlap_order_independent": 0
+    }
+  },
+  "controlled": "same data, seed, full batch, optimizer, LR schedule, regularization, precision and stopping rule; only FFN topology/router/auxiliary loss differ",
+  "limitation": "With fixed prefix KV, increasing distance also moves query absolute positions beyond training. The padding control cannot separate distance extrapolation from absolute-position/RoPE extrapolation; intermediate query context also changes when query positions move.",
+  "near_far_paired_outcomes": {
+    "both_correct": 4343,
+    "near_only_correct": 1974,
+    "far_only_correct": 21,
+    "both_incorrect": 62
+  }
+}

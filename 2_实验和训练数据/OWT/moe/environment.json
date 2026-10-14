@@ -1,0 +1,28 @@
+{
+  "python": "3.12.14",
+  "torch": "2.11.0+cu128",
+  "numpy": "2.4.4",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "cs336_basics_source": "/root/autodl-tmp/cs336/assignment1-basics/cs336_basics",
+  "command": [
+    "/root/autodl-tmp/cs336/n1_experiments/train_owt_moe.py",
+    "--config",
+    "/root/autodl-tmp/cs336/n1_experiments/configs/owt_moe.json",
+    "--out-dir",
+    "/root/autodl-tmp/cs336/n1_experiments/outputs/owt-moe-full-20261013-185250",
+    "--wandb-mode",
+    "online"
+  ],
+  "attention_backend": "pytorch_sdpa_flash2",
+  "model_type": "moe",
+  "parameter_count": 63851008,
+  "active_parameter_count": 51464704,
+  "tokens_per_step": 2048,
+  "planned_tokens": 327680000,
+  "train_data": "/root/autodl-tmp/cs336/assignment1-basics/data/tokenized/20260916-user-bpe/owt_train.npy",
+  "train_tokens": 2727120452,
+  "valid_data": "/root/autodl-tmp/cs336/assignment1-basics/data/tokenized/20260916-user-bpe/owt_valid.npy",
+  "valid_tokens": 66401098,
+  "eval_tokens": 65536
+}

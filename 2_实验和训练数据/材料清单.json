@@ -1,0 +1,892 @@
+{
+  "files": [
+    {
+      "file": "1_代码/decoding/decode.py",
+      "bytes": 3903
+    },
+    {
+      "file": "1_代码/experiments/__init__.py",
+      "bytes": 55
+    },
+    {
+      "file": "1_代码/experiments/configs/mqar_512_fp32.json",
+      "bytes": 2195
+    },
+    {
+      "file": "1_代码/experiments/configs/mqar_512_fp32_moe4_top2.json",
+      "bytes": 2431
+    },
+    {
+      "file": "1_代码/experiments/configs/owt_51m.json",
+      "bytes": 622
+    },
+    {
+      "file": "1_代码/experiments/configs/owt_moe.json",
+      "bytes": 690
+    },
+    {
+      "file": "1_代码/experiments/configs/sft_dense.json",
+      "bytes": 2792
+    },
+    {
+      "file": "1_代码/experiments/configs/sft_moe.json",
+      "bytes": 2854
+    },
+    {
+      "file": "1_代码/experiments/full_instruction_data.py",
+      "bytes": 3407
+    },
+    {
+      "file": "1_代码/experiments/model.py",
+      "bytes": 2716
+    },
+    {
+      "file": "1_代码/experiments/model_moe.py",
+      "bytes": 840
+    },
+    {
+      "file": "1_代码/experiments/mqar/__init__.py",
+      "bytes": 73
+    },
+    {
+      "file": "1_代码/experiments/mqar/data.py",
+      "bytes": 5599
+    },
+    {
+      "file": "1_代码/experiments/mqar_fp32/__init__.py",
+      "bytes": 80
+    },
+    {
+      "file": "1_代码/experiments/mqar_fp32/batches.py",
+      "bytes": 2412
+    },
+    {
+      "file": "1_代码/experiments/mqar_fp32/data.py",
+      "bytes": 1012
+    },
+    {
+      "file": "1_代码/experiments/mqar_fp32/evaluate_far.py",
+      "bytes": 10590
+    },
+    {
+      "file": "1_代码/experiments/mqar_fp32/evaluate_length_transfer.py",
+      "bytes": 10826
+    },
+    {
+      "file": "1_代码/experiments/mqar_fp32/model.py",
+      "bytes": 4272
+    },
+    {
+      "file": "1_代码/experiments/mqar_fp32/train.py",
+      "bytes": 16559
+    },
+    {
+      "file": "1_代码/experiments/mqar_fp32/verify.py",
+      "bytes": 8142
+    },
+    {
+      "file": "1_代码/experiments/mqar_moe/__init__.py",
+      "bytes": 49
+    },
+    {
+      "file": "1_代码/experiments/mqar_moe/evaluate_controlled.py",
+      "bytes": 7227
+    },
+    {
+      "file": "1_代码/experiments/mqar_moe/model.py",
+      "bytes": 4881
+    },
+    {
+      "file": "1_代码/experiments/mqar_moe/train.py",
+      "bytes": 18437
+    },
+    {
+      "file": "1_代码/experiments/mqar_moe/verify.py",
+      "bytes": 6101
+    },
+    {
+      "file": "1_代码/experiments/plan_full_instruction_sft.py",
+      "bytes": 9199
+    },
+    {
+      "file": "1_代码/experiments/prepare_full_instruction_data.py",
+      "bytes": 15797
+    },
+    {
+      "file": "1_代码/experiments/prepare_half_instruction_sft.py",
+      "bytes": 9250
+    },
+    {
+      "file": "1_代码/experiments/prepare_instruction_data.py",
+      "bytes": 15169
+    },
+    {
+      "file": "1_代码/experiments/select_short_instruction_data.py",
+      "bytes": 6008
+    },
+    {
+      "file": "1_代码/experiments/tasks/__init__.py",
+      "bytes": 72
+    },
+    {
+      "file": "1_代码/experiments/tasks/mqar.py",
+      "bytes": 2319
+    },
+    {
+      "file": "1_代码/experiments/train_full_instruction_sft.py",
+      "bytes": 13728
+    },
+    {
+      "file": "1_代码/experiments/train_instruction_sft.py",
+      "bytes": 12243
+    },
+    {
+      "file": "1_代码/experiments/train_owt.py",
+      "bytes": 14167
+    },
+    {
+      "file": "1_代码/experiments/train_owt_moe.py",
+      "bytes": 16359
+    },
+    {
+      "file": "1_代码/experiments/verify_grouped_moe.py",
+      "bytes": 7091
+    },
+    {
+      "file": "1_代码/experiments/verify_moe.py",
+      "bytes": 7634
+    },
+    {
+      "file": "1_代码/experiments/verify_sft_data.py",
+      "bytes": 7884
+    },
+    {
+      "file": "1_代码/experiments/verify_training.py",
+      "bytes": 8272
+    },
+    {
+      "file": "1_代码/moe/MoE_module.py",
+      "bytes": 4472
+    },
+    {
+      "file": "1_代码/moe/Transformer_block.py",
+      "bytes": 2164
+    },
+    {
+      "file": "1_代码/moe/Transformer_lm.py",
+      "bytes": 2791
+    },
+    {
+      "file": "1_代码/moe/__init__.py",
+      "bytes": 76
+    },
+    {
+      "file": "1_代码/moe/grouped_experts.py",
+      "bytes": 1934
+    },
+    {
+      "file": "1_代码/moe/requirements-grouped-gemm.txt",
+      "bytes": 212
+    },
+    {
+      "file": "1_代码/optimizer/AdamW.py",
+      "bytes": 2712
+    },
+    {
+      "file": "1_代码/references/zoology-de4e25878422/README.md",
+      "bytes": 11541
+    },
+    {
+      "file": "1_代码/references/zoology-de4e25878422/manifest.json",
+      "bytes": 3025
+    },
+    {
+      "file": "1_代码/references/zoology-de4e25878422/zoology/config.py",
+      "bytes": 3435
+    },
+    {
+      "file": "1_代码/references/zoology-de4e25878422/zoology/data/associative_recall.py",
+      "bytes": 14111
+    },
+    {
+      "file": "1_代码/references/zoology-de4e25878422/zoology/data/utils.py",
+      "bytes": 6580
+    },
+    {
+      "file": "1_代码/references/zoology-de4e25878422/zoology/experiments/paper/figure2.py",
+      "bytes": 5311
+    },
+    {
+      "file": "1_代码/references/zoology-de4e25878422/zoology/logger.py",
+      "bytes": 1211
+    },
+    {
+      "file": "1_代码/references/zoology-de4e25878422/zoology/mixers/attention.py",
+      "bytes": 2207
+    },
+    {
+      "file": "1_代码/references/zoology-de4e25878422/zoology/mixers/mlp.py",
+      "bytes": 751
+    },
+    {
+      "file": "1_代码/references/zoology-de4e25878422/zoology/model.py",
+      "bytes": 7162
+    },
+    {
+      "file": "1_代码/references/zoology-de4e25878422/zoology/train.py",
+      "bytes": 6285
+    },
+    {
+      "file": "1_代码/requirements.txt",
+      "bytes": 70
+    },
+    {
+      "file": "1_代码/tokenizer/tokenizer.py",
+      "bytes": 22818
+    },
+    {
+      "file": "1_代码/training_utils/Crossentropyloss.py",
+      "bytes": 1715
+    },
+    {
+      "file": "1_代码/training_utils/Gradient_clipping.py",
+      "bytes": 1707
+    },
+    {
+      "file": "1_代码/training_utils/Learning_rate_schedule.py",
+      "bytes": 299
+    },
+    {
+      "file": "1_代码/trainingloop/Checkpoint.py",
+      "bytes": 953
+    },
+    {
+      "file": "1_代码/trainingloop/Data_loader.py",
+      "bytes": 1200
+    },
+    {
+      "file": "1_代码/trainingloop/Training_loop.py",
+      "bytes": 8153
+    },
+    {
+      "file": "1_代码/transformer/Embedding_module.py",
+      "bytes": 1064
+    },
+    {
+      "file": "1_代码/transformer/Linear_module.py",
+      "bytes": 920
+    },
+    {
+      "file": "1_代码/transformer/Multihead_self_attention_module.py",
+      "bytes": 5404
+    },
+    {
+      "file": "1_代码/transformer/RMSNorm_module.py",
+      "bytes": 1289
+    },
+    {
+      "file": "1_代码/transformer/RoPE_module.py",
+      "bytes": 3072
+    },
+    {
+      "file": "1_代码/transformer/Scaled_dot_product_function.py",
+      "bytes": 1751
+    },
+    {
+      "file": "1_代码/transformer/SoftMax_function.py",
+      "bytes": 502
+    },
+    {
+      "file": "1_代码/transformer/Swiglu_module.py",
+      "bytes": 2035
+    },
+    {
+      "file": "1_代码/transformer/Transformer_block.py",
+      "bytes": 2034
+    },
+    {
+      "file": "1_代码/transformer/Transformer_lm.py",
+      "bytes": 2477
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/dense/completion_acceptance.json",
+      "bytes": 1649
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/dense/config.json",
+      "bytes": 2195
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/dense/data_manifest.json",
+      "bytes": 3936
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/dense/environment.json",
+      "bytes": 454
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/dense/final_results.json",
+      "bytes": 302
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/dense/fused_adamw_check.json",
+      "bytes": 338
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/dense/metrics.jsonl",
+      "bytes": 123178
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/dense/source_sha256.json",
+      "bytes": 2352
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/dense/status.json",
+      "bytes": 94
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/dense/test_predictions.npy",
+      "bytes": 384128
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/dense/wandb_run.json",
+      "bytes": 205
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/distance_accuracy.pdf",
+      "bytes": 16382
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/distance_accuracy.png",
+      "bytes": 105204
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/evaluation_1024/far_predictions.npy",
+      "bytes": 12928
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/evaluation_1024/far_samples.npz",
+      "bytes": 1063656
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/evaluation_1024/near_predictions.npy",
+      "bytes": 12928
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/evaluation_1024/near_samples.npz",
+      "bytes": 1063656
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/evaluation_1024/results.json",
+      "bytes": 11494
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/evaluation_512/predictions.npy",
+      "bytes": 12928
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/evaluation_512/query_predictions.jsonl",
+      "bytes": 179890
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/evaluation_512/results.json",
+      "bytes": 4592
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/evaluation_512/samples.npz",
+      "bytes": 551656
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/evaluation_accuracy.pdf",
+      "bytes": 17873
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/evaluation_accuracy.png",
+      "bytes": 112182
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/loss_curve_data.csv",
+      "bytes": 24059
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/loss_curves.pdf",
+      "bytes": 17082
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/loss_curves.png",
+      "bytes": 82865
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/minimind-3-moe表现.png",
+      "bytes": 99344
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/completion_acceptance.json",
+      "bytes": 1751
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/config.json",
+      "bytes": 2431
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/controlled_evaluation/comparison.json",
+      "bytes": 8809
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/controlled_evaluation/comparison.txt",
+      "bytes": 1856
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/controlled_evaluation/far_1024_predictions.npy",
+      "bytes": 12928
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/controlled_evaluation/far_512_predictions.npy",
+      "bytes": 12928
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/controlled_evaluation/near_1024_predictions.npy",
+      "bytes": 12928
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/data_manifest.json",
+      "bytes": 3936
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/environment.json",
+      "bytes": 708
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/final_results.json",
+      "bytes": 304
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/fused_adamw_check.json",
+      "bytes": 339
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/local_acceptance.json",
+      "bytes": 523
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/metrics.jsonl",
+      "bytes": 166448
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/online_acceptance.json",
+      "bytes": 177
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/qualification_acceptance.json",
+      "bytes": 248
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/source_sha256.json",
+      "bytes": 2575
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/status.json",
+      "bytes": 95
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/test_predictions.npy",
+      "bytes": 384128
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/training_runtime_summary.json",
+      "bytes": 437
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/wandb_run.json",
+      "bytes": 205
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/moe/workflow_exit.json",
+      "bytes": 68
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/test_accuracy.pdf",
+      "bytes": 14464
+    },
+    {
+      "file": "2_实验和训练数据/MQAR/test_accuracy.png",
+      "bytes": 53183
+    },
+    {
+      "file": "2_实验和训练数据/OWT/dense/config.json",
+      "bytes": 622
+    },
+    {
+      "file": "2_实验和训练数据/OWT/dense/environment.json",
+      "bytes": 935
+    },
+    {
+      "file": "2_实验和训练数据/OWT/dense/metrics.jsonl",
+      "bytes": 75652
+    },
+    {
+      "file": "2_实验和训练数据/OWT/dense/wandb_history.json",
+      "bytes": 106266
+    },
+    {
+      "file": "2_实验和训练数据/OWT/dense/wandb_run.json",
+      "bytes": 154
+    },
+    {
+      "file": "2_实验和训练数据/OWT/dense/wandb_summary.json",
+      "bytes": 2344
+    },
+    {
+      "file": "2_实验和训练数据/OWT/loss_curve_data.csv",
+      "bytes": 17980
+    },
+    {
+      "file": "2_实验和训练数据/OWT/loss_curves.pdf",
+      "bytes": 20637
+    },
+    {
+      "file": "2_实验和训练数据/OWT/loss_curves.png",
+      "bytes": 96334
+    },
+    {
+      "file": "2_实验和训练数据/OWT/moe/config.json",
+      "bytes": 690
+    },
+    {
+      "file": "2_实验和训练数据/OWT/moe/environment-resume-24000.json",
+      "bytes": 1100
+    },
+    {
+      "file": "2_实验和训练数据/OWT/moe/environment.json",
+      "bytes": 1001
+    },
+    {
+      "file": "2_实验和训练数据/OWT/moe/metrics.jsonl",
+      "bytes": 345664
+    },
+    {
+      "file": "2_实验和训练数据/OWT/moe/wandb_run.json",
+      "bytes": 154
+    },
+    {
+      "file": "2_实验和训练数据/SFT/dense/config.json",
+      "bytes": 2808
+    },
+    {
+      "file": "2_实验和训练数据/SFT/dense/data_manifest.json",
+      "bytes": 12578
+    },
+    {
+      "file": "2_实验和训练数据/SFT/dense/environment.json",
+      "bytes": 360
+    },
+    {
+      "file": "2_实验和训练数据/SFT/dense/metrics.jsonl",
+      "bytes": 33216
+    },
+    {
+      "file": "2_实验和训练数据/SFT/dense/status.json",
+      "bytes": 43
+    },
+    {
+      "file": "2_实验和训练数据/SFT/dense/summary.json",
+      "bytes": 819
+    },
+    {
+      "file": "2_实验和训练数据/SFT/dense/wandb_run.json",
+      "bytes": 110
+    },
+    {
+      "file": "2_实验和训练数据/SFT/loss_curve_data.csv",
+      "bytes": 5659
+    },
+    {
+      "file": "2_实验和训练数据/SFT/loss_curves.pdf",
+      "bytes": 17800
+    },
+    {
+      "file": "2_实验和训练数据/SFT/loss_curves.png",
+      "bytes": 109628
+    },
+    {
+      "file": "2_实验和训练数据/SFT/moe/config.json",
+      "bytes": 2873
+    },
+    {
+      "file": "2_实验和训练数据/SFT/moe/data_manifest.json",
+      "bytes": 12578
+    },
+    {
+      "file": "2_实验和训练数据/SFT/moe/environment.json",
+      "bytes": 363
+    },
+    {
+      "file": "2_实验和训练数据/SFT/moe/metrics.jsonl",
+      "bytes": 35918
+    },
+    {
+      "file": "2_实验和训练数据/SFT/moe/status.json",
+      "bytes": 43
+    },
+    {
+      "file": "2_实验和训练数据/SFT/moe/summary.json",
+      "bytes": 818
+    },
+    {
+      "file": "2_实验和训练数据/SFT/moe/wandb_run.json",
+      "bytes": 110
+    },
+    {
+      "file": "2_实验和训练数据/training_data/mqar_512/manifest.json",
+      "bytes": 3936
+    },
+    {
+      "file": "2_实验和训练数据/training_data/mqar_512/preview.txt",
+      "bytes": 12830
+    },
+    {
+      "file": "2_实验和训练数据/training_data/mqar_512/test_distances.npy",
+      "bytes": 384128
+    },
+    {
+      "file": "2_实验和训练数据/training_data/mqar_512/test_inputs.npy",
+      "bytes": 3072128
+    },
+    {
+      "file": "2_实验和训练数据/training_data/mqar_512/test_positions.npy",
+      "bytes": 384128
+    },
+    {
+      "file": "2_实验和训练数据/training_data/mqar_512/test_targets.npy",
+      "bytes": 384128
+    },
+    {
+      "file": "2_实验和训练数据/training_data/mqar_512/train_distances.npy",
+      "bytes": 12800128
+    },
+    {
+      "file": "2_实验和训练数据/training_data/mqar_512/train_inputs.npy",
+      "bytes": 102400128
+    },
+    {
+      "file": "2_实验和训练数据/training_data/mqar_512/train_positions.npy",
+      "bytes": 12800128
+    },
+    {
+      "file": "2_实验和训练数据/training_data/mqar_512/train_targets.npy",
+      "bytes": 12800128
+    },
+    {
+      "file": "2_实验和训练数据/training_data/mqar_512/valid_distances.npy",
+      "bytes": 384128
+    },
+    {
+      "file": "2_实验和训练数据/training_data/mqar_512/valid_inputs.npy",
+      "bytes": 3072128
+    },
+    {
+      "file": "2_实验和训练数据/training_data/mqar_512/valid_positions.npy",
+      "bytes": 384128
+    },
+    {
+      "file": "2_实验和训练数据/training_data/mqar_512/valid_targets.npy",
+      "bytes": 384128
+    },
+    {
+      "file": "2_实验和训练数据/training_data/owt/manifest.json",
+      "bytes": 6312
+    },
+    {
+      "file": "2_实验和训练数据/training_data/owt/owt_train.npy",
+      "bytes": 5454241032
+    },
+    {
+      "file": "2_实验和训练数据/training_data/owt/owt_train_metrics.json",
+      "bytes": 751032
+    },
+    {
+      "file": "2_实验和训练数据/training_data/owt/owt_valid.npy",
+      "bytes": 132802324
+    },
+    {
+      "file": "2_实验和训练数据/training_data/owt/owt_valid_metrics.json",
+      "bytes": 19282
+    },
+    {
+      "file": "2_实验和训练数据/training_data/owt/verification.json",
+      "bytes": 389
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/manifest.json",
+      "bytes": 12578
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/selected_parent_indices.npy",
+      "bytes": 1815256
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/test-00000-of-00001/assistant_mask.bin",
+      "bytes": 22583677
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/test-00000-of-00001/conversation_lengths.npy",
+      "bytes": 191304
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/test-00000-of-00001/rows.jsonl",
+      "bytes": 6247053
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/test-00000-of-00001/stats.json",
+      "bytes": 1445
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/test-00000-of-00001/tokens.bin",
+      "bytes": 45167354
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/test-00000-of-00001/windows.npy",
+      "bytes": 764832
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00000-of-00004/assistant_mask.bin",
+      "bytes": 46909128
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00000-of-00004/conversation_lengths.npy",
+      "bytes": 453568
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00000-of-00004/rows.jsonl",
+      "bytes": 16602919
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00000-of-00004/stats.json",
+      "bytes": 1486
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00000-of-00004/tokens.bin",
+      "bytes": 93818256
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00000-of-00004/windows.npy",
+      "bytes": 1813888
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00001-of-00004/assistant_mask.bin",
+      "bytes": 47160058
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00001-of-00004/conversation_lengths.npy",
+      "bytes": 453072
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00001-of-00004/rows.jsonl",
+      "bytes": 16642053
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00001-of-00004/stats.json",
+      "bytes": 1499
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00001-of-00004/tokens.bin",
+      "bytes": 94320116
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00001-of-00004/windows.npy",
+      "bytes": 1811904
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00002-of-00004/assistant_mask.bin",
+      "bytes": 47296258
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00002-of-00004/conversation_lengths.npy",
+      "bytes": 454640
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00002-of-00004/rows.jsonl",
+      "bytes": 16699930
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00002-of-00004/stats.json",
+      "bytes": 1472
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00002-of-00004/tokens.bin",
+      "bytes": 94592516
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00002-of-00004/windows.npy",
+      "bytes": 1818176
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00003-of-00004/assistant_mask.bin",
+      "bytes": 47262070
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00003-of-00004/conversation_lengths.npy",
+      "bytes": 454360
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00003-of-00004/rows.jsonl",
+      "bytes": 16689368
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00003-of-00004/stats.json",
+      "bytes": 1486
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00003-of-00004/tokens.bin",
+      "bytes": 94524140
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/shards/train-00003-of-00004/windows.npy",
+      "bytes": 1817056
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk/training_budget.json",
+      "bytes": 440
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk_parent/manifest.json",
+      "bytes": 12241
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk_parent/source_manifest.json",
+      "bytes": 1567
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk_parent/training_budget.json",
+      "bytes": 3814
+    },
+    {
+      "file": "2_实验和训练数据/training_data/smol_smoltalk_source_manifest.json",
+      "bytes": 1567
+    },
+    {
+      "file": "2_实验和训练数据/training_data/tokenizer/merges.json",
+      "bytes": 1166871
+    },
+    {
+      "file": "2_实验和训练数据/training_data/tokenizer/metrics.json",
+      "bytes": 3891
+    },
+    {
+      "file": "2_实验和训练数据/training_data/tokenizer/validation.json",
+      "bytes": 1704
+    },
+    {
+      "file": "2_实验和训练数据/training_data/tokenizer/vocab.json",
+      "bytes": 874467
+    },
+    {
+      "file": "2_实验和训练数据/整理核对.json",
+      "bytes": 405
+    },
+    {
+      "file": "README.md",
+      "bytes": 13184
+    }
+  ]
+}

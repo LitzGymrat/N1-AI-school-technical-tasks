@@ -1,0 +1,49 @@
+{
+  "settings": {
+    "max_length": 2048,
+    "selection": "complete_serialized_length < 2048",
+    "format_version": 4
+  },
+  "name": "test-00000-of-00001",
+  "path": "shards/test-00000-of-00001",
+  "original_split": "test",
+  "original_conversations": 24229,
+  "conversations": 23897,
+  "excluded_length_ge_2048": 332,
+  "sources": {
+    "smol-summarize-20k": 1000,
+    "smol-magpie-ultra-short": 14122,
+    "everyday-conversations": 127,
+    "self-oss-instruct": 2590,
+    "smol-contraints": 1803,
+    "openhermes-50k": 2483,
+    "smollm-rewrite-30k": 1418,
+    "smol-summarize-5k": 171,
+    "explore-instruct-rewrite": 183
+  },
+  "assistant_turn_counts": {
+    "1": 9524,
+    "3": 14169,
+    "4": 132,
+    "2": 18,
+    "5": 21,
+    "10": 2,
+    "6": 11,
+    "7": 2,
+    "12": 12,
+    "8": 3,
+    "9": 3
+  },
+  "windows": 23897,
+  "total_tokens": 19809402,
+  "supervised_tokens": 16020920,
+  "useful_input_positions": 19785505,
+  "sha256": {
+    "tokens.bin": "673976148409018654bb528a42417bd930208af7bc7c0cd47466945c9c9683f1",
+    "assistant_mask.bin": "6208999879f37c3ee776fb4dca50e4fdd81204567149fd0e42a9f937fc4e95e1",
+    "windows.npy": "47ea865c5d47df08d857582c4305f31ed95bd3244a1c01070762c7c2cc40e678",
+    "conversation_lengths.npy": "b4092e489cb2e2d67754ace754968fed54553c244de908a6c1b91c6d3863b21a",
+    "rows.jsonl": "b665e7587badf66c426dfeebbfc92ed87d1a17a04922f94f2aae06b524acdf33"
+  },
+  "parent_eligible_conversations": 23897
+}

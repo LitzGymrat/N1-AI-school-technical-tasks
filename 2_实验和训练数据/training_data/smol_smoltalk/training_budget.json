@@ -1,0 +1,23 @@
+{
+  "train_samples": 226891,
+  "validation_samples": 23897,
+  "batch_size": 64,
+  "grad_accum_steps": 1,
+  "epochs": 2,
+  "steps_per_epoch": 3546,
+  "total_steps": 7092,
+  "warmup_steps": 710,
+  "epoch_budgets": [
+    {
+      "epoch": 1,
+      "updates": 3546,
+      "padded_input_positions": 395273386
+    },
+    {
+      "epoch": 2,
+      "updates": 3546,
+      "padded_input_positions": 394597940
+    }
+  ],
+  "training_started": false
+}

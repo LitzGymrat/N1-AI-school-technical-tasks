@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "workflow": {
+    "stage": "complete",
+    "exit_code": 0,
+    "status": "complete"
+  },
+  "wandb_state": "finished",
+  "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/2zqtop3z",
+  "controlled_summary_uploaded": true,
+  "padding_control_prediction_changes": 0,
+  "files": {
+    "best.pt": {
+      "sha256": "58c819c765a1df608b84b66af3f3cf37a4a9436ef6f2d65e83303719ac25e3ce",
+      "bytes": 174731771
+    },
+    "checkpoint.pt": {
+      "sha256": "31a1149e543c9ee5d5027dae039a06b60e9b4f303e4d3c09dcabf232bb1740ac",
+      "bytes": 174733355
+    },
+    "test_predictions.npy": {
+      "sha256": "e9fedb387488602d41b52f9c4a226ddd262d23797666ca933836a926e86bd9a7",
+      "bytes": 384128
+    },
+    "final_results.json": {
+      "sha256": "cd84b3ed87a63af72b10dfa8a8bfea3bf326cada248efc1421328caa8b673f47",
+      "bytes": 304
+    },
+    "metrics.jsonl": {
+      "sha256": "d82e8ee8d2261afd22fb61970b825c21a4ef8c5183041ff977e69ce23fa2dd51",
+      "bytes": 166448
+    },
+    "config.json": {
+      "sha256": "d5df240706e16aaa9086254c95499cebf927b3fee826b14aa1b403b1593c5349",
+      "bytes": 2431
+    },
+    "data_manifest.json": {
+      "sha256": "fd898fb48350b3763b2a25cc8c0e09f8e59694ac5ded3d29df905a766b3258a5",
+      "bytes": 3936
+    },
+    "source_sha256.json": {
+      "sha256": "f2fd8cfa42060048494ca56496b5f450df6c07eb089faff29da424d6208fb75b",
+      "bytes": 2575
+    },
+    "controlled_evaluation/comparison.json": {
+      "sha256": "3db817280e206e5870b13e9e839ef2634b1da10b91473c280ef20174c62898ab",
+      "bytes": 8809
+    },
+    "controlled_evaluation/comparison.txt": {
+      "sha256": "2490ac809008b00518b95c9527e2bb04d93c69a51a1faaa5264a886d7ab519cd",
+      "bytes": 1856
+    }
+  }
+}

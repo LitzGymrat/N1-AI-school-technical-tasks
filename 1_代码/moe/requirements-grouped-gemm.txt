@@ -1,0 +1,2 @@
+# CUDA 服务器使用；保留原 Torch 环境，按 README 的 --no-deps --no-build-isolation 安装。
+nv_grouped_gemm @ git+https://github.com/fanshiqing/grouped_gemm@efe8c40eaf4c8ef57191e0ea9aa4117aa5b1a8f2

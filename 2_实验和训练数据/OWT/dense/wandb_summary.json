@@ -1,0 +1,78 @@
+{
+  "state": "finished",
+  "url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/vck7m4f2",
+  "summary": {
+    "_runtime": 5640.198254835,
+    "_step": 160000,
+    "_timestamp": 1791873604.6992648,
+    "_wandb.runtime": 5640,
+    "estimated_remaining_train_seconds": 0,
+    "lr": 6e-05,
+    "peak_allocated_gib": 1.910550117492676,
+    "seconds_per_step": 0.03384285738691688,
+    "step": 160000,
+    "tokens_per_second": 60514.98478942635,
+    "tokens_seen": 327680000,
+    "train_loss": 4.449338073730469,
+    "training_seconds": 5581.8887384310365,
+    "valid_loss": 4.339840218424797,
+    "wall_seconds_this_session": 5639.275004379451
+  },
+  "config": {
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "seed": 42,
+    "model": {
+      "d_ff": 1344,
+      "d_model": 512,
+      "num_heads": 8,
+      "num_layers": 6,
+      "rope_theta": 10000,
+      "vocab_size": 32000,
+      "context_len": 2048
+    },
+    "numpy": "2.4.4",
+    "torch": "2.11.0+cu128",
+    "device": "cuda",
+    "python": "3.12.14",
+    "command": [
+      "/root/autodl-tmp/cs336/n1_experiments/train_owt.py",
+      "--config",
+      "/root/autodl-tmp/cs336/n1_experiments/configs/owt_51m.json",
+      "--out-dir",
+      "/root/autodl-tmp/cs336/n1_experiments/outputs/owt-b1-full-20261013-130555",
+      "--wandb-mode",
+      "online"
+    ],
+    "training": {
+      "eps": 1e-08,
+      "betas": [
+        0.9,
+        0.95
+      ],
+      "steps": 160000,
+      "max_lr": 0.0006,
+      "min_lr": 6e-05,
+      "eval_batches": 32,
+      "log_interval": 800,
+      "warmup_steps": 3200,
+      "weight_decay": 0.1,
+      "eval_interval": 4000,
+      "max_grad_norm": 1,
+      "grad_accum_steps": 1,
+      "micro_batch_size": 1,
+      "checkpoint_interval": 16000
+    },
+    "attention": "flash2",
+    "precision": "bf16",
+    "train_data": "/root/autodl-tmp/cs336/assignment1-basics/data/tokenized/20260916-user-bpe/owt_train.npy",
+    "valid_data": "/root/autodl-tmp/cs336/assignment1-basics/data/tokenized/20260916-user-bpe/owt_valid.npy",
+    "eval_tokens": 65536,
+    "train_tokens": 2727120452,
+    "valid_tokens": 66401098,
+    "planned_tokens": 327680000,
+    "parameter_count": 51452416,
+    "tokens_per_step": 2048,
+    "attention_backend": "pytorch_sdpa_flash2",
+    "cs336_basics_source": "/root/autodl-tmp/cs336/assignment1-basics/cs336_basics"
+  }
+}

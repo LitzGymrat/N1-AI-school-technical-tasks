@@ -1,0 +1,65 @@
+{
+  "status": "prepared_half_train_a800_training_not_started",
+  "model_type": "moe",
+  "initial_checkpoint": "n1_experiments/outputs/owt-moe-full-20261013-185250/checkpoint.pt",
+  "initial_checkpoint_sha256": "fa410208b22a6aca870fe0a7efc5d185799f44ba406023626eeeade0848b1610",
+  "parent_pretraining_step": 160000,
+  "model": {
+    "vocab_size": 32000,
+    "d_model": 512,
+    "num_heads": 8,
+    "d_ff": 672,
+    "num_experts": 4,
+    "top_k": 2,
+    "num_layers": 6,
+    "context_len": 2048,
+    "rope_theta": 10000
+  },
+  "attention": "flash2",
+  "precision": "bf16",
+  "seed": 42,
+  "data": {
+    "directory": "n1_experiments/outputs/smol_smoltalk_lt2048_half_seed42",
+    "format": "smoltalk_mmap_v1",
+    "manifest_sha256": "bcb9651c210e04d7af13b0457de54d4cf9cb79c9bc216b491f85c8c00c2965bd",
+    "max_length": 2048,
+    "overlap": 0,
+    "batching": "Same seed+epoch shuffle for both models; complete batch64, right padding to batch maximum; no splitting, accumulation, packing, truncation or windows; keep last batch.",
+    "loss": "All assistant content, leading newline and end-of-turn EOS; system/user/header/padding labels -100; shifted exactly once.",
+    "selection": "All eligible complete conversations <2048; train uniformly sampled without replacement to half with seed42; full eligible validation unchanged.",
+    "windowing": "One complete conversation per example; no windowing, overlap, truncation or cross-conversation packing."
+  },
+  "training": {
+    "batch_size": 64,
+    "grad_accum_steps": 1,
+    "epochs": 2,
+    "steps_per_epoch": 3546,
+    "max_steps": 7092,
+    "max_lr": 0.0001,
+    "min_lr": 1e-05,
+    "warmup_steps": 710,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.1,
+    "max_grad_norm": 1.0,
+    "log_interval": 100,
+    "checkpoint_interval": 1000,
+    "eval_interval": 3546,
+    "balance_loss_coef": 0.01,
+    "loss_reduction": "Mean CE over all supervised tokens in the full batch; MoE adds balance coefficient times the full-batch auxiliary loss; one forward/backward/update per batch.",
+    "checkpoint_selection": "Lowest assistant-token-averaged CE on unchanged full eligible validation after each epoch; no RULER or base reevaluation.",
+    "optimizer_state": "Load original pretraining weights only; fresh FP32 AdamW state and SFT schedule."
+  },
+  "reference": "https://github.com/huggingface/alignment-handbook/blob/main/recipes/smollm2/sft/config_smol.yaml",
+  "recipe_boundary": "2 epochs, cosine and 10% warmup; existing LR=1e-4 and tokenizer; uniform half of eligible train, unchanged eligible validation; full batch64 on one A800 per model.",
+  "budget": "n1_experiments/outputs/smol_smoltalk_lt2048_half_seed42/training_budget.json",
+  "moe_backend": "grouped",
+  "hardware": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "parallel_models": true,
+    "physical_gpu_index": 1
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "complete",
+  "step": 7092,
+  "validation_this_session": [
+    {
+      "step": 3546,
+      "epoch": 1,
+      "valid_loss": 1.9748601203925866,
+      "validation_seconds": 61.00486182048917,
+      "validation_examples": 23897,
+      "validation_supervised_tokens": 16020920
+    },
+    {
+      "step": 7092,
+      "epoch": 2,
+      "valid_loss": 1.889311225572564,
+      "validation_seconds": 60.96986636146903,
+      "validation_examples": 23897,
+      "validation_supervised_tokens": 16020920
+    }
+  ],
+  "best_valid_loss": 1.889311225572564,
+  "best_checkpoint": "/root/autodl-tmp/cs336/n1_experiments/outputs/instruction-sft-half-a800-20261014-091526/moe/best.pt",
+  "training_seconds": 3810.827751081437,
+  "wall_seconds_this_session": 3956.754708714783,
+  "peak_allocated_gib": 56.424543380737305
+}

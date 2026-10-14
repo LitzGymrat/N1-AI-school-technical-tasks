@@ -1,0 +1,28 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch": "2.11.0+cu128",
+  "precision": "fp32",
+  "tf32": false,
+  "parameter_count": 14555648,
+  "batch_size": 128,
+  "attention": "efficient",
+  "optimization": {
+    "query_head_only": true,
+    "compile": true,
+    "compile_mode": "default",
+    "fused_adamw": true,
+    "fixed_data_cache": true,
+    "pinned_async_prefetch": true,
+    "sync_at_log_window_only": true
+  },
+  "pid": 11704,
+  "moe": {
+    "num_experts": 4,
+    "top_k": 2,
+    "expert_d_ff": 672,
+    "balance_loss_coef": 0.01,
+    "expert_backend": "compiled_fp32_sparse_fused_gate_up",
+    "aux_reduction": "mean across layers; all full-context tokens"
+  },
+  "active_parameter_count": 10426880
+}

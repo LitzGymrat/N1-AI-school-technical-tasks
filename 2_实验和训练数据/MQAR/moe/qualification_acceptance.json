@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "step": 100,
+  "seconds_per_step": 0.11042072355747223,
+  "full_remaining_training_seconds_upper_budget": 5515.294300248623,
+  "peak_allocated_gib": 6.914829730987549,
+  "all_100_updates_included_in_formal_budget": true
+}

@@ -1,0 +1,23 @@
+{
+  "assignment1-basics/cs336_basics/Transformer/Embedding_module.py": "8295e87789285fada02da482bf6a14a647ea11a2261dd9f23d24be2e42c3e515",
+  "assignment1-basics/cs336_basics/Transformer/Linear_module.py": "f15a0c7e72a1be3f355125751b59c834dbbda083e34066a79c1554d9bf610aea",
+  "assignment1-basics/cs336_basics/Transformer/Multihead_self_attention_module.py": "26df5539695b56ff232bbdf9875578284956a528abab84875bc98de0d56bf1eb",
+  "assignment1-basics/cs336_basics/Transformer/RMSNorm_module.py": "e67f6757016dc1ad0ebf3520d50eb39ca0dc5128efd34d4a4ced79f07152fffa",
+  "assignment1-basics/cs336_basics/Transformer/RoPE_module.py": "c1679d91bc908447b72e82ede2c68a4f80017a710ac61e6f6c963eaadb213a09",
+  "assignment1-basics/cs336_basics/Transformer/Scaled_dot_product_function.py": "6b67baf076af4f9433ca79f94a14abc9acdb3c005bdbd86a936691c5128f5fd5",
+  "assignment1-basics/cs336_basics/Transformer/SoftMax_function.py": "d40686226b0035dd5bc66d745e7c840628c1f08124d86be4e2fe4d8b2f0815e1",
+  "assignment1-basics/cs336_basics/Transformer/Swiglu_module.py": "9ceeb9459439756812ba56c8b86ef9e4250888b01ae042f89c2b319e3885eb4d",
+  "assignment1-basics/cs336_basics/Transformer/Transformer_block.py": "707fa12727243df3f39eeaf840425e04be914c1e3a63f3c273c19ceeee67d1a5",
+  "assignment1-basics/cs336_basics/Transformer/Transformer_lm.py": "f171570d94fb2fde1c48065cd61e2264940fd7bb086d65c71d3399fce7537390",
+  "assignment1-basics/cs336_basics/__init__.py": "687192e9a8eb08caed2ad612b86fbefdaa21229160f613525996f0eada9096dc",
+  "n1_experiments/moe/MoE_module.py": "8dda1d7e2da4eba73b917d4c0d523b897aa0c46bdada647729f3cfea182c8df5",
+  "n1_experiments/mqar/data.py": "cdef11a6bfdd31076f181f153f3801a4cf626461b3c844ebf060560a63a0d47e",
+  "n1_experiments/mqar_fp32/batches.py": "56c6d1725294779d0d30e773a07833ed19196d596279ac710c3093026f06602f",
+  "n1_experiments/mqar_fp32/model.py": "626c663eaf89de43e118577dd87943d233d97e38d5008e260e4488a5efa8499b",
+  "n1_experiments/mqar_moe/__init__.py": "765b0c6ae6795404456c17184d3f3836c5a26d901db879328d18da0e6d44ea88",
+  "n1_experiments/mqar_moe/evaluate_controlled.py": "5ec9c73592310ddeac322ba2412b1456f213ee73aacf123135a85384d5528030",
+  "n1_experiments/mqar_moe/model.py": "725b8e8cb17861945b2bd1b10fd5e9a4cd6899b6a25c2253424472e65ceb0f10",
+  "n1_experiments/mqar_moe/train.py": "c998f45b89bf0bd6ecedc527304df99bd9d36dfd6bb47da0656724b3098ac7ac",
+  "n1_experiments/mqar_moe/verify.py": "51424337e234993e8f6cb10e9f502978bd28289546c9f5bc56cc2e25356af516",
+  "n1_experiments/tasks/mqar.py": "e8a0419c097c40d1a8934c95ee25a214d7778ad9e1836dcda4e5ede31ee61ac5"
+}
