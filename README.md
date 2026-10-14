@@ -136,7 +136,7 @@ x=(x_0,\ldots,x_{N-1})\in\mathcal C^N,\qquad |\mathcal C|=c.
 对于每个查询位置`i`，在前面找相同的token，输出它后面的token：
 
 ```math
-1\le i<N,\quad \exists\,0\le j<i:\ x_i=x_j
+1\le i\lt N,\quad \exists\,0\le j\lt i:\ x_i=x_j
 \quad\Longrightarrow\quad y_i=x_{j+1}.
 ```
 
