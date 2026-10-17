@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="report-publication" content="1">
+<meta name="source-sha256" content="ba4228c9c68c3e6322c8637be58e9b9dff2f9c91253d195ec10d304464b6d1ae">
+<title>任务A｜从头实现Transformer与长距离信息利用</title>
+<style>
+
+:root { color-scheme: light; --ink:#2f2923; --muted:#62584b; --line:#aa9b84; --cream:#F5EDDA; }
+* { box-sizing:border-box; }
+html { background:var(--cream); }
+body { margin:0; color:var(--ink); background:var(--cream);
+  font-family:"Songti SC","Noto Serif CJK SC","Source Han Serif SC",serif;
+  font-size:14px; line-height:1.72; -webkit-font-smoothing:antialiased; }
+main { width:min(100% - 48px, 900px); margin:28px auto 48px; }
+h1,h2,h3,h4 { font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;
+  color:var(--ink); font-weight:600; line-height:1.4; break-after:avoid-page; }
+h1 { font-size:23px; margin:0 0 9px; }
+h2 { font-size:18px; margin:25px 0 10px; }
+h3 { font-size:15.5px; margin:20px 0 8px; }
+h4 { font-size:14px; margin:14px 0 6px; }
+h3.condition-group { font-size:19px; font-weight:700; margin:25px 0 12px; }
+p { margin:0 0 9px; orphans:3; widows:3; }
+strong { font-weight:700; }
+a { color:#4a3828; text-decoration-thickness:.65px; text-underline-offset:2px;
+  overflow-wrap:anywhere; }
+a:hover { color:#8c6545; }
+ul,ol { margin:6px 0 11px; padding-left:1.65em; }
+li { margin:3px 0; }
+li > p { margin-bottom:4px; }
+blockquote { margin:10px 0; padding-left:12px; border-left:1px solid var(--line); }
+blockquote.finding-box { margin:12px 0 15px; padding:10px 14px;
+  border:1px solid #c89d60; border-radius:10px; background:#fcf7ed;
+  box-shadow:0 2px 0 #ecd5ae; color:var(--ink); break-inside:avoid; }
+blockquote.finding-box > :last-child { margin-bottom:0; }
+blockquote.finding-box > p + p { margin-top:5px; }
+blockquote.finding-box strong { font-weight:700; }
+code,pre { font-family:"SFMono-Regular",Menlo,monospace; font-size:.89em; }
+code { padding:0 2px; }
+pre { margin:10px 0; padding:8px 10px; background:var(--cream); white-space:pre-wrap; }
+hr { border:0; border-top:1px solid var(--line); margin:18px 0; }
+.table-wrap { margin:10px 0 13px; max-width:100%; overflow-x:auto; }
+table { width:100%; border-collapse:collapse; border-spacing:0; color:var(--ink);
+  background:var(--cream); font-family:"Times New Roman","Songti SC","Noto Serif CJK SC",serif;
+  font-size:11.5px; line-height:1.43; border-top:1.1px solid var(--ink);
+  border-bottom:1.1px solid var(--ink); font-variant-numeric:tabular-nums lining-nums; }
+thead { border-bottom:.7px solid var(--line); }
+th,td { padding:4px 6px; vertical-align:top; border:0; }
+th { font-weight:550; text-align:center; max-width:12em; overflow-wrap:anywhere; }
+td { text-align:left; overflow-wrap:anywhere; }
+td.num { text-align:right !important; white-space:nowrap; }
+td.label { text-align:left !important; }
+table a { text-decoration-thickness:.55px; }
+p:has(> img:only-child) { margin:10px 0 5px; text-align:center; break-inside:avoid; }
+img { display:block; width:auto; max-width:100%; max-height:310px; height:auto;
+  margin:0 auto; object-fit:contain; break-inside:avoid; }
+img.task-figure { max-height:155px; }
+p.figure-caption { margin:0 0 14px; color:var(--muted); font-size:12px; line-height:1.55; }
+.math-display { margin:8px 0 12px; overflow-x:auto; text-align:center; }
+.math-inline { white-space:nowrap; }
+math { color:var(--ink); font-size:1.04em; }
+math[display="block"] { margin:0; }
+@media (max-width:600px) {
+  main { width:calc(100% - 28px); margin-top:18px; }
+  body { font-size:13px; }
+  h1 { font-size:20px; }
+  h2 { font-size:17px; }
+  h3 { font-size:15px; }
+  h3.condition-group { font-size:18px; margin-top:22px; }
+  table { font-size:10.5px; }
+  th,td { padding:3px 4px; }
+  img { max-height:280px; }
+  blockquote.finding-box { padding:9px 11px; border-radius:8px; }
+}
+@page { size:A4; margin:13mm 13mm 15mm; }
+@media print {
+  html,body { background:var(--cream); }
+  body { font-size:9.5pt; line-height:1.6; print-color-adjust:exact; -webkit-print-color-adjust:exact; }
+  main { width:auto; max-width:none; margin:0; }
+  h1 { font-size:17pt; }
+  h2 { font-size:13pt; margin-top:16pt; }
+  h3 { font-size:11pt; margin-top:12pt; }
+  h3.condition-group { font-size:13pt; margin-top:16pt; }
+  p { margin-bottom:6pt; }
+  .table-wrap { overflow:visible; margin:7pt 0 10pt; }
+  table { font-size:8pt; line-height:1.35; }
+  th,td { padding:3pt 4pt; }
+  thead { display:table-header-group; }
+  tr { break-inside:avoid-page; }
+  img { max-height:70mm; }
+  img.task-figure { max-height:35mm; }
+  p.figure-caption { font-size:8.4pt; }
+  a { color:inherit; }
+  .math-display { overflow:visible; }
+  blockquote.finding-box { margin:8pt 0 10pt; padding:7pt 10pt;
+    border-radius:7pt; border-bottom-width:1.5pt; box-shadow:none; break-inside:avoid-page; }
+}
+
+</style>
+</head>
+<body>
+<main>
+<h1 id="面试官你好我是miles-zhu这是我这两次任务的情况说明还请你过目了">面试官你好😊我是Miles Zhu，这是我这两次任务的情况说明，还请你过目了！</h1>
+<h1 id="任务一从头实现transformer并且构造一个必须依赖较远信息才能正确预测的-synthetic-task验证模型是否真正利用上下文">任务一：从头实现Transformer并且构造一个必须依赖较远信息才能正确预测的 synthetic task，验证模型是否真正利用上下文</h1>
+<h2 id="代码">代码</h2>
+<p><code>1_代码</code> 保存已有实现，按模块分为以下子文件夹。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>文件夹</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>tokenizer</code></td>
+<td>自写 BPE 训练、编码和解码</td>
+</tr>
+<tr>
+<td><code>transformer</code></td>
+<td>Linear、Embedding、RMSNorm、RoPE、Softmax、因果多头注意力、SwiGLU、Transformer block 和语言模型</td>
+</tr>
+<tr>
+<td><code>moe</code></td>
+<td>Top-2 路由、专家分发、输出加权、负载均衡损失、MoE Transformer 和 grouped GEMM 实现</td>
+</tr>
+<tr>
+<td><code>trainingloop</code></td>
+<td>训练循环、数据采样、checkpoint 保存和加载</td>
+</tr>
+<tr>
+<td><code>optimizer</code></td>
+<td>自写 AdamW</td>
+</tr>
+<tr>
+<td><code>training_utils</code></td>
+<td>自写交叉熵、梯度裁剪和余弦学习率调度</td>
+</tr>
+<tr>
+<td><code>decoding</code></td>
+<td>文本生成代码</td>
+</tr>
+<tr>
+<td><code>experiments</code></td>
+<td>OWT、SFT、MQAR 的实际训练入口、数据构造、评估和配置</td>
+</tr>
+</tbody></table></div>
+<p><code>2_实验和训练数据</code> 保存 OWT、SFT、MQAR 的配置、训练指标、评估结果和预测。<code>training_data</code> 保存实际使用的 OWT token 数组、BPE 词表与 merges、smol-smoltalk 训练与验证数据、MQAR 训练与验证及测试数据。<a href="https://github.com/LitzGymrat/N1-AI-school-technical-tasks/releases/tag/training-data-v1">训练数据下载</a>。</p>
+<h2 id="第一部分owt-预训练与-smol-smoltalk-指令微调">第一部分：OWT 预训练与 smol-smoltalk 指令微调</h2>
+<h3 id="owt-预训练">OWT 预训练</h3>
+<p>Dense 和 MoE 均从随机初始化开始，在同一份 OWT 数据上训练。自然语言数据使用自己训练的 32000 词表 BPE tokenizer。每次从训练 token 流中抽取连续片段，预测下一个 token。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>Dense</th>
+<th>MoE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>层数 / hidden size / heads</td>
+<td>6 / 512 / 8</td>
+<td>6 / 512 / 8</td>
+</tr>
+<tr>
+<td>上下文长度 / 词表大小</td>
+<td>2048 / 32000</td>
+<td>2048 / 32000</td>
+</tr>
+<tr>
+<td>FFN</td>
+<td>SwiGLU，宽度 1344</td>
+<td>4 个 SwiGLU 专家，每专家宽度 672，Top-2</td>
+</tr>
+<tr>
+<td>总参数量</td>
+<td>51,452,416</td>
+<td>63,851,008</td>
+</tr>
+<tr>
+<td>Batch size / 梯度累积</td>
+<td>1 / 1</td>
+<td>1 / 1</td>
+</tr>
+<tr>
+<td>更新次数 / 累计输入 tokens</td>
+<td>160000 / 327680000</td>
+<td>160000 / 327680000</td>
+</tr>
+<tr>
+<td>优化器</td>
+<td>自写 AdamW</td>
+<td>自写 AdamW</td>
+</tr>
+<tr>
+<td>峰值 / 最小学习率</td>
+<td>6.00e-4 / 6.00e-5</td>
+<td>6.00e-4 / 6.00e-5</td>
+</tr>
+<tr>
+<td>Warmup / 后续日程</td>
+<td>3200 步 / cosine</td>
+<td>3200 步 / cosine</td>
+</tr>
+<tr>
+<td>AdamW betas / eps / weight decay</td>
+<td>(0.90, 0.95) / 1.00e-8 / 0.10</td>
+<td>(0.90, 0.95) / 1.00e-8 / 0.10</td>
+</tr>
+<tr>
+<td>梯度裁剪上限 / 随机种子</td>
+<td>1.00 / 42</td>
+<td>1.00 / 42</td>
+</tr>
+<tr>
+<td>计算精度 / 注意力</td>
+<td>BF16 autocast / FA2</td>
+<td>BF16 autocast / FA2</td>
+</tr>
+<tr>
+<td>均衡损失系数</td>
+<td>—</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>GPU</td>
+<td>RTX 4090</td>
+<td>RTX 4090</td>
+</tr>
+</tbody></table></div>
+<p>模型参数和优化器状态保持 FP32。MoE 的训练目标为 <code>CE + 0.01 × balance_loss</code>，曲线和下表中的 loss 均为 CE。验证每 4000 步进行一次，使用相同的固定 32 条、每条 2048 tokens 的 OWT 验证片段。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>最终结果</th>
+<th align="right">Dense</th>
+<th align="right">MoE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Train loss</td>
+<td align="right">4.45</td>
+<td align="right">4.43</td>
+</tr>
+<tr>
+<td>Valid loss</td>
+<td align="right">4.34</td>
+<td align="right">4.32</td>
+</tr>
+</tbody></table></div>
+<p>Train loss 为最后一个 800 步记录窗口的平均值。MoE 的最终 train loss 低 0.02，valid loss 低 0.02。</p>
+<p><img src="2_%E5%AE%9E%E9%AA%8C%E5%92%8C%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE/OWT/loss_curves.png" alt="OWT train 与 valid loss"></p>
+<h3 id="smol-smoltalk-指令微调">smol-smoltalk 指令微调</h3>
+<p>Dense 和 MoE 分别加载各自 OWT 第 160000 步的权重，模型和 tokenizer 沿用预训练配置，重新建立优化器与学习率日程。</p>
+<p>数据来自 <code>HuggingFaceTB/smol-smoltalk</code>，revision 为 <code>f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc</code>。保留完整编码长度小于 2048 的对话，再以 seed=42 从 453783 条合格训练样本中均匀无放回抽取一半，即 226891 条；23897 条合格验证样本全部保留。两种模型使用相同的数据和逐轮洗牌顺序。</p>
+<p>保留完整多轮对话，每条对话独立组批，按 batch 内最长样本右侧补齐。所有 assistant 回答及其 EOS 参与监督，system、user、角色标记和 padding 不参与 loss。标签只进行一次 next-token 对齐。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>两种模型共用设置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>最大完整序列长度</td>
+<td>小于 2048</td>
+</tr>
+<tr>
+<td>训练 / 验证样本</td>
+<td>226891 / 23897</td>
+</tr>
+<tr>
+<td>每轮完整序列 tokens / 回答监督 tokens</td>
+<td>188627514 / 152507457</td>
+</tr>
+<tr>
+<td>Batch size / 梯度累积</td>
+<td>64 / 1，保留每轮最后 11 条</td>
+</tr>
+<tr>
+<td>Epochs / 每轮更新 / 总更新</td>
+<td>2 / 3546 / 7092</td>
+</tr>
+<tr>
+<td>优化器</td>
+<td>自写 AdamW，重新初始化状态</td>
+</tr>
+<tr>
+<td>峰值 / 最小学习率</td>
+<td>1.00e-4 / 1.00e-5</td>
+</tr>
+<tr>
+<td>Warmup / 后续日程</td>
+<td>710 步 / cosine</td>
+</tr>
+<tr>
+<td>AdamW betas / eps / weight decay</td>
+<td>(0.90, 0.95) / 1.00e-8 / 0.10</td>
+</tr>
+<tr>
+<td>梯度裁剪上限 / 随机种子</td>
+<td>1.00 / 42</td>
+</tr>
+<tr>
+<td>计算精度 / 注意力</td>
+<td>BF16 autocast / FA2；参数、优化器状态和 CE 为 FP32</td>
+</tr>
+<tr>
+<td>验证与 checkpoint 选择</td>
+<td>每轮结束验证，以全部验证回答 tokens 的平均 CE 选择 best checkpoint</td>
+</tr>
+<tr>
+<td>GPU</td>
+<td>每个模型使用一张 A800 80GB，两张卡并行训练</td>
+</tr>
+</tbody></table></div>
+<p>MoE 保留 4 专家、Top-2、grouped GEMM 后端和 0.01 均衡损失系数。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>结果</th>
+<th align="right">Dense</th>
+<th align="right">MoE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>第 1 轮 valid loss</td>
+<td align="right">1.99</td>
+<td align="right">1.97</td>
+</tr>
+<tr>
+<td>第 2 轮 valid loss</td>
+<td align="right">1.90</td>
+<td align="right">1.89</td>
+</tr>
+<tr>
+<td>最后记录窗口 train loss</td>
+<td align="right">1.88</td>
+<td align="right">1.86</td>
+</tr>
+</tbody></table></div>
+<p>MoE 的最终 train loss 低 0.01，valid loss 低 0.01。曲线直接使用原始记录，验证曲线只有两轮结束时的两个点。</p>
+<p><img src="2_%E5%AE%9E%E9%AA%8C%E5%92%8C%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE/SFT/loss_curves.png" alt="SFT train 与 valid loss"></p>
+<h2 id="第二部分专门训练模型利用-long-range-information">第二部分：专门训练模型利用 long-range information</h2>
+<h3 id="目标与任务构造">目标与任务构造</h3>
+<p>我们希望构造一个任务来检测模型是否在训练中学会了利用long-range information</p>
+<p>一开始我调研了一些相关工作找到了一些任务比如说变量追踪，多跳问答，高频词聚合这一些，</p>
+<p>但是这一些都需要比较强的指令遵循能力：
+我用我在第一部分里面训练出来的模型发现它首先经过OWT训练就没办法正常吐字，容易出现重复，或者说乱码</p>
+<p>比如经典的：Where is the capital of France? The capital of France is France.</p>
+<p>我研究了一下，跟一个性能还行的小模型：SmolLM2-135M相比，预训练的token量差距太大了，</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>SmolLM2-135M</th>
+<th>我们的 Dense</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>总参数</td>
+<td>134.50M</td>
+<td>51.50M</td>
+</tr>
+<tr>
+<td>Transformer 主体参数</td>
+<td>106.20M</td>
+<td>18.70M</td>
+</tr>
+<tr>
+<td>层数</td>
+<td>30</td>
+<td>6</td>
+</tr>
+<tr>
+<td>隐藏维度</td>
+<td>576</td>
+<td>512</td>
+</tr>
+<tr>
+<td>embedding 与输出层</td>
+<td>共享</td>
+<td>独立</td>
+</tr>
+<tr>
+<td>预训练 token</td>
+<td>2 万亿</td>
+<td>3.28 亿</td>
+</tr>
+</tbody></table></div>
+<p>我去试了一下64M的经典开源项目Minimind但是发现它也很差，</p>
+<p><img src="2_%E5%AE%9E%E9%AA%8C%E5%92%8C%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE/MQAR/minimind-3-moe%E8%A1%A8%E7%8E%B0.png" alt="Minimind表现"></p>
+<p>我就知道应该不是我训练参数或者模型本身的问题，很大问题应该是来自于训练量：
+所以在有限的时间和算力之下，他的自然语言任务都表现很差，所以就放弃通过自然语言预训练的模型来完成任务一中测评模型是否在训练过后学会Long-range information利用的问题。</p>
+<p>所以我又调研到一个专门做长序列能力的工作Zoology，他就直接从预训练阶段让模型学习符号任务，这样子更加好训练，便于我在资源有限的情况下去尝试测评这个问题。
+借用其中用于测试模型长上下文中关系捕获能力的任务构造：
+任务形式化：</p>
+<p>按<a href="https://proceedings.iclr.cc/paper_files/paper/2024/file/448fc91f669c15d10364ee01d512cc10-Paper-Conference.pdf#page=5">原论文 §3.2，Definition 3.1</a>，给定输入序列：</p>
+<div class="math-display"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>x</mi><mo>=</mo><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>x</mi><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo><mo>∈</mo><msup><mi mathvariant="script">C</mi><mi>N</mi></msup><mo separator="true">,</mo><mspace width="2em"/><mi mathvariant="normal">∣</mi><mi mathvariant="script">C</mi><mi mathvariant="normal">∣</mi><mo>=</mo><mi>c</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">x=(x_0,\ldots,x_{N-1})\in\mathcal C^N,\qquad |\mathcal C|=c.</annotation></semantics></math></span></div>
+<p>对于每个查询位置<code>i</code>，在前面找相同的token，输出它后面的token：</p>
+<div class="math-display"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>&lt;</mo><mi>N</mi><mo separator="true">,</mo><mspace width="1em"/><mi mathvariant="normal">∃</mi><mtext> </mtext><mn>0</mn><mo>≤</mo><mi>j</mi><mo>&lt;</mo><mi>i</mi><mo>:</mo><mtext> </mtext><msub><mi>x</mi><mi>i</mi></msub><mo>=</mo><msub><mi>x</mi><mi>j</mi></msub><mspace width="1em"/><mo>⟹</mo><mspace width="1em"/><msub><mi>y</mi><mi>i</mi></msub><mo>=</mo><msub><mi>x</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">1\le i\lt N,\quad \exists\,0\le j\lt i:\ x_i=x_j
+\quad\Longrightarrow\quad y_i=x_{j+1}.</annotation></semantics></math></span></div>
+<p>我们这里取<code>N=512</code>、<code>c=8192</code>、<code>D=64</code>，把键值对放在前缀，query放在后面的<code>q_r</code>位置：</p>
+<div class="math-display"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>x</mi><mrow><mn>2</mn><mi>r</mi></mrow></msub><mo>=</mo><msub><mi>k</mi><mi>r</mi></msub><mo separator="true">,</mo><mspace width="1em"/><msub><mi>x</mi><mrow><mn>2</mn><mi>r</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>v</mi><mi>r</mi></msub><mo separator="true">,</mo><mspace width="1em"/><msub><mi>x</mi><msub><mi>q</mi><mi>r</mi></msub></msub><mo>=</mo><msub><mi>k</mi><mi>r</mi></msub><mo separator="true">,</mo><mspace width="1em"/><msub><mi>y</mi><msub><mi>q</mi><mi>r</mi></msub></msub><mo>=</mo><msub><mi>v</mi><mi>r</mi></msub><mo separator="true">,</mo><mspace width="2em"/><mi>r</mi><mo>=</mo><mn>0</mn><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><mi>D</mi><mo>−</mo><mn>1.</mn></mrow><annotation encoding="application/x-tex">x_{2r}=k_r,\quad x_{2r+1}=v_r,\quad x_{q_r}=k_r,
+\quad y_{q_r}=v_r,\qquad r=0,\ldots,D-1.</annotation></semantics></math></span></div>
+<p>每条样本重新随机配对，key和value分别无放回采样。query位置按幂律采样（α=0.01），其余位置填0，只在query位置算loss。</p>
+<p>训练举例子：</p>
+<p>这里用一个缩短的样本举例，每个字母占一个token：</p>
+<pre><code class="language-text">位置： 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+输入： A a B b 0 0 B 0 0 0  0  0  A  0  0  0
+标签： · · · · · · b · · ·  ·  ·  a  ·  ·  ·
+</code></pre>
+<p>位置6的B要回答b，位置12的A要回答a，<code>·</code>表示不算loss。下一条样本如果是<code>A c</code>、<code>B d</code>，就要回答c和d。</p>
+<p>实际测试举例子：</p>
+<p>512长度远距离测试集第0条样本，数字是实际符号ID：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>前面的键值对</th>
+<th align="right">key位置</th>
+<th align="right">query位置</th>
+<th align="right">距离</th>
+<th align="right">正确value</th>
+<th align="right">Dense回答</th>
+<th align="right">MoE回答</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>3909 → 7511</td>
+<td align="right">0</td>
+<td align="right">510</td>
+<td align="right">510</td>
+<td align="right">7511</td>
+<td align="right">7511</td>
+<td align="right">7511</td>
+</tr>
+<tr>
+<td>1076 → 5474</td>
+<td align="right">64</td>
+<td align="right">446</td>
+<td align="right">382</td>
+<td align="right">5474</td>
+<td align="right">5474</td>
+<td align="right">5474</td>
+</tr>
+<tr>
+<td>1477 → 7054</td>
+<td align="right">126</td>
+<td align="right">432</td>
+<td align="right">306</td>
+<td align="right">7054</td>
+<td align="right">7054</td>
+<td align="right">7054</td>
+</tr>
+</tbody></table></div>
+<p>首先明确我们的核心问题：“测评模型是否在训练过后学会Long-range information利用”</p>
+<p>为什么说这个任务可以体现这个点呢？</p>
+<p>首先这个任务本身就要求模型捕获位置和逻辑关系去匹配键值对，比如“前面出现A a，后面再出现A的时候要找到a”，
+这个可以理解为对于信息的利用，那么我们如果将键值对的距离进行控制，使其相对较长，就成为了一个长距离信息利用的任务,也就是任务所要求的<strong>必须依赖较远信息</strong>才能准确预测的任务。到这里还是很合理的。</p>
+<p>所以我们希望模型能够从这个训练中学习到这样的长距离信息利用的能力，而不仅仅是记住。</p>
+<p>由于验证集中的长距离键值对匹配是模型没见过的，假如他并没有学会这样的能力，他不可能能够大量的匹配好没见过的组合，我认为这个分布外的能力测试是能够反映其学会了这样的利用。</p>
+<p>因此我选择构造这个任务，认为其可以测评模型是否在训练过后学会Long-range information利用。
+首先为了清楚说明，我们定义Long-range information为：</p>
+<div class="math-display"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mo>=</mo><mtext>训练时的 </mtext><mrow><mi mathvariant="monospace">c</mi><mi mathvariant="monospace">o</mi><mi mathvariant="monospace">n</mi><mi mathvariant="monospace">t</mi><mi mathvariant="monospace">e</mi><mi mathvariant="monospace">x</mi><mi mathvariant="monospace">t</mi><mi mathvariant="monospace">_</mi><mi mathvariant="monospace">l</mi><mi mathvariant="monospace">e</mi><mi mathvariant="monospace">n</mi></mrow><mo>=</mo><mn>512</mn><mo separator="true">,</mo><mspace width="2em"/><mi mathvariant="normal">Δ</mi><mo>=</mo><mtext>query位置</mtext><mo>−</mo><mtext>对应key首次出现的位置</mtext><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">d=\text{训练时的 }\mathtt{context\_len}=512,\qquad
+\Delta=\text{query位置}-\text{对应key首次出现的位置}.</annotation></semantics></math></span></div>
+<p>这里把距离Δ≥d/2的信息定义为long-range information。</p>
+<p>构造实验：</p>
+<p>我们重新从零训练Dense和MoE，train/valid/test分别是100000/3000/3000条，seed分别是0/10/20。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>Dense</th>
+<th>MoE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>层数 / hidden size / heads</td>
+<td>2 / 512 / 1</td>
+<td>2 / 512 / 1</td>
+</tr>
+<tr>
+<td>上下文长度 / 词表大小</td>
+<td>512 / 8192</td>
+<td>512 / 8192</td>
+</tr>
+<tr>
+<td>位置编码 / 归一化</td>
+<td>RoPE，theta=10000 / pre-RMSNorm</td>
+<td>同左</td>
+</tr>
+<tr>
+<td>FFN</td>
+<td>SwiGLU，宽度 1344</td>
+<td>4 个 SwiGLU 专家，每专家宽度 672，Top-2</td>
+</tr>
+<tr>
+<td>Embedding 与输出权重</td>
+<td>共享</td>
+<td>共享</td>
+</tr>
+<tr>
+<td>Embedding / attention dropout</td>
+<td>0.10 / 0.10</td>
+<td>0.10 / 0.10</td>
+</tr>
+<tr>
+<td>初始权重标准差</td>
+<td>0.02；残差输出投影为 0.01</td>
+<td>同左</td>
+</tr>
+<tr>
+<td>Batch size</td>
+<td>128，保留尾 batch=32</td>
+<td>同左</td>
+</tr>
+<tr>
+<td>优化器 / betas / eps / weight decay</td>
+<td>torch AdamW（fused）/ (0.90, 9.99e-1) / 1.00e-8 / 0.10</td>
+<td>同左</td>
+</tr>
+<tr>
+<td>初始学习率</td>
+<td>2.15e-3</td>
+<td>同左</td>
+</tr>
+<tr>
+<td>学习率日程</td>
+<td>每轮更新 cosine，T_max=64，最小值 0，无 warmup</td>
+<td>同左</td>
+</tr>
+<tr>
+<td>精度 / 注意力</td>
+<td>FP32，关闭 TF32 / efficient SDPA</td>
+<td>同左</td>
+</tr>
+<tr>
+<td>监督</td>
+<td>仅计算每条样本 64 个 query 的 CE</td>
+<td>同左，另加 0.01 × balance_loss</td>
+</tr>
+<tr>
+<td>最大预算 / 停止条件</td>
+<td>64 轮 / 每轮验证，准确率 &gt;99.00% 时停止</td>
+<td>同左</td>
+</tr>
+<tr>
+<td>初始化种子</td>
+<td>123</td>
+<td>123，共享部分的初始权重与 Dense 相同</td>
+</tr>
+<tr>
+<td>实际训练轮数 / 更新次数</td>
+<td>20 / 15640</td>
+<td>16 / 12512</td>
+</tr>
+</tbody></table></div>
+<ol>
+<li>512长度内：100条，每条64个query，距离都在<code>[256,512)</code>；256、258、……、510这些合法距离各出现50次。</li>
+<li>1024长度外推：保持同一批样本的KV和答案不变，把query后移到<code>Δ∈[512,1024)</code>；512、514、……、1022这些合法距离各出现25次。另设末尾补0、query位置不动的对照组。模型不再训练，RoPE按原公式扩展缓存，theta不变。</li>
+</ol>
+<p>准确率只统计query位置：</p>
+<div class="math-display"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">y</mi></mrow><mo>=</mo><mfrac><mtext>回答正确的query数</mtext><mtext>全部query数</mtext></mfrac><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\mathrm{Accuracy}=\frac{\text{回答正确的query数}}{\text{全部query数}}.</annotation></semantics></math></span></div>
+<p>实验结果(各项细粒度也给出，附上图注)：</p>
+<p><img src="2_%E5%AE%9E%E9%AA%8C%E5%92%8C%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE/MQAR/test_accuracy.png" alt="原始独立test的准确率"></p>
+<p>图注：原始独立test，3000条样本、192000个query；柱上标出准确率和正确数。</p>
+<p><img src="2_%E5%AE%9E%E9%AA%8C%E5%92%8C%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE/MQAR/evaluation_accuracy.png" alt="两组远距离测试与补零对照的结果"></p>
+<p>图注：每组100条、6400个query；左图是query准确率，右图是整条64个query全对的比例。</p>
+<p><img src="2_%E5%AE%9E%E9%AA%8C%E5%92%8C%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE/MQAR/distance_accuracy.png" alt="Dense和MoE在不同距离区间的准确率"></p>
+<p>图注：左图是512长度，右图是1024长度；横轴是距离区间，纵轴是query准确率，每个区间1600个query。</p>
+<p>对于MoE和Dense模型，我们可以看到，经过了一定量的训练</p>
+<p>1.对于在训练的context_len之内：
+他们在给定的序列之内，面对没见过的符号键值对组合也能够有相当的准确率，这个组合他们并没有见过。</p>
+<p>假如他没有在预训练中学会这项能力，我认为其不可能泛化过去。</p>
+<p>2.对于从512-1024，超出的context_len。
+可以看到我们超出训练的上下文范畴，两个模型在一定范围内，依然能够有一定的查找匹配准确率，其中MoE在[768,896)的准确率是75.44%，在[896,1024)仍有46.00</p>
+<p>面对超出训练的上下文范畴，他们依然能够在long-range（大于等于d/2甚至大于d）的情况下，去匹配键值也就是利用信息，进一步为其收获了这种利用长距离上下文的能力提供了依据</p>
+<p>综上所述，我认为有充足理由说明，经过针对MQAR任务的预训练之后，不仅仅模型能跑通，并且收获了一定的可泛化的远距离信息依赖处理能力，在分布外任务提现出对上下文的实际利用，而非记忆。
+至此，任务一完成</p>
+</main>
+</body>
+</html>
