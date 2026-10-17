@@ -1,0 +1,40 @@
+{
+  "captured_at_china": "2026-10-16T19:07:58.200820+08:00",
+  "read_only": true,
+  "rows": [
+    {
+      "seed": 0,
+      "run_id": "f4da27bbced6fd16",
+      "state": "running",
+      "url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/f4da27bbced6fd16",
+      "global_step": 97825,
+      "bench_long": 0.9282114505767822,
+      "valid_acc": 0.925537109375,
+      "final_result_steps_done": 64000,
+      "final_test_long": 0.8293017745018005,
+      "final_test_short": 0.8269805908203125,
+      "final_test_all": 0.8281402587890625,
+      "final_test_seed": 888,
+      "final_test_queries": 131072,
+      "final_test_benchmark_sha256": "126c81304b48d43fb51c7b80125e9c06baa84d480c5ea61703709b3e212e74ad",
+      "note": "final_result can be inherited from parent; use only if final_result_steps_done exceeds 64000 and agrees with completed continuation endpoint"
+    },
+    {
+      "seed": 1,
+      "run_id": "b0393e498ee66355",
+      "state": "running",
+      "url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/b0393e498ee66355",
+      "global_step": 97975,
+      "bench_long": 0.8597418665885925,
+      "valid_acc": 0.8568115234375,
+      "final_result_steps_done": 64000,
+      "final_test_long": 0.8490929007530212,
+      "final_test_short": 0.8514057397842407,
+      "final_test_all": 0.850250244140625,
+      "final_test_seed": 888,
+      "final_test_queries": 131072,
+      "final_test_benchmark_sha256": "126c81304b48d43fb51c7b80125e9c06baa84d480c5ea61703709b3e212e74ad",
+      "note": "final_result can be inherited from parent; use only if final_result_steps_done exceeds 64000 and agrees with completed continuation endpoint"
+    }
+  ]
+}

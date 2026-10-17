@@ -1,0 +1,768 @@
+{
+  "source": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/results_1024_20261017/results_snapshot.json",
+  "source_sha256": "1fbeda2af98411a32ff9c91c12f3924314c47a7ef7e065d0b04f501d88244dbc",
+  "old_source": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv",
+  "old_source_sha256": "a75254ac2025d769a3e986818e34fcbf7f97f8f4d47961e2fb7fefa69d5c1ceb",
+  "figures": {
+    "s31_minimum": [
+      {
+        "condition": "M01",
+        "seed": 1000,
+        "test_long": 0.043644245713949203,
+        "task_id": "n4night_L1024_M01_s1000",
+        "final_step": 64000
+      },
+      {
+        "condition": "M01",
+        "seed": 1001,
+        "test_long": 0.04446887597441673,
+        "task_id": "n4night_L1024_M01_s1001",
+        "final_step": 64000
+      },
+      {
+        "condition": "M01",
+        "seed": 1002,
+        "test_long": 0.04341518506407738,
+        "task_id": "n4night_L1024_M01_s1002",
+        "final_step": 64000
+      },
+      {
+        "condition": "M01",
+        "seed": 1003,
+        "test_long": 0.037871845066547394,
+        "task_id": "n4night_L1024_M01_s1003",
+        "final_step": 64000
+      },
+      {
+        "condition": "M01",
+        "seed": 1004,
+        "test_long": 0.0439496673643589,
+        "task_id": "n4night_L1024_M01_s1004",
+        "final_step": 64000
+      },
+      {
+        "condition": "M01",
+        "seed": 1005,
+        "test_long": 0.037566427141427994,
+        "task_id": "n4night_L1024_M01_s1005",
+        "final_step": 64000
+      },
+      {
+        "condition": "M01",
+        "seed": 1006,
+        "test_long": 0.04390385374426842,
+        "task_id": "n4night_L1024_M01_s1006",
+        "final_step": 64000
+      },
+      {
+        "condition": "M01",
+        "seed": 1007,
+        "test_long": 0.04407183453440666,
+        "task_id": "n4night_L1024_M01_s1007",
+        "final_step": 64000
+      },
+      {
+        "condition": "M01",
+        "seed": 1008,
+        "test_long": 0.03981124982237816,
+        "task_id": "n4night_L1024_M01_s1008",
+        "final_step": 64000
+      },
+      {
+        "condition": "M01",
+        "seed": 1009,
+        "test_long": 0.04084967076778412,
+        "task_id": "n4night_L1024_M01_s1009",
+        "final_step": 64000
+      },
+      {
+        "condition": "M01",
+        "seed": 1010,
+        "test_long": 0.04349153861403465,
+        "task_id": "n4night_L1024_M01_s1010",
+        "final_step": 64000
+      },
+      {
+        "condition": "M02",
+        "seed": 1000,
+        "test_long": 0.9978009462356567,
+        "task_id": "n4night_L1024_M02_s1000",
+        "final_step": 64000
+      },
+      {
+        "condition": "M02",
+        "seed": 1001,
+        "test_long": 0.9755665063858032,
+        "task_id": "n4night_L1024_M02_s1001",
+        "final_step": 64000
+      },
+      {
+        "condition": "M02",
+        "seed": 1002,
+        "test_long": 0.20163702964782715,
+        "task_id": "n4night_L1024_M02_s1002",
+        "final_step": 64000
+      },
+      {
+        "condition": "M02",
+        "seed": 1003,
+        "test_long": 0.9998319745063782,
+        "task_id": "n4night_L1024_M02_s1003",
+        "final_step": 64000
+      },
+      {
+        "condition": "M02",
+        "seed": 1004,
+        "test_long": 0.02774723432958126,
+        "task_id": "n4night_L1024_M02_s1004",
+        "final_step": 64000
+      },
+      {
+        "condition": "M02",
+        "seed": 1005,
+        "test_long": 0.06525257974863052,
+        "task_id": "n4night_L1024_M02_s1005",
+        "final_step": 64000
+      },
+      {
+        "condition": "M02",
+        "seed": 1006,
+        "test_long": 0.07136093825101852,
+        "task_id": "n4night_L1024_M02_s1006",
+        "final_step": 64000
+      },
+      {
+        "condition": "M02",
+        "seed": 1007,
+        "test_long": 0.0589151531457901,
+        "task_id": "n4night_L1024_M02_s1007",
+        "final_step": 64000
+      },
+      {
+        "condition": "M02",
+        "seed": 1008,
+        "test_long": 0.03070979006588459,
+        "task_id": "n4night_L1024_M02_s1008",
+        "final_step": 64000
+      },
+      {
+        "condition": "M02",
+        "seed": 1009,
+        "test_long": 0.025410786271095276,
+        "task_id": "n4night_L1024_M02_s1009",
+        "final_step": 64000
+      },
+      {
+        "condition": "M02",
+        "seed": 1010,
+        "test_long": 0.8066855669021606,
+        "task_id": "n4night_L1024_M02_s1010",
+        "final_step": 64000
+      }
+    ],
+    "s33_position": [
+      {
+        "condition": "C00",
+        "seed": 0,
+        "test_long": 0.08377618342638016,
+        "source": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+      },
+      {
+        "condition": "C00",
+        "seed": 1,
+        "test_long": 0.9997556209564208,
+        "source": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+      },
+      {
+        "condition": "C00",
+        "seed": 2,
+        "test_long": 0.08260032534599304,
+        "source": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+      },
+      {
+        "condition": "P01",
+        "seed": 0,
+        "test_long": 0.056517619639635086,
+        "source": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+      },
+      {
+        "condition": "P01",
+        "seed": 1,
+        "test_long": 0.04065115004777908,
+        "source": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+      },
+      {
+        "condition": "P01",
+        "seed": 2,
+        "test_long": 0.04740089178085327,
+        "source": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+      },
+      {
+        "condition": "P02",
+        "seed": 0,
+        "test_long": 0.03284771740436554,
+        "source": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+      },
+      {
+        "condition": "P02",
+        "seed": 1,
+        "test_long": 0.0320536307990551,
+        "source": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+      },
+      {
+        "condition": "P02",
+        "seed": 2,
+        "test_long": 0.03180929645895958,
+        "source": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+      },
+      {
+        "condition": "P01",
+        "seed": 1000,
+        "test_long": 0.049095962196588516,
+        "task_id": "n4night_L1024_P01_s1000",
+        "final_step": 24000
+      },
+      {
+        "condition": "P01",
+        "seed": 1001,
+        "test_long": 0.04509498178958893,
+        "task_id": "n4night_L1024_P01_s1001",
+        "final_step": 24000
+      },
+      {
+        "condition": "P01",
+        "seed": 1002,
+        "test_long": 0.04355262219905853,
+        "task_id": "n4night_L1024_P01_s1002",
+        "final_step": 24000
+      },
+      {
+        "condition": "P01",
+        "seed": 1003,
+        "test_long": 0.052425019443035126,
+        "task_id": "n4night_L1024_P01_s1003",
+        "final_step": 24000
+      },
+      {
+        "condition": "P01",
+        "seed": 1004,
+        "test_long": 0.037749677896499634,
+        "task_id": "n4night_L1024_P01_s1004",
+        "final_step": 24000
+      },
+      {
+        "condition": "P01",
+        "seed": 1005,
+        "test_long": 0.054135359823703766,
+        "task_id": "n4night_L1024_P01_s1005",
+        "final_step": 24000
+      },
+      {
+        "condition": "P01",
+        "seed": 1006,
+        "test_long": 0.04297232627868652,
+        "task_id": "n4night_L1024_P01_s1006",
+        "final_step": 24000
+      },
+      {
+        "condition": "P01",
+        "seed": 1007,
+        "test_long": 0.0460875928401947,
+        "task_id": "n4night_L1024_P01_s1007",
+        "final_step": 24000
+      },
+      {
+        "condition": "P03",
+        "seed": 1000,
+        "test_long": 0.9999846816062927,
+        "task_id": "n4night_L1024_P03_s1000",
+        "final_step": 24000
+      },
+      {
+        "condition": "P03",
+        "seed": 1001,
+        "test_long": 0.9997251033782959,
+        "task_id": "n4night_L1024_P03_s1001",
+        "final_step": 24000
+      },
+      {
+        "condition": "P03",
+        "seed": 1002,
+        "test_long": 0.9953117966651917,
+        "task_id": "n4night_L1024_P03_s1002",
+        "final_step": 24000
+      },
+      {
+        "condition": "P03",
+        "seed": 1003,
+        "test_long": 0.9998014569282532,
+        "task_id": "n4night_L1024_P03_s1003",
+        "final_step": 24000
+      },
+      {
+        "condition": "P03",
+        "seed": 1004,
+        "test_long": 0.999893069267273,
+        "task_id": "n4night_L1024_P03_s1004",
+        "final_step": 24000
+      },
+      {
+        "condition": "P03",
+        "seed": 1005,
+        "test_long": 0.9999541640281677,
+        "task_id": "n4night_L1024_P03_s1005",
+        "final_step": 24000
+      },
+      {
+        "condition": "P03",
+        "seed": 1006,
+        "test_long": 0.999923586845398,
+        "task_id": "n4night_L1024_P03_s1006",
+        "final_step": 24000
+      },
+      {
+        "condition": "P03",
+        "seed": 1007,
+        "test_long": 0.9979536533355713,
+        "task_id": "n4night_L1024_P03_s1007",
+        "final_step": 24000
+      },
+      {
+        "condition": "P04_ALIBI_SMEAR",
+        "seed": 0,
+        "test_long": 0.09657320380210876,
+        "task_id": "n4night_L1024_P04_ALIBI_SMEAR_s0",
+        "final_step": 24000
+      },
+      {
+        "condition": "P04_ALIBI_SMEAR",
+        "seed": 1,
+        "test_long": 0.02615906111896038,
+        "task_id": "n4night_L1024_P04_ALIBI_SMEAR_s1",
+        "final_step": 24000
+      },
+      {
+        "condition": "P04_ALIBI_SMEAR",
+        "seed": 2,
+        "test_long": 0.46628183126449585,
+        "task_id": "n4night_L1024_P04_ALIBI_SMEAR_s2",
+        "final_step": 24000
+      }
+    ],
+    "s34_coverage": [
+      {
+        "condition": "D00",
+        "seed": 1000,
+        "test_long": 0.09023577719926834,
+        "task_id": "n4night_L1024_D00_s1000",
+        "final_step": 24000
+      },
+      {
+        "condition": "D00",
+        "seed": 1001,
+        "test_long": 0.06477917730808258,
+        "task_id": "n4night_L1024_D00_s1001",
+        "final_step": 24000
+      },
+      {
+        "condition": "D00",
+        "seed": 1002,
+        "test_long": 0.03574918955564499,
+        "task_id": "n4night_L1024_D00_s1002",
+        "final_step": 24000
+      },
+      {
+        "condition": "D00",
+        "seed": 1003,
+        "test_long": 0.15851199626922607,
+        "task_id": "n4night_L1024_D00_s1003",
+        "final_step": 24000
+      },
+      {
+        "condition": "D00",
+        "seed": 1004,
+        "test_long": 0.06688656657934189,
+        "task_id": "n4night_L1024_D00_s1004",
+        "final_step": 24000
+      },
+      {
+        "condition": "D00",
+        "seed": 1005,
+        "test_long": 0.055479198694229126,
+        "task_id": "n4night_L1024_D00_s1005",
+        "final_step": 24000
+      },
+      {
+        "condition": "D00",
+        "seed": 1006,
+        "test_long": 0.0949544906616211,
+        "task_id": "n4night_L1024_D00_s1006",
+        "final_step": 24000
+      },
+      {
+        "condition": "D00",
+        "seed": 1007,
+        "test_long": 0.12838250398635864,
+        "task_id": "n4night_L1024_D00_s1007",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1000,
+        "test_long": 0.996197521686554,
+        "task_id": "n4night_L1024_D03_s1000",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1001,
+        "test_long": 0.9985644817352295,
+        "task_id": "n4night_L1024_D03_s1001",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1002,
+        "test_long": 0.9954797625541687,
+        "task_id": "n4night_L1024_D03_s1002",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1003,
+        "test_long": 0.9983506798744202,
+        "task_id": "n4night_L1024_D03_s1003",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1004,
+        "test_long": 0.9979689121246338,
+        "task_id": "n4night_L1024_D03_s1004",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1005,
+        "test_long": 0.9958615303039551,
+        "task_id": "n4night_L1024_D03_s1005",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1006,
+        "test_long": 0.9972512125968933,
+        "task_id": "n4night_L1024_D03_s1006",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1007,
+        "test_long": 0.9985950589179993,
+        "task_id": "n4night_L1024_D03_s1007",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1008,
+        "test_long": 0.9981216192245483,
+        "task_id": "n4night_L1024_D03_s1008",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1009,
+        "test_long": 0.9983049035072327,
+        "task_id": "n4night_L1024_D03_s1009",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1010,
+        "test_long": 0.9966556429862976,
+        "task_id": "n4night_L1024_D03_s1010",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1011,
+        "test_long": 0.9979842305183411,
+        "task_id": "n4night_L1024_D03_s1011",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1012,
+        "test_long": 0.9970832467079163,
+        "task_id": "n4night_L1024_D03_s1012",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1013,
+        "test_long": 0.9953423142433167,
+        "task_id": "n4night_L1024_D03_s1013",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1014,
+        "test_long": 0.9974650144577026,
+        "task_id": "n4night_L1024_D03_s1014",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1015,
+        "test_long": 0.9966403841972351,
+        "task_id": "n4night_L1024_D03_s1015",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1016,
+        "test_long": 0.9969610571861267,
+        "task_id": "n4night_L1024_D03_s1016",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1017,
+        "test_long": 0.9950674772262573,
+        "task_id": "n4night_L1024_D03_s1017",
+        "final_step": 24000
+      },
+      {
+        "condition": "D03",
+        "seed": 1018,
+        "test_long": 0.9986255764961243,
+        "task_id": "n4night_L1024_D03_s1018",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1000,
+        "test_long": 0.9982590675354004,
+        "task_id": "n4night_L1024_D25_s1000",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1001,
+        "test_long": 0.9987019300460815,
+        "task_id": "n4night_L1024_D25_s1001",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1002,
+        "test_long": 0.9992364048957825,
+        "task_id": "n4night_L1024_D25_s1002",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1003,
+        "test_long": 0.9994349479675293,
+        "task_id": "n4night_L1024_D25_s1003",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1004,
+        "test_long": 0.9996029138565063,
+        "task_id": "n4night_L1024_D25_s1004",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1005,
+        "test_long": 0.9992822408676147,
+        "task_id": "n4night_L1024_D25_s1005",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1006,
+        "test_long": 0.9997098445892334,
+        "task_id": "n4night_L1024_D25_s1006",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1007,
+        "test_long": 0.9980452656745911,
+        "task_id": "n4night_L1024_D25_s1007",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1008,
+        "test_long": 0.9985034465789795,
+        "task_id": "n4night_L1024_D25_s1008",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1009,
+        "test_long": 0.9994349479675293,
+        "task_id": "n4night_L1024_D25_s1009",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1010,
+        "test_long": 0.9988852143287659,
+        "task_id": "n4night_L1024_D25_s1010",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1011,
+        "test_long": 0.9849428534507751,
+        "task_id": "n4night_L1024_D25_s1011",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1012,
+        "test_long": 0.998717188835144,
+        "task_id": "n4night_L1024_D25_s1012",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1013,
+        "test_long": 0.9981369376182556,
+        "task_id": "n4night_L1024_D25_s1013",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1014,
+        "test_long": 0.9991142749786377,
+        "task_id": "n4night_L1024_D25_s1014",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1015,
+        "test_long": 0.9991600513458252,
+        "task_id": "n4night_L1024_D25_s1015",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1016,
+        "test_long": 0.9997251033782959,
+        "task_id": "n4night_L1024_D25_s1016",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1017,
+        "test_long": 0.999190628528595,
+        "task_id": "n4night_L1024_D25_s1017",
+        "final_step": 24000
+      },
+      {
+        "condition": "D25",
+        "seed": 1018,
+        "test_long": 0.9989157319068909,
+        "task_id": "n4night_L1024_D25_s1018",
+        "final_step": 24000
+      },
+      {
+        "condition": "D100",
+        "seed": 1000,
+        "test_long": 0.9996334910392761,
+        "task_id": "n4night_L1024_D100_s1000",
+        "final_step": 24000
+      },
+      {
+        "condition": "D100",
+        "seed": 1001,
+        "test_long": 0.9797660112380981,
+        "task_id": "n4night_L1024_D100_s1001",
+        "final_step": 24000
+      },
+      {
+        "condition": "D100",
+        "seed": 1002,
+        "test_long": 0.9997251033782959,
+        "task_id": "n4night_L1024_D100_s1002",
+        "final_step": 24000
+      },
+      {
+        "condition": "D100",
+        "seed": 1003,
+        "test_long": 0.9997556209564209,
+        "task_id": "n4night_L1024_D100_s1003",
+        "final_step": 24000
+      },
+      {
+        "condition": "D100",
+        "seed": 1004,
+        "test_long": 0.9997403621673584,
+        "task_id": "n4night_L1024_D100_s1004",
+        "final_step": 24000
+      },
+      {
+        "condition": "D100",
+        "seed": 1005,
+        "test_long": 0.9996029138565063,
+        "task_id": "n4night_L1024_D100_s1005",
+        "final_step": 24000
+      },
+      {
+        "condition": "D100",
+        "seed": 1006,
+        "test_long": 0.9848359823226929,
+        "task_id": "n4night_L1024_D100_s1006",
+        "final_step": 24000
+      },
+      {
+        "condition": "D100",
+        "seed": 1007,
+        "test_long": 0.9808349609375,
+        "task_id": "n4night_L1024_D100_s1007",
+        "final_step": 24000
+      },
+      {
+        "condition": "D100",
+        "seed": 1008,
+        "test_long": 0.9997708797454834,
+        "task_id": "n4night_L1024_D100_s1008",
+        "final_step": 24000
+      },
+      {
+        "condition": "D100",
+        "seed": 1009,
+        "test_long": 0.9992058873176575,
+        "task_id": "n4night_L1024_D100_s1009",
+        "final_step": 24000
+      },
+      {
+        "condition": "D100",
+        "seed": 1010,
+        "test_long": 0.9998167157173157,
+        "task_id": "n4night_L1024_D100_s1010",
+        "final_step": 24000
+      },
+      {
+        "condition": "D100",
+        "seed": 1011,
+        "test_long": 0.9995418190956116,
+        "task_id": "n4night_L1024_D100_s1011",
+        "final_step": 24000
+      },
+      {
+        "condition": "D100",
+        "seed": 1012,
+        "test_long": 0.9996334910392761,
+        "task_id": "n4night_L1024_D100_s1012",
+        "final_step": 24000
+      }
+    ]
+  }
+}

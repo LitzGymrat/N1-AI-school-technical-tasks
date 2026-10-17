@@ -1,0 +1,11 @@
+{
+ "status": "completed",
+ "job": "M7_direct_B0_s0",
+ "elapsed_seconds": 89.58423066139221,
+ "transformer_training_performed": false,
+ "linear_probe_fits_performed": true,
+ "stage_statuses": {
+  "M1": "completed",
+  "probe": "completed"
+ }
+}

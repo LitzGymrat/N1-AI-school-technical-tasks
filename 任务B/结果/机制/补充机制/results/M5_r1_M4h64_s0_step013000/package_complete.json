@@ -1,0 +1,10 @@
+{
+ "status": "completed",
+ "job": "M5_r1_M4h64_s0_step013000",
+ "elapsed_seconds": 22.669190883636475,
+ "transformer_training_performed": false,
+ "linear_probe_fits_performed": false,
+ "stage_statuses": {
+  "M5": "completed"
+ }
+}

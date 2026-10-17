@@ -1,0 +1,1160 @@
+{
+  "status": "completed",
+  "results": [
+    {
+      "source": {
+        "seed": 0,
+        "step": 0,
+        "path": "/Users/mileszhu/Documents/\u4e2a\u4eba\u9879\u76ee/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_loss_phases_20261017/two_layer_first_drop/inputs/seed0_v0/step_000000_initial.pt",
+        "sha256": "c485b5065dcf8fa072df5fde4772a8bac6afbd24433c0656d4bdcd5347c9e5ce",
+        "artifact": "litzgymrat-nanjing-university/n1-long-range/n2_M02_s0-full-state:v0",
+        "artifact_digest": "5196b0ba1a9441c8db6653643de56350"
+      },
+      "model": {
+        "path": "/Users/mileszhu/Documents/\u4e2a\u4eba\u9879\u76ee/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_loss_phases_20261017/two_layer_first_drop/inputs/seed0_v0/step_000000_initial.pt",
+        "sha256": "c485b5065dcf8fa072df5fde4772a8bac6afbd24433c0656d4bdcd5347c9e5ce",
+        "step": 0,
+        "step_evidence": "checkpoint",
+        "model": {
+          "vocab": 896,
+          "d_model": 256,
+          "n_layer": 2,
+          "n_head": 1,
+          "head_dim": 256,
+          "mlp_mult": 4.0,
+          "max_len": 4096,
+          "pos": "rope",
+          "rope_base": 10000.0,
+          "rope_frac": 1.0,
+          "alibi_scale": 1.0,
+          "attn_scale": "std",
+          "qk_norm": false,
+          "smear": false,
+          "init_std": 0.02,
+          "tie_emb": false
+        },
+        "task": {
+          "L": 1024,
+          "n_q": 32,
+          "n_dis": 32,
+          "dist": "uniform",
+          "d_min": 4,
+          "d_max": 1022,
+          "Vb": 256,
+          "K": 512,
+          "Vv": 128,
+          "background": "iid",
+          "branch": 4
+        },
+        "precision": "bf16",
+        "runtime_model_sha256": "a239d42033d9ff12d87505c9c8dce3f89e48357448c154680e0b40d2f0a4f2e2",
+        "runtime_task_sha256": "e562045e9bc1603af9d95f3471774b234de432dfc3f080da95b056e320d7bc0a"
+      },
+      "sequence_hash": "f41c63614b67ee1c78bc94b89018c0f938defe60571c2bbf1cc18aea1e1d4685",
+      "n_sequences": 128,
+      "long_queries": 2079,
+      "long": {
+        "value_vocab_mass": 0.14271792769432068,
+        "key_vocab_mass": 0.5709318518638611,
+        "background_vocab_mass": 0.2863503098487854,
+        "correct": 0.001443001443001443,
+        "ce": 6.85422420501709
+      },
+      "attention": {
+        "query_L0_value_token_mass": [
+          0.08972430974245071
+        ],
+        "query_L0_value_token_uniform_mass": [
+          0.08972316980361938
+        ],
+        "query_L0_key_token_mass": [
+          0.0908244252204895
+        ],
+        "query_L0_key_token_uniform_mass": [
+          0.09085781872272491
+        ],
+        "query_L0_background_token_mass": [
+          0.8194513320922852
+        ],
+        "query_L0_background_token_uniform_mass": [
+          0.8194190263748169
+        ],
+        "query_L0_effective_visible_fraction": [
+          0.9947543144226074
+        ],
+        "query_L0_target_position_mass": [
+          0.0011370256543159485
+        ],
+        "value_L0_value_token_mass": [
+          0.15555858612060547
+        ],
+        "value_L0_value_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L0_key_token_mass": [
+          0.15596255660057068
+        ],
+        "value_L0_key_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L0_background_token_mass": [
+          0.6884788870811462
+        ],
+        "value_L0_background_token_uniform_mass": [
+          0.6883518695831299
+        ],
+        "value_L0_effective_visible_fraction": [
+          0.9948725700378418
+        ],
+        "value_L0_target_position_mass": [
+          0.03417909890413284
+        ],
+        "query_L1_value_token_mass": [
+          0.08970453590154648
+        ],
+        "query_L1_value_token_uniform_mass": [
+          0.08972316980361938
+        ],
+        "query_L1_key_token_mass": [
+          0.0908581092953682
+        ],
+        "query_L1_key_token_uniform_mass": [
+          0.09085781872272491
+        ],
+        "query_L1_background_token_mass": [
+          0.8194373846054077
+        ],
+        "query_L1_background_token_uniform_mass": [
+          0.8194190263748169
+        ],
+        "query_L1_effective_visible_fraction": [
+          0.9948878288269043
+        ],
+        "query_L1_target_position_mass": [
+          0.0011350930435582995
+        ],
+        "value_L1_value_token_mass": [
+          0.15555159747600555
+        ],
+        "value_L1_value_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L1_key_token_mass": [
+          0.156073197722435
+        ],
+        "value_L1_key_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L1_background_token_mass": [
+          0.6883752346038818
+        ],
+        "value_L1_background_token_uniform_mass": [
+          0.6883518695831299
+        ],
+        "value_L1_effective_visible_fraction": [
+          0.9954743981361389
+        ],
+        "value_L1_target_position_mass": [
+          0.034131165593862534
+        ]
+      },
+      "frozen_before": "65eccda6677bf7cfb2ab5af53929127436592ba5534a0d1a8d5143920c844ab6",
+      "frozen_after": "65eccda6677bf7cfb2ab5af53929127436592ba5534a0d1a8d5143920c844ab6",
+      "arrays_sha256": "d8614edcc1cda7c7ea90ccbdb7464b01b2dc0f0e1af1010194814a3634fa5f94",
+      "runtime_sha256": "30a3e3531c005ad257e6078652d8c6ddff6250b1653b9740924b8a8ff8d64d89",
+      "device": "mps",
+      "precision": "fp32",
+      "generation_device": "cpu"
+    },
+    {
+      "source": {
+        "seed": 0,
+        "step": 110,
+        "path": "/Users/mileszhu/Documents/\u4e2a\u4eba\u9879\u76ee/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_loss_phases_20261017/two_layer_first_drop/inputs/seed0_v1/step_000110_loss_drop.pt",
+        "sha256": "eb3327de918dadb9d0bb98cf78261f36d063e225cd687e427e635963b691907c",
+        "artifact": "litzgymrat-nanjing-university/n1-long-range/n2_M02_s0-full-state:v1",
+        "artifact_digest": "56ce0cab7a60e2c4f30a635f8cae5136"
+      },
+      "model": {
+        "path": "/Users/mileszhu/Documents/\u4e2a\u4eba\u9879\u76ee/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_loss_phases_20261017/two_layer_first_drop/inputs/seed0_v1/step_000110_loss_drop.pt",
+        "sha256": "eb3327de918dadb9d0bb98cf78261f36d063e225cd687e427e635963b691907c",
+        "step": 110,
+        "step_evidence": "checkpoint",
+        "model": {
+          "vocab": 896,
+          "d_model": 256,
+          "n_layer": 2,
+          "n_head": 1,
+          "head_dim": 256,
+          "mlp_mult": 4.0,
+          "max_len": 4096,
+          "pos": "rope",
+          "rope_base": 10000.0,
+          "rope_frac": 1.0,
+          "alibi_scale": 1.0,
+          "attn_scale": "std",
+          "qk_norm": false,
+          "smear": false,
+          "init_std": 0.02,
+          "tie_emb": false
+        },
+        "task": {
+          "L": 1024,
+          "n_q": 32,
+          "n_dis": 32,
+          "dist": "uniform",
+          "d_min": 4,
+          "d_max": 1022,
+          "Vb": 256,
+          "K": 512,
+          "Vv": 128,
+          "background": "iid",
+          "branch": 4
+        },
+        "precision": "bf16",
+        "runtime_model_sha256": "a239d42033d9ff12d87505c9c8dce3f89e48357448c154680e0b40d2f0a4f2e2",
+        "runtime_task_sha256": "e562045e9bc1603af9d95f3471774b234de432dfc3f080da95b056e320d7bc0a"
+      },
+      "sequence_hash": "f41c63614b67ee1c78bc94b89018c0f938defe60571c2bbf1cc18aea1e1d4685",
+      "n_sequences": 128,
+      "long_queries": 2079,
+      "long": {
+        "value_vocab_mass": 0.9930931329727173,
+        "key_vocab_mass": 0.004585277289152145,
+        "background_vocab_mass": 0.0023216286208480597,
+        "correct": 0.00913900913900914,
+        "ce": 4.866303443908691
+      },
+      "attention": {
+        "query_L0_value_token_mass": [
+          0.08968296647071838
+        ],
+        "query_L0_value_token_uniform_mass": [
+          0.08972316980361938
+        ],
+        "query_L0_key_token_mass": [
+          0.09072815626859665
+        ],
+        "query_L0_key_token_uniform_mass": [
+          0.09085781872272491
+        ],
+        "query_L0_background_token_mass": [
+          0.8195889592170715
+        ],
+        "query_L0_background_token_uniform_mass": [
+          0.8194190263748169
+        ],
+        "query_L0_effective_visible_fraction": [
+          0.9946295022964478
+        ],
+        "query_L0_target_position_mass": [
+          0.0011364362435415387
+        ],
+        "value_L0_value_token_mass": [
+          0.1554574966430664
+        ],
+        "value_L0_value_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L0_key_token_mass": [
+          0.15520775318145752
+        ],
+        "value_L0_key_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L0_background_token_mass": [
+          0.6893347501754761
+        ],
+        "value_L0_background_token_uniform_mass": [
+          0.6883518695831299
+        ],
+        "value_L0_effective_visible_fraction": [
+          0.9947362542152405
+        ],
+        "value_L0_target_position_mass": [
+          0.034065939486026764
+        ],
+        "query_L1_value_token_mass": [
+          0.09592932462692261
+        ],
+        "query_L1_value_token_uniform_mass": [
+          0.08972316980361938
+        ],
+        "query_L1_key_token_mass": [
+          0.09625740349292755
+        ],
+        "query_L1_key_token_uniform_mass": [
+          0.09085781872272491
+        ],
+        "query_L1_background_token_mass": [
+          0.807813286781311
+        ],
+        "query_L1_background_token_uniform_mass": [
+          0.8194190263748169
+        ],
+        "query_L1_effective_visible_fraction": [
+          0.8772258162498474
+        ],
+        "query_L1_target_position_mass": [
+          0.0018764006672427058
+        ],
+        "value_L1_value_token_mass": [
+          0.15470914542675018
+        ],
+        "value_L1_value_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L1_key_token_mass": [
+          0.15395396947860718
+        ],
+        "value_L1_key_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L1_background_token_mass": [
+          0.691336989402771
+        ],
+        "value_L1_background_token_uniform_mass": [
+          0.6883518695831299
+        ],
+        "value_L1_effective_visible_fraction": [
+          0.9950749278068542
+        ],
+        "value_L1_target_position_mass": [
+          0.034459784626960754
+        ]
+      },
+      "frozen_before": "d8a734edd51bfc6b614e8b6e8b2efd693d6d4a1ccc274918c7d32722b556bf15",
+      "frozen_after": "d8a734edd51bfc6b614e8b6e8b2efd693d6d4a1ccc274918c7d32722b556bf15",
+      "arrays_sha256": "8d24413ecac49585435fc19cd391661820590de20dfc23f1b65a80cb45166910",
+      "runtime_sha256": "30a3e3531c005ad257e6078652d8c6ddff6250b1653b9740924b8a8ff8d64d89",
+      "device": "mps",
+      "precision": "fp32",
+      "generation_device": "cpu"
+    },
+    {
+      "source": {
+        "seed": 1,
+        "step": 0,
+        "path": "/Users/mileszhu/Documents/\u4e2a\u4eba\u9879\u76ee/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_loss_phases_20261017/two_layer_first_drop/inputs/seed1_v0/step_000000_initial.pt",
+        "sha256": "21b915d4f997755394f093923469ad3bfcf0b2f49ca01ba073eb5eb9769e9430",
+        "artifact": "litzgymrat-nanjing-university/n1-long-range/n2_M02_s1-full-state:v0",
+        "artifact_digest": "c2a7835c54ee984d223e2606e0ad4b7d"
+      },
+      "model": {
+        "path": "/Users/mileszhu/Documents/\u4e2a\u4eba\u9879\u76ee/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_loss_phases_20261017/two_layer_first_drop/inputs/seed1_v0/step_000000_initial.pt",
+        "sha256": "21b915d4f997755394f093923469ad3bfcf0b2f49ca01ba073eb5eb9769e9430",
+        "step": 0,
+        "step_evidence": "checkpoint",
+        "model": {
+          "vocab": 896,
+          "d_model": 256,
+          "n_layer": 2,
+          "n_head": 1,
+          "head_dim": 256,
+          "mlp_mult": 4.0,
+          "max_len": 4096,
+          "pos": "rope",
+          "rope_base": 10000.0,
+          "rope_frac": 1.0,
+          "alibi_scale": 1.0,
+          "attn_scale": "std",
+          "qk_norm": false,
+          "smear": false,
+          "init_std": 0.02,
+          "tie_emb": false
+        },
+        "task": {
+          "L": 1024,
+          "n_q": 32,
+          "n_dis": 32,
+          "dist": "uniform",
+          "d_min": 4,
+          "d_max": 1022,
+          "Vb": 256,
+          "K": 512,
+          "Vv": 128,
+          "background": "iid",
+          "branch": 4
+        },
+        "precision": "bf16",
+        "runtime_model_sha256": "a239d42033d9ff12d87505c9c8dce3f89e48357448c154680e0b40d2f0a4f2e2",
+        "runtime_task_sha256": "e562045e9bc1603af9d95f3471774b234de432dfc3f080da95b056e320d7bc0a"
+      },
+      "sequence_hash": "f41c63614b67ee1c78bc94b89018c0f938defe60571c2bbf1cc18aea1e1d4685",
+      "n_sequences": 128,
+      "long_queries": 2079,
+      "long": {
+        "value_vocab_mass": 0.1422102451324463,
+        "key_vocab_mass": 0.5707074403762817,
+        "background_vocab_mass": 0.28708240389823914,
+        "correct": 0.000962000962000962,
+        "ce": 6.8599443435668945
+      },
+      "attention": {
+        "query_L0_value_token_mass": [
+          0.08977121859788895
+        ],
+        "query_L0_value_token_uniform_mass": [
+          0.08972316980361938
+        ],
+        "query_L0_key_token_mass": [
+          0.09086455404758453
+        ],
+        "query_L0_key_token_uniform_mass": [
+          0.09085781872272491
+        ],
+        "query_L0_background_token_mass": [
+          0.8193643093109131
+        ],
+        "query_L0_background_token_uniform_mass": [
+          0.8194190263748169
+        ],
+        "query_L0_effective_visible_fraction": [
+          0.9947376251220703
+        ],
+        "query_L0_target_position_mass": [
+          0.00113553530536592
+        ],
+        "value_L0_value_token_mass": [
+          0.15637952089309692
+        ],
+        "value_L0_value_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L0_key_token_mass": [
+          0.15597808361053467
+        ],
+        "value_L0_key_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L0_background_token_mass": [
+          0.6876424551010132
+        ],
+        "value_L0_background_token_uniform_mass": [
+          0.6883518695831299
+        ],
+        "value_L0_effective_visible_fraction": [
+          0.9950425028800964
+        ],
+        "value_L0_target_position_mass": [
+          0.033904287964105606
+        ],
+        "query_L1_value_token_mass": [
+          0.08979350328445435
+        ],
+        "query_L1_value_token_uniform_mass": [
+          0.08972316980361938
+        ],
+        "query_L1_key_token_mass": [
+          0.0908794030547142
+        ],
+        "query_L1_key_token_uniform_mass": [
+          0.09085781872272491
+        ],
+        "query_L1_background_token_mass": [
+          0.819327175617218
+        ],
+        "query_L1_background_token_uniform_mass": [
+          0.8194190263748169
+        ],
+        "query_L1_effective_visible_fraction": [
+          0.9948064684867859
+        ],
+        "query_L1_target_position_mass": [
+          0.0011365866521373391
+        ],
+        "value_L1_value_token_mass": [
+          0.1556997448205948
+        ],
+        "value_L1_value_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L1_key_token_mass": [
+          0.15578868985176086
+        ],
+        "value_L1_key_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L1_background_token_mass": [
+          0.6885115504264832
+        ],
+        "value_L1_background_token_uniform_mass": [
+          0.6883518695831299
+        ],
+        "value_L1_effective_visible_fraction": [
+          0.9953252673149109
+        ],
+        "value_L1_target_position_mass": [
+          0.03408142551779747
+        ]
+      },
+      "frozen_before": "5e0c2df9b343a659562317daeee1adb447b7b4d07d46c55c2a1d5e187107e10c",
+      "frozen_after": "5e0c2df9b343a659562317daeee1adb447b7b4d07d46c55c2a1d5e187107e10c",
+      "arrays_sha256": "14e24acee882013b823b06e4ad2a3feae9053fa6e2278e595f2c4f24bceec4d7",
+      "runtime_sha256": "30a3e3531c005ad257e6078652d8c6ddff6250b1653b9740924b8a8ff8d64d89",
+      "device": "mps",
+      "precision": "fp32",
+      "generation_device": "cpu"
+    },
+    {
+      "source": {
+        "seed": 1,
+        "step": 110,
+        "path": "/Users/mileszhu/Documents/\u4e2a\u4eba\u9879\u76ee/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_loss_phases_20261017/two_layer_first_drop/inputs/seed1_v1/step_000110_loss_drop.pt",
+        "sha256": "888b05afc2e0a6d8cdc2d1630c1bd9e12d21c77078484586104b62d63f5e033b",
+        "artifact": "litzgymrat-nanjing-university/n1-long-range/n2_M02_s1-full-state:v1",
+        "artifact_digest": "8e2aad85c932389091e73b1f8c02349a"
+      },
+      "model": {
+        "path": "/Users/mileszhu/Documents/\u4e2a\u4eba\u9879\u76ee/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_loss_phases_20261017/two_layer_first_drop/inputs/seed1_v1/step_000110_loss_drop.pt",
+        "sha256": "888b05afc2e0a6d8cdc2d1630c1bd9e12d21c77078484586104b62d63f5e033b",
+        "step": 110,
+        "step_evidence": "checkpoint",
+        "model": {
+          "vocab": 896,
+          "d_model": 256,
+          "n_layer": 2,
+          "n_head": 1,
+          "head_dim": 256,
+          "mlp_mult": 4.0,
+          "max_len": 4096,
+          "pos": "rope",
+          "rope_base": 10000.0,
+          "rope_frac": 1.0,
+          "alibi_scale": 1.0,
+          "attn_scale": "std",
+          "qk_norm": false,
+          "smear": false,
+          "init_std": 0.02,
+          "tie_emb": false
+        },
+        "task": {
+          "L": 1024,
+          "n_q": 32,
+          "n_dis": 32,
+          "dist": "uniform",
+          "d_min": 4,
+          "d_max": 1022,
+          "Vb": 256,
+          "K": 512,
+          "Vv": 128,
+          "background": "iid",
+          "branch": 4
+        },
+        "precision": "bf16",
+        "runtime_model_sha256": "a239d42033d9ff12d87505c9c8dce3f89e48357448c154680e0b40d2f0a4f2e2",
+        "runtime_task_sha256": "e562045e9bc1603af9d95f3471774b234de432dfc3f080da95b056e320d7bc0a"
+      },
+      "sequence_hash": "f41c63614b67ee1c78bc94b89018c0f938defe60571c2bbf1cc18aea1e1d4685",
+      "n_sequences": 128,
+      "long_queries": 2079,
+      "long": {
+        "value_vocab_mass": 0.9929978847503662,
+        "key_vocab_mass": 0.004626938607543707,
+        "background_vocab_mass": 0.002375213196501136,
+        "correct": 0.007215007215007215,
+        "ce": 4.865739822387695
+      },
+      "attention": {
+        "query_L0_value_token_mass": [
+          0.08979921787977219
+        ],
+        "query_L0_value_token_uniform_mass": [
+          0.08972316980361938
+        ],
+        "query_L0_key_token_mass": [
+          0.09080810099840164
+        ],
+        "query_L0_key_token_uniform_mass": [
+          0.09085781872272491
+        ],
+        "query_L0_background_token_mass": [
+          0.8193928003311157
+        ],
+        "query_L0_background_token_uniform_mass": [
+          0.8194190263748169
+        ],
+        "query_L0_effective_visible_fraction": [
+          0.9946656823158264
+        ],
+        "query_L0_target_position_mass": [
+          0.0011357178445905447
+        ],
+        "value_L0_value_token_mass": [
+          0.1568467617034912
+        ],
+        "value_L0_value_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L0_key_token_mass": [
+          0.1550973802804947
+        ],
+        "value_L0_key_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L0_background_token_mass": [
+          0.6880559325218201
+        ],
+        "value_L0_background_token_uniform_mass": [
+          0.6883518695831299
+        ],
+        "value_L0_effective_visible_fraction": [
+          0.9949629902839661
+        ],
+        "value_L0_target_position_mass": [
+          0.03373320773243904
+        ],
+        "query_L1_value_token_mass": [
+          0.09691798686981201
+        ],
+        "query_L1_value_token_uniform_mass": [
+          0.08972316980361938
+        ],
+        "query_L1_key_token_mass": [
+          0.09695583581924438
+        ],
+        "query_L1_key_token_uniform_mass": [
+          0.09085781872272491
+        ],
+        "query_L1_background_token_mass": [
+          0.8061262369155884
+        ],
+        "query_L1_background_token_uniform_mass": [
+          0.8194190263748169
+        ],
+        "query_L1_effective_visible_fraction": [
+          0.8659994006156921
+        ],
+        "query_L1_target_position_mass": [
+          0.0019255104707553983
+        ],
+        "value_L1_value_token_mass": [
+          0.1556129902601242
+        ],
+        "value_L1_value_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L1_key_token_mass": [
+          0.15517687797546387
+        ],
+        "value_L1_key_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L1_background_token_mass": [
+          0.6892101764678955
+        ],
+        "value_L1_background_token_uniform_mass": [
+          0.6883518695831299
+        ],
+        "value_L1_effective_visible_fraction": [
+          0.9942491054534912
+        ],
+        "value_L1_target_position_mass": [
+          0.03555138409137726
+        ]
+      },
+      "frozen_before": "aa99e71cdec12a898d57437a9634ab29bc5acdeb6f3f333abdac9acf819386c9",
+      "frozen_after": "aa99e71cdec12a898d57437a9634ab29bc5acdeb6f3f333abdac9acf819386c9",
+      "arrays_sha256": "0cfcab74513136e4d8ccd6dc2c72daded7c6ebd2277711d299b64b1894b60a6c",
+      "runtime_sha256": "30a3e3531c005ad257e6078652d8c6ddff6250b1653b9740924b8a8ff8d64d89",
+      "device": "mps",
+      "precision": "fp32",
+      "generation_device": "cpu"
+    },
+    {
+      "source": {
+        "seed": 1,
+        "step": 53620,
+        "path": "/Users/mileszhu/Documents/\u4e2a\u4eba\u9879\u76ee/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_loss_phases_20261017/two_layer_first_drop/inputs/seed1_v62/step_053620_loss_drop.pt",
+        "sha256": "51c7c50f4a2420ec668a294774ea2c40c19d6fcc03b7bdec695c14b3efc86edd",
+        "artifact": "litzgymrat-nanjing-university/n1-long-range/n2_M02_s1-full-state:v62",
+        "artifact_digest": "98ea137670bbb27eb33c56b3a9d4389d"
+      },
+      "model": {
+        "path": "/Users/mileszhu/Documents/\u4e2a\u4eba\u9879\u76ee/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_loss_phases_20261017/two_layer_first_drop/inputs/seed1_v62/step_053620_loss_drop.pt",
+        "sha256": "51c7c50f4a2420ec668a294774ea2c40c19d6fcc03b7bdec695c14b3efc86edd",
+        "step": 53620,
+        "step_evidence": "checkpoint",
+        "model": {
+          "vocab": 896,
+          "d_model": 256,
+          "n_layer": 2,
+          "n_head": 1,
+          "head_dim": 256,
+          "mlp_mult": 4.0,
+          "max_len": 4096,
+          "pos": "rope",
+          "rope_base": 10000.0,
+          "rope_frac": 1.0,
+          "alibi_scale": 1.0,
+          "attn_scale": "std",
+          "qk_norm": false,
+          "smear": false,
+          "init_std": 0.02,
+          "tie_emb": false
+        },
+        "task": {
+          "L": 1024,
+          "n_q": 32,
+          "n_dis": 32,
+          "dist": "uniform",
+          "d_min": 4,
+          "d_max": 1022,
+          "Vb": 256,
+          "K": 512,
+          "Vv": 128,
+          "background": "iid",
+          "branch": 4
+        },
+        "precision": "bf16",
+        "runtime_model_sha256": "a239d42033d9ff12d87505c9c8dce3f89e48357448c154680e0b40d2f0a4f2e2",
+        "runtime_task_sha256": "e562045e9bc1603af9d95f3471774b234de432dfc3f080da95b056e320d7bc0a"
+      },
+      "sequence_hash": "f41c63614b67ee1c78bc94b89018c0f938defe60571c2bbf1cc18aea1e1d4685",
+      "n_sequences": 128,
+      "long_queries": 2079,
+      "long": {
+        "value_vocab_mass": 0.9999812245368958,
+        "key_vocab_mass": 1.2592802704602946e-05,
+        "background_vocab_mass": 6.2962021729617845e-06,
+        "correct": 0.5343915343915344,
+        "ce": 1.8165372610092163
+      },
+      "attention": {
+        "query_L0_value_token_mass": [
+          0.49757668375968933
+        ],
+        "query_L0_value_token_uniform_mass": [
+          0.08972316980361938
+        ],
+        "query_L0_key_token_mass": [
+          0.17669665813446045
+        ],
+        "query_L0_key_token_uniform_mass": [
+          0.09085781872272491
+        ],
+        "query_L0_background_token_mass": [
+          0.3257266879081726
+        ],
+        "query_L0_background_token_uniform_mass": [
+          0.8194190263748169
+        ],
+        "query_L0_effective_visible_fraction": [
+          0.2525459825992584
+        ],
+        "query_L0_target_position_mass": [
+          0.00845316518098116
+        ],
+        "value_L0_value_token_mass": [
+          0.1606871336698532
+        ],
+        "value_L0_value_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L0_key_token_mass": [
+          0.5560769438743591
+        ],
+        "value_L0_key_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L0_background_token_mass": [
+          0.28323593735694885
+        ],
+        "value_L0_background_token_uniform_mass": [
+          0.6883518695831299
+        ],
+        "value_L0_effective_visible_fraction": [
+          0.26988083124160767
+        ],
+        "value_L0_target_position_mass": [
+          0.5409565567970276
+        ],
+        "query_L1_value_token_mass": [
+          0.9253922700881958
+        ],
+        "query_L1_value_token_uniform_mass": [
+          0.08972316980361938
+        ],
+        "query_L1_key_token_mass": [
+          0.048411134630441666
+        ],
+        "query_L1_key_token_uniform_mass": [
+          0.09085781872272491
+        ],
+        "query_L1_background_token_mass": [
+          0.026196608319878578
+        ],
+        "query_L1_background_token_uniform_mass": [
+          0.8194190263748169
+        ],
+        "query_L1_effective_visible_fraction": [
+          0.0033652798738330603
+        ],
+        "query_L1_target_position_mass": [
+          0.45618268847465515
+        ],
+        "value_L1_value_token_mass": [
+          0.47724971175193787
+        ],
+        "value_L1_value_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L1_key_token_mass": [
+          0.22464844584465027
+        ],
+        "value_L1_key_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L1_background_token_mass": [
+          0.29810187220573425
+        ],
+        "value_L1_background_token_uniform_mass": [
+          0.6883518695831299
+        ],
+        "value_L1_effective_visible_fraction": [
+          0.06670351326465607
+        ],
+        "value_L1_target_position_mass": [
+          0.03502076491713524
+        ]
+      },
+      "frozen_before": "d29052328a982cb1bcd5ea56178d6a2aeb474e4fd247ffd5799b961537d0b41d",
+      "frozen_after": "d29052328a982cb1bcd5ea56178d6a2aeb474e4fd247ffd5799b961537d0b41d",
+      "arrays_sha256": "30afebcd1b2c5ecff6bfb1c0a4625b5a51370419f7dad0e67e4b6b8d39a3645f",
+      "runtime_sha256": "30a3e3531c005ad257e6078652d8c6ddff6250b1653b9740924b8a8ff8d64d89",
+      "device": "mps",
+      "precision": "fp32",
+      "generation_device": "cpu"
+    },
+    {
+      "source": {
+        "seed": 2,
+        "step": 0,
+        "path": "/Users/mileszhu/Documents/\u4e2a\u4eba\u9879\u76ee/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_loss_phases_20261017/two_layer_first_drop/inputs/seed2_v0/step_000000_initial.pt",
+        "sha256": "26e8992985c3d45736c6b009784faf73981d95e318b4211d93baede61ab5f999",
+        "artifact": "litzgymrat-nanjing-university/n1-long-range/n2_M02_s2-full-state:v0",
+        "artifact_digest": "c5f051394e8207d52ff2b819fb082362"
+      },
+      "model": {
+        "path": "/Users/mileszhu/Documents/\u4e2a\u4eba\u9879\u76ee/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_loss_phases_20261017/two_layer_first_drop/inputs/seed2_v0/step_000000_initial.pt",
+        "sha256": "26e8992985c3d45736c6b009784faf73981d95e318b4211d93baede61ab5f999",
+        "step": 0,
+        "step_evidence": "checkpoint",
+        "model": {
+          "vocab": 896,
+          "d_model": 256,
+          "n_layer": 2,
+          "n_head": 1,
+          "head_dim": 256,
+          "mlp_mult": 4.0,
+          "max_len": 4096,
+          "pos": "rope",
+          "rope_base": 10000.0,
+          "rope_frac": 1.0,
+          "alibi_scale": 1.0,
+          "attn_scale": "std",
+          "qk_norm": false,
+          "smear": false,
+          "init_std": 0.02,
+          "tie_emb": false
+        },
+        "task": {
+          "L": 1024,
+          "n_q": 32,
+          "n_dis": 32,
+          "dist": "uniform",
+          "d_min": 4,
+          "d_max": 1022,
+          "Vb": 256,
+          "K": 512,
+          "Vv": 128,
+          "background": "iid",
+          "branch": 4
+        },
+        "precision": "bf16",
+        "runtime_model_sha256": "a239d42033d9ff12d87505c9c8dce3f89e48357448c154680e0b40d2f0a4f2e2",
+        "runtime_task_sha256": "e562045e9bc1603af9d95f3471774b234de432dfc3f080da95b056e320d7bc0a"
+      },
+      "sequence_hash": "f41c63614b67ee1c78bc94b89018c0f938defe60571c2bbf1cc18aea1e1d4685",
+      "n_sequences": 128,
+      "long_queries": 2079,
+      "long": {
+        "value_vocab_mass": 0.1447100043296814,
+        "key_vocab_mass": 0.5697231888771057,
+        "background_vocab_mass": 0.2855668365955353,
+        "correct": 0.001924001924001924,
+        "ce": 6.822894096374512
+      },
+      "attention": {
+        "query_L0_value_token_mass": [
+          0.08971031755208969
+        ],
+        "query_L0_value_token_uniform_mass": [
+          0.08972316980361938
+        ],
+        "query_L0_key_token_mass": [
+          0.09080302715301514
+        ],
+        "query_L0_key_token_uniform_mass": [
+          0.09085781872272491
+        ],
+        "query_L0_background_token_mass": [
+          0.8194867372512817
+        ],
+        "query_L0_background_token_uniform_mass": [
+          0.8194190263748169
+        ],
+        "query_L0_effective_visible_fraction": [
+          0.9947956800460815
+        ],
+        "query_L0_target_position_mass": [
+          0.001136076869443059
+        ],
+        "value_L0_value_token_mass": [
+          0.15613137185573578
+        ],
+        "value_L0_value_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L0_key_token_mass": [
+          0.1558723747730255
+        ],
+        "value_L0_key_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L0_background_token_mass": [
+          0.6879963278770447
+        ],
+        "value_L0_background_token_uniform_mass": [
+          0.6883518695831299
+        ],
+        "value_L0_effective_visible_fraction": [
+          0.994986355304718
+        ],
+        "value_L0_target_position_mass": [
+          0.03412427380681038
+        ],
+        "query_L1_value_token_mass": [
+          0.08976380527019501
+        ],
+        "query_L1_value_token_uniform_mass": [
+          0.08972316980361938
+        ],
+        "query_L1_key_token_mass": [
+          0.09089898318052292
+        ],
+        "query_L1_key_token_uniform_mass": [
+          0.09085781872272491
+        ],
+        "query_L1_background_token_mass": [
+          0.8193373084068298
+        ],
+        "query_L1_background_token_uniform_mass": [
+          0.8194190263748169
+        ],
+        "query_L1_effective_visible_fraction": [
+          0.9948179721832275
+        ],
+        "query_L1_target_position_mass": [
+          0.0011362804798409343
+        ],
+        "value_L1_value_token_mass": [
+          0.1556704193353653
+        ],
+        "value_L1_value_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L1_key_token_mass": [
+          0.15598002076148987
+        ],
+        "value_L1_key_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L1_background_token_mass": [
+          0.6883496046066284
+        ],
+        "value_L1_background_token_uniform_mass": [
+          0.6883518695831299
+        ],
+        "value_L1_effective_visible_fraction": [
+          0.9954279065132141
+        ],
+        "value_L1_target_position_mass": [
+          0.034005988389253616
+        ]
+      },
+      "frozen_before": "aab70d9de503221a9137f2568dedb4a5220746a3d55d0c5e5ed445b569fbf46d",
+      "frozen_after": "aab70d9de503221a9137f2568dedb4a5220746a3d55d0c5e5ed445b569fbf46d",
+      "arrays_sha256": "0e5c95cfcd3a7600a6f999dd14b34558ce8133ef0ce1497ea0a20f2aaf2c1f7d",
+      "runtime_sha256": "30a3e3531c005ad257e6078652d8c6ddff6250b1653b9740924b8a8ff8d64d89",
+      "device": "mps",
+      "precision": "fp32",
+      "generation_device": "cpu"
+    },
+    {
+      "source": {
+        "seed": 2,
+        "step": 110,
+        "path": "/Users/mileszhu/Documents/\u4e2a\u4eba\u9879\u76ee/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_loss_phases_20261017/two_layer_first_drop/inputs/seed2_v1/step_000110_loss_drop.pt",
+        "sha256": "b9d04b207d34636afde88c6241cf96c14d173b09e3007d8bafafab864c033295",
+        "artifact": "litzgymrat-nanjing-university/n1-long-range/n2_M02_s2-full-state:v1",
+        "artifact_digest": "b59c6ef44e004f3a43b5cb82b4752982"
+      },
+      "model": {
+        "path": "/Users/mileszhu/Documents/\u4e2a\u4eba\u9879\u76ee/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_loss_phases_20261017/two_layer_first_drop/inputs/seed2_v1/step_000110_loss_drop.pt",
+        "sha256": "b9d04b207d34636afde88c6241cf96c14d173b09e3007d8bafafab864c033295",
+        "step": 110,
+        "step_evidence": "checkpoint",
+        "model": {
+          "vocab": 896,
+          "d_model": 256,
+          "n_layer": 2,
+          "n_head": 1,
+          "head_dim": 256,
+          "mlp_mult": 4.0,
+          "max_len": 4096,
+          "pos": "rope",
+          "rope_base": 10000.0,
+          "rope_frac": 1.0,
+          "alibi_scale": 1.0,
+          "attn_scale": "std",
+          "qk_norm": false,
+          "smear": false,
+          "init_std": 0.02,
+          "tie_emb": false
+        },
+        "task": {
+          "L": 1024,
+          "n_q": 32,
+          "n_dis": 32,
+          "dist": "uniform",
+          "d_min": 4,
+          "d_max": 1022,
+          "Vb": 256,
+          "K": 512,
+          "Vv": 128,
+          "background": "iid",
+          "branch": 4
+        },
+        "precision": "bf16",
+        "runtime_model_sha256": "a239d42033d9ff12d87505c9c8dce3f89e48357448c154680e0b40d2f0a4f2e2",
+        "runtime_task_sha256": "e562045e9bc1603af9d95f3471774b234de432dfc3f080da95b056e320d7bc0a"
+      },
+      "sequence_hash": "f41c63614b67ee1c78bc94b89018c0f938defe60571c2bbf1cc18aea1e1d4685",
+      "n_sequences": 128,
+      "long_queries": 2079,
+      "long": {
+        "value_vocab_mass": 0.993042528629303,
+        "key_vocab_mass": 0.004588879179209471,
+        "background_vocab_mass": 0.0023686790373176336,
+        "correct": 0.008177008177008177,
+        "ce": 4.865707874298096
+      },
+      "attention": {
+        "query_L0_value_token_mass": [
+          0.089705690741539
+        ],
+        "query_L0_value_token_uniform_mass": [
+          0.08972316980361938
+        ],
+        "query_L0_key_token_mass": [
+          0.09068986028432846
+        ],
+        "query_L0_key_token_uniform_mass": [
+          0.09085781872272491
+        ],
+        "query_L0_background_token_mass": [
+          0.8196045160293579
+        ],
+        "query_L0_background_token_uniform_mass": [
+          0.8194190263748169
+        ],
+        "query_L0_effective_visible_fraction": [
+          0.9947376251220703
+        ],
+        "query_L0_target_position_mass": [
+          0.0011350226122885942
+        ],
+        "value_L0_value_token_mass": [
+          0.1564008891582489
+        ],
+        "value_L0_value_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L0_key_token_mass": [
+          0.15505044162273407
+        ],
+        "value_L0_key_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L0_background_token_mass": [
+          0.688548743724823
+        ],
+        "value_L0_background_token_uniform_mass": [
+          0.6883518695831299
+        ],
+        "value_L0_effective_visible_fraction": [
+          0.9949222803115845
+        ],
+        "value_L0_target_position_mass": [
+          0.033934932202100754
+        ],
+        "query_L1_value_token_mass": [
+          0.10622009634971619
+        ],
+        "query_L1_value_token_uniform_mass": [
+          0.08972316980361938
+        ],
+        "query_L1_key_token_mass": [
+          0.10634054988622665
+        ],
+        "query_L1_key_token_uniform_mass": [
+          0.09085781872272491
+        ],
+        "query_L1_background_token_mass": [
+          0.7874393463134766
+        ],
+        "query_L1_background_token_uniform_mass": [
+          0.8194190263748169
+        ],
+        "query_L1_effective_visible_fraction": [
+          0.5540727376937866
+        ],
+        "query_L1_target_position_mass": [
+          0.0028880492318421602
+        ],
+        "value_L1_value_token_mass": [
+          0.1554504632949829
+        ],
+        "value_L1_value_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L1_key_token_mass": [
+          0.15524134039878845
+        ],
+        "value_L1_key_token_uniform_mass": [
+          0.15582408010959625
+        ],
+        "value_L1_background_token_mass": [
+          0.689308226108551
+        ],
+        "value_L1_background_token_uniform_mass": [
+          0.6883518695831299
+        ],
+        "value_L1_effective_visible_fraction": [
+          0.9933510422706604
+        ],
+        "value_L1_target_position_mass": [
+          0.03480476886034012
+        ]
+      },
+      "frozen_before": "b4e88f88f889d3054bb3f7517919151094fb72b79a43de53b010f212e1c248fa",
+      "frozen_after": "b4e88f88f889d3054bb3f7517919151094fb72b79a43de53b010f212e1c248fa",
+      "arrays_sha256": "d31f85c45a2cbd97e4536b74cca4411ddae446ebc286deb96e5e049999069bbf",
+      "runtime_sha256": "30a3e3531c005ad257e6078652d8c6ddff6250b1653b9740924b8a8ff8d64d89",
+      "device": "mps",
+      "precision": "fp32",
+      "generation_device": "cpu"
+    }
+  ]
+}

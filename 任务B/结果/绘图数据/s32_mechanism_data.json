@@ -1,0 +1,66 @@
+{
+  "source": {
+    "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/results_1024_20261017/mechanism_snapshot.json",
+    "sha256": "9f3b8832dc7bea5ec0fc5f60627fa531b245b24fbbd80529e6a1299d0e74031d"
+  },
+  "model": {
+    "name": "r1_M4h64_s1_cap64000",
+    "seed": 1,
+    "checkpoint_step": 35750,
+    "layers": 4,
+    "d_model": 256,
+    "heads": 1,
+    "head_dim": 64
+  },
+  "ko_source": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M2_r1_M4h64_s1_final/result",
+  "patch_source": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M3_r1_M4h64_s1_final/result",
+  "knockout": [
+    {
+      "condition": "native",
+      "label": "原始",
+      "long_accuracy": 0.9956400018357887
+    },
+    {
+      "condition": "no_op_recompute",
+      "label": "无操作重算",
+      "long_accuracy": 0.9947527039637738
+    },
+    {
+      "condition": "block_binding_edge",
+      "label": "限制值读取前一键",
+      "long_accuracy": 0.022886165802316154
+    },
+    {
+      "condition": "block_retrieval_edge",
+      "label": "限制查询读取原值",
+      "long_accuracy": 0.010785258616733214
+    },
+    {
+      "condition": "binding_control",
+      "label": "值读取无关词元的限制",
+      "long_accuracy": 0.9956400018357887
+    },
+    {
+      "condition": "retrieval_control",
+      "label": "查询读取无关词元的限制",
+      "long_accuracy": 0.9947680022029465
+    }
+  ],
+  "recovery": [
+    {
+      "condition": "binding_restore",
+      "label": "恢复绑定表示",
+      "R": 0.9992714524269104
+    },
+    {
+      "condition": "retrieval_restore",
+      "label": "恢复读取输出",
+      "R": 0.9275513291358948
+    },
+    {
+      "condition": "unrelated_restore",
+      "label": "恢复无关位置",
+      "R": 0.0
+    }
+  ]
+}

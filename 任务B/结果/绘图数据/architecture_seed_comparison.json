@@ -1,0 +1,295 @@
+{
+  "cohort": "original exploratory seeds 0,1,2; kept separate from registered seeds 1000+",
+  "metric": "third consecutive development long>=98%, restricted to 12000 updates",
+  "rows": [
+    {
+      "condition": "E00",
+      "seed": 0,
+      "step": 4000,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "E00",
+      "seed": 1,
+      "step": 4250,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "E00",
+      "seed": 2,
+      "step": 3750,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "E02",
+      "seed": 0,
+      "step": 2250,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "E02",
+      "seed": 1,
+      "step": 3000,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "E02",
+      "seed": 2,
+      "step": 3000,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "E08",
+      "seed": 0,
+      "step": 10000,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "E08",
+      "seed": 1,
+      "step": 5500,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "E08",
+      "seed": 2,
+      "step": 11000,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "EW128",
+      "seed": 0,
+      "step": 10500,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "EW128",
+      "seed": 1,
+      "step": 6250,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "EW128",
+      "seed": 2,
+      "step": 11750,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "EW512",
+      "seed": 0,
+      "step": 10500,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "EW512",
+      "seed": 1,
+      "step": 8750,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "EW512",
+      "seed": 2,
+      "step": 7500,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "EH1",
+      "seed": 0,
+      "step": 5500,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "EH1",
+      "seed": 1,
+      "step": 6250,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "EH1",
+      "seed": 2,
+      "step": 5500,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "EH16",
+      "seed": 0,
+      "step": 4500,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "EH16",
+      "seed": 1,
+      "step": 7000,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "EH16",
+      "seed": 2,
+      "step": 4250,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/完整结果汇总_20261016.csv"
+    },
+    {
+      "condition": "E06",
+      "seed": 0,
+      "step": 9500,
+      "status": "reached",
+      "source": "n1_experiments/outputs/wandb-new-checkpoint-cleanup-20261016/small_result_files/0d90322c6c94e0a7/n3_E06_s0-result_v0/metrics.jsonl",
+      "sha256": "8987f58df14aa57c1b034c6b1af2e4954430a40289b49d19e5345def987e0d0b"
+    },
+    {
+      "condition": "E10",
+      "seed": 1,
+      "step": null,
+      "status": "unreached",
+      "source": "n1_experiments/outputs/wandb-new-checkpoint-cleanup-20261016/small_result_files/45b743370c616f49/n3_E10_s1-result_v0/metrics.jsonl",
+      "sha256": "62f0f7ce2cb12ac18bddf938bcd24bb47388d5c11868f1e19578b5ed092b34fb"
+    },
+    {
+      "condition": "EH8",
+      "seed": 1,
+      "step": 3500,
+      "status": "reached",
+      "source": "n1_experiments/outputs/wandb-new-checkpoint-cleanup-20261016/small_result_files/5e220d118a9f52c7/n3_EH8_s1-result_v0/metrics.jsonl",
+      "sha256": "818ba3fa76c76724383ee70697d1f9869b620e93090a5e605cf983b262c5e8b1"
+    },
+    {
+      "condition": "E06",
+      "seed": 1,
+      "step": 3250,
+      "status": "reached",
+      "source": "n1_experiments/outputs/wandb-new-checkpoint-cleanup-20261016/small_result_files/6790ba088eb194d8/n3_E06_s1-result_v0/metrics.jsonl",
+      "sha256": "663cd489fcc2a35c6afe614c34fd3aeb2fb94b9f1b8cf11a5ed29aa538a8819b"
+    },
+    {
+      "condition": "EW1024",
+      "seed": 0,
+      "step": null,
+      "status": "unreached",
+      "source": "n1_experiments/outputs/wandb-new-checkpoint-cleanup-20261016/small_result_files/6be8894bcea038a1/n3_EW1024_s0-result_v0/metrics.jsonl",
+      "sha256": "597e974ecffebe15b46aa28492ead5f27281ad6c1c0ecbda4794c28909ec3c6c"
+    },
+    {
+      "condition": "EH2",
+      "seed": 0,
+      "step": 5250,
+      "status": "reached",
+      "source": "n1_experiments/outputs/wandb-new-checkpoint-cleanup-20261016/small_result_files/7995f8eeb7d19759/n3_EH2_s0-result_v0/metrics.jsonl",
+      "sha256": "95a6c4764eac8d74b1acde8f742367a3509bdf35f79a1a8e8ee71690e6630380"
+    },
+    {
+      "condition": "E10",
+      "seed": 0,
+      "step": 3000,
+      "status": "reached",
+      "source": "n1_experiments/outputs/wandb-new-checkpoint-cleanup-20261016/small_result_files/7a295ca35dbe0fd3/n3_E10_s0-result_v0/metrics.jsonl",
+      "sha256": "596ce3078b3d1a381d4e028588bf510e11759d1b627dfb0c32d99a91d4faaf89"
+    },
+    {
+      "condition": "EW1024",
+      "seed": 1,
+      "step": null,
+      "status": "unreached",
+      "source": "n1_experiments/outputs/wandb-new-checkpoint-cleanup-20261016/small_result_files/872dffac0b6d802c/n3_EW1024_s1-result_v0/metrics.jsonl",
+      "sha256": "afd084b6ea2950ef6d4481fe967a7c0596e680d970e11f1631bf91d36ab5cd43"
+    },
+    {
+      "condition": "E06",
+      "seed": 2,
+      "step": 5000,
+      "status": "reached",
+      "source": "n1_experiments/outputs/wandb-new-checkpoint-cleanup-20261016/small_result_files/93d71b80cc48736e/n3_E06_s2-result_v0/metrics.jsonl",
+      "sha256": "8ebf379ca3869f7e874505b0a1ce962fa96db442473b4a1117cc809158916b76"
+    },
+    {
+      "condition": "EH2",
+      "seed": 1,
+      "step": 3500,
+      "status": "reached",
+      "source": "n1_experiments/outputs/wandb-new-checkpoint-cleanup-20261016/small_result_files/9451381642c91f4b/n3_EH2_s1-result_v0/metrics.jsonl",
+      "sha256": "42ee2de61a42869435fe63d8f57a11b25aa5f58abdbfb22439bdc0477b162f4d"
+    },
+    {
+      "condition": "EW64",
+      "seed": 1,
+      "step": null,
+      "status": "unreached",
+      "source": "n1_experiments/outputs/wandb-new-checkpoint-cleanup-20261016/small_result_files/947924288c7e825e/n3_EW64_s1-result_v0/metrics.jsonl",
+      "sha256": "632d8e35c5b5045a11b012e01ab0acc481c94ef050b51f33e05d5bfe7815c213"
+    },
+    {
+      "condition": "EW64",
+      "seed": 0,
+      "step": null,
+      "status": "unreached",
+      "source": "n1_experiments/outputs/wandb-new-checkpoint-cleanup-20261016/small_result_files/c5ca498123f77f4f/n3_EW64_s0-result_v0/metrics.jsonl",
+      "sha256": "5f09790d9e6388c70f81643e9bc222a805441a19cd10890db9c496ea632072d9"
+    },
+    {
+      "condition": "EW1024",
+      "seed": 2,
+      "step": null,
+      "status": "unreached",
+      "source": "n1_experiments/outputs/wandb-new-checkpoint-cleanup-20261016/small_result_files/e507fd59fce81a6c/n3_EW1024_s2-result_v0/metrics.jsonl",
+      "sha256": "d3a92af330202e913d73d55b3cafeb6367a0280114d03aac7462f8d4bdbdd8e3"
+    },
+    {
+      "condition": "EH8",
+      "seed": 0,
+      "step": 2750,
+      "status": "reached",
+      "source": "n1_experiments/outputs/wandb-new-checkpoint-cleanup-20261016/small_result_files/e9ab7a936cb14fe3/n3_EH8_s0-result_v0/metrics.jsonl",
+      "sha256": "33ab2a31892b218aa0f473fb86d63ba39cc5e24ecf3b34735b0f24fb9c0e36a1"
+    },
+    {
+      "condition": "EH8",
+      "seed": 2,
+      "step": 4750,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/architecture_extension_20261016/no_diag_20261016/EH8_s2_completed_summary.json",
+      "basis": "registered three-consecutive-evaluation early stop, 4250 to 4750"
+    },
+    {
+      "condition": "EH2",
+      "seed": 2,
+      "step": 3250,
+      "status": "reached",
+      "source": "n1_experiments/colab_parallel_20261015/next_round_20261016/architecture_extension_20261016/startup_wandb_status.json",
+      "basis": "finished below budget under the registered three-consecutive-evaluation early-stop contract"
+    },
+    {
+      "condition": "E10",
+      "seed": 2,
+      "step": null,
+      "status": "time_record_unavailable",
+      "source": "No complete local timing record used; leave this point empty."
+    },
+    {
+      "condition": "EW64",
+      "seed": 2,
+      "step": null,
+      "status": "time_record_unavailable",
+      "source": "No complete local timing record used; leave this point empty."
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "source": {
+    "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/results_1024_20261017/mechanism_snapshot.json",
+    "sha256": "9f3b8832dc7bea5ec0fc5f60627fa531b245b24fbbd80529e6a1299d0e74031d"
+  },
+  "steps": [
+    3000,
+    3250,
+    4500
+  ],
+  "seeds": [
+    1000,
+    1001,
+    1002
+  ],
+  "path_rule": "Select at final checkpoint, then trace the same path at each saved step.",
+  "omitted_from_plot": "The 24000-step endpoint remains in manuscript Appendix D.11.",
+  "trajectories": [
+    {
+      "seed": 1000,
+      "condition": "C01",
+      "label": "先短后全",
+      "training_job": "n4night_L1024_C01_s1000",
+      "source_dir": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M9_n4prep_C01_s1000/result",
+      "points": [
+        {
+          "step": 3000,
+          "status": "completed",
+          "binding_attention": 0.9677174910794315,
+          "retrieval_attention": 0.001020120977486113,
+          "long_accuracy": 0.008604794099569761
+        },
+        {
+          "step": 3250,
+          "status": "completed",
+          "binding_attention": 0.9998646366636789,
+          "retrieval_attention": 0.1881654560421066,
+          "long_accuracy": 0.651259987707437
+        },
+        {
+          "step": 4500,
+          "status": "completed",
+          "binding_attention": 0.9997347032902133,
+          "retrieval_attention": 0.7507536669755712,
+          "long_accuracy": 0.9702519975414874
+        }
+      ]
+    },
+    {
+      "seed": 1000,
+      "condition": "C02",
+      "label": "打乱顺序",
+      "training_job": "n4night_L1024_C02_s1000",
+      "source_dir": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M9_n4prep_C02_s1000/result",
+      "points": [
+        {
+          "step": 3000,
+          "status": "completed",
+          "binding_attention": 0.00839889217593685,
+          "retrieval_attention": 0.006762894601223824,
+          "long_accuracy": 0.03355869698832206
+        },
+        {
+          "step": 3250,
+          "status": "completed",
+          "binding_attention": 0.005501950894041901,
+          "retrieval_attention": 0.003944864595289884,
+          "long_accuracy": 0.042532267977873385
+        },
+        {
+          "step": 4500,
+          "status": "completed",
+          "binding_attention": 0.0072383279063253075,
+          "retrieval_attention": 0.00024413155173583117,
+          "long_accuracy": 0.04376152427781192
+        }
+      ]
+    },
+    {
+      "seed": 1001,
+      "condition": "C01",
+      "label": "先短后全",
+      "training_job": "n4night_L1024_C01_s1001",
+      "source_dir": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M9_n4prep_C01_s1001",
+      "points": [
+        {
+          "step": 3000,
+          "status": "completed",
+          "binding_attention": 0.9995320638020834,
+          "retrieval_attention": 0.0031425834361494247,
+          "long_accuracy": 0.011063306699446834
+        },
+        {
+          "step": 3250,
+          "status": "completed",
+          "binding_attention": 0.9999823558783519,
+          "retrieval_attention": 0.9175951995776215,
+          "long_accuracy": 0.9921327596803934
+        },
+        {
+          "step": 4500,
+          "status": "completed",
+          "binding_attention": 0.9999999119261814,
+          "retrieval_attention": 0.9647391916984203,
+          "long_accuracy": 0.9969268592501537
+        }
+      ]
+    },
+    {
+      "seed": 1001,
+      "condition": "C02",
+      "label": "打乱顺序",
+      "training_job": "n4night_L1024_C02_s1001",
+      "source_dir": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M9_n4prep_C02_s1001/result",
+      "points": [
+        {
+          "step": 3000,
+          "status": "NA_unlocalized",
+          "binding_attention": null,
+          "retrieval_attention": 0.017183735235026,
+          "long_accuracy": 0.03491087891825446
+        },
+        {
+          "step": 3250,
+          "status": "NA_unlocalized",
+          "binding_attention": null,
+          "retrieval_attention": 0.017733225500230137,
+          "long_accuracy": 0.041180086047940996
+        },
+        {
+          "step": 4500,
+          "status": "NA_unlocalized",
+          "binding_attention": null,
+          "retrieval_attention": 0.016104680099821113,
+          "long_accuracy": 0.03995082974800246
+        }
+      ]
+    },
+    {
+      "seed": 1002,
+      "condition": "C01",
+      "label": "先短后全",
+      "training_job": "n4night_L1024_C01_s1002",
+      "source_dir": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M9_n4prep_C01_s1002/result",
+      "points": [
+        {
+          "step": 3000,
+          "status": "completed",
+          "binding_attention": 0.9954349145068668,
+          "retrieval_attention": 0.0003944339758572094,
+          "long_accuracy": 0.007744314689612784
+        },
+        {
+          "step": 3250,
+          "status": "completed",
+          "binding_attention": 0.9423275336978154,
+          "retrieval_attention": 0.41064318859525023,
+          "long_accuracy": 0.9180086047940996
+        },
+        {
+          "step": 4500,
+          "status": "completed",
+          "binding_attention": 0.9999788439152133,
+          "retrieval_attention": 0.8890666600043298,
+          "long_accuracy": 0.9938537185003073
+        }
+      ]
+    },
+    {
+      "seed": 1002,
+      "condition": "C02",
+      "label": "打乱顺序",
+      "training_job": "n4night_L1024_C02_s1002",
+      "source_dir": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M9_n4prep_C02_s1002/result",
+      "points": [
+        {
+          "step": 3000,
+          "status": "NA_unlocalized",
+          "binding_attention": null,
+          "retrieval_attention": 0.013722443847211172,
+          "long_accuracy": 0.03884449907805777
+        },
+        {
+          "step": 3250,
+          "status": "NA_unlocalized",
+          "binding_attention": null,
+          "retrieval_attention": 0.014122743657566009,
+          "long_accuracy": 0.04179471419791026
+        },
+        {
+          "step": 4500,
+          "status": "NA_unlocalized",
+          "binding_attention": null,
+          "retrieval_attention": 0.01380963712626426,
+          "long_accuracy": 0.03687768899815612
+        }
+      ]
+    }
+  ]
+}

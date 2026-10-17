@@ -1,0 +1,14 @@
+{
+ "status": "completed",
+ "job": "M9_n4prep_C01_s1001",
+ "elapsed_seconds": 364.9688079357147,
+ "transformer_training_performed": false,
+ "linear_probe_fits_performed": false,
+ "stage_statuses": {
+  "M1": "completed",
+  "3000": "completed",
+  "3250": "completed",
+  "4500": "completed",
+  "final": "completed"
+ }
+}

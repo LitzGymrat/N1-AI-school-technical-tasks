@@ -1,0 +1,479 @@
+[
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_B0_s0",
+    "group": "r1_B0",
+    "seed": 0,
+    "steps": 22750,
+    "long_accuracy": 0.9935135841369629,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_B0_s1",
+    "group": "r1_B0",
+    "seed": 1,
+    "steps": 24000,
+    "long_accuracy": 0.07999449223279953,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_B0_s2",
+    "group": "r1_B0",
+    "seed": 2,
+    "steps": 21500,
+    "long_accuracy": 0.9951810836791992,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_T1a_s0",
+    "group": "r1_T1a",
+    "seed": 0,
+    "steps": 12000,
+    "long_accuracy": 0.9986690878868103,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_T1a_s1",
+    "group": "r1_T1a",
+    "seed": 1,
+    "steps": 12000,
+    "long_accuracy": 0.9987302422523499,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_T1a_s2",
+    "group": "r1_T1a",
+    "seed": 2,
+    "steps": 12000,
+    "long_accuracy": 0.9992963075637817,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:pure_long512_budget48k_seed0",
+    "group": "pure_long512",
+    "seed": 0,
+    "steps": 3750,
+    "long_accuracy": 0.9945385456085205,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:pure_long512_budget48k_seed1",
+    "group": "pure_long512",
+    "seed": 1,
+    "steps": 4750,
+    "long_accuracy": 0.9990209341049194,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:pure_long512_budget48k_seed2",
+    "group": "pure_long512",
+    "seed": 2,
+    "steps": 18750,
+    "long_accuracy": 0.9780929088592529,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_T1c_s0",
+    "group": "r1_T1c",
+    "seed": 0,
+    "steps": 2500,
+    "long_accuracy": 0.009362522512674332,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_T1c_s1",
+    "group": "r1_T1c",
+    "seed": 1,
+    "steps": 2750,
+    "long_accuracy": 0.00871999654918909,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_T1c_s2",
+    "group": "r1_T1c",
+    "seed": 2,
+    "steps": 2500,
+    "long_accuracy": 0.009071855805814266,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_S1_s0",
+    "group": "r1_S1",
+    "seed": 0,
+    "steps": 1500,
+    "long_accuracy": 0.9966650009155273,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_S1_s1",
+    "group": "r1_S1",
+    "seed": 1,
+    "steps": 2750,
+    "long_accuracy": 0.9911882281303406,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_S1_s2",
+    "group": "r1_S1",
+    "seed": 2,
+    "steps": 1250,
+    "long_accuracy": 0.9994645714759827,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_W1_s0",
+    "group": "r1_W1",
+    "seed": 0,
+    "steps": 2750,
+    "long_accuracy": 0.991387128829956,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_W1_s1",
+    "group": "r1_W1",
+    "seed": 1,
+    "steps": 4000,
+    "long_accuracy": 0.9841204285621643,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_W1_s2",
+    "group": "r1_W1",
+    "seed": 2,
+    "steps": 3750,
+    "long_accuracy": 0.9908363819122314,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_M1d1_s0",
+    "group": "r1_M1d1",
+    "seed": 0,
+    "steps": 24000,
+    "long_accuracy": 0.05674117058515549,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_M1d1_s1",
+    "group": "r1_M1d1",
+    "seed": 1,
+    "steps": 24000,
+    "long_accuracy": 0.04012728109955788,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_M1d1_s2",
+    "group": "r1_M1d1",
+    "seed": 2,
+    "steps": 24000,
+    "long_accuracy": 0.03879633545875549,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_M1d1s_s0",
+    "group": "r1_M1d1s",
+    "seed": 0,
+    "steps": 1000,
+    "long_accuracy": 0.999785840511322,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_M1d1s_s1",
+    "group": "r1_M1d1s",
+    "seed": 1,
+    "steps": 1000,
+    "long_accuracy": 0.9998011589050293,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_M1d1s_s2_cap24000",
+    "group": "r1_M1d1s",
+    "seed": 2,
+    "steps": 1000,
+    "long_accuracy": 0.9998623132705688,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_M1d2_s0",
+    "group": "r1_M1d2",
+    "seed": 0,
+    "steps": 14000,
+    "long_accuracy": 0.9879143834114075,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_M1d2_s1",
+    "group": "r1_M1d2",
+    "seed": 1,
+    "steps": 24000,
+    "long_accuracy": 0.06968347728252411,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_M1d2_s2",
+    "group": "r1_M1d2",
+    "seed": 2,
+    "steps": 10000,
+    "long_accuracy": 0.9987149834632874,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_M4h64_s0",
+    "group": "r1_M4h64",
+    "seed": 0,
+    "steps": 24000,
+    "long_accuracy": 0.3315587341785431,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_M4h64_s1",
+    "group": "r1_M4h64",
+    "seed": 1,
+    "steps": 24000,
+    "long_accuracy": 0.04158061370253563,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_M4h64_s2",
+    "group": "r1_M4h64",
+    "seed": 2,
+    "steps": 24000,
+    "long_accuracy": 0.16678141057491302,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_M4h256_s0",
+    "group": "r1_M4h256",
+    "seed": 0,
+    "steps": 24000,
+    "long_accuracy": 0.05299310013651848,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_M4h256_s1",
+    "group": "r1_M4h256",
+    "seed": 1,
+    "steps": 24000,
+    "long_accuracy": 0.05984671041369438,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "historical:r1_M4h256_s2",
+    "group": "r1_M4h256",
+    "seed": 2,
+    "steps": 24000,
+    "long_accuracy": 0.049520399421453476,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r1_B0_s1_cap64000",
+    "group": "r1_B0",
+    "seed": 1,
+    "steps": 64000,
+    "long_accuracy": 0.08544066548347473,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r1_M1d1_s0_cap64000",
+    "group": "r1_M1d1",
+    "seed": 0,
+    "steps": 64000,
+    "long_accuracy": 0.06556825339794159,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r1_M1d1_s1_cap64000",
+    "group": "r1_M1d1",
+    "seed": 1,
+    "steps": 64000,
+    "long_accuracy": 0.0445178747177124,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r1_M1d1_s2_cap64000",
+    "group": "r1_M1d1",
+    "seed": 2,
+    "steps": 64000,
+    "long_accuracy": 0.0432022288441658,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r1_M1d2_s1_cap64000",
+    "group": "r1_M1d2",
+    "seed": 1,
+    "steps": 64000,
+    "long_accuracy": 0.10578732192516327,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r1_M4h256_s0_cap64000",
+    "group": "r1_M4h256",
+    "seed": 0,
+    "steps": 9250,
+    "long_accuracy": 0.9933758974075317,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r1_M4h256_s1_cap64000",
+    "group": "r1_M4h256",
+    "seed": 1,
+    "steps": 24750,
+    "long_accuracy": 0.9979347586631775,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r1_M4h256_s2_cap64000",
+    "group": "r1_M4h256",
+    "seed": 2,
+    "steps": 64000,
+    "long_accuracy": 0.07098382711410522,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r1_M4h64_s0_cap64000",
+    "group": "r1_M4h64",
+    "seed": 0,
+    "steps": 14000,
+    "long_accuracy": 0.9948139190673828,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r1_M4h64_s1_cap64000",
+    "group": "r1_M4h64",
+    "seed": 1,
+    "steps": 35750,
+    "long_accuracy": 0.9956094026565552,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r1_M4h64_s2_cap64000",
+    "group": "r1_M4h64",
+    "seed": 2,
+    "steps": 16250,
+    "long_accuracy": 0.9946609139442444,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r3_L2048_B0_s0_cap24000",
+    "group": "r3_L2048_B0",
+    "seed": 0,
+    "steps": 24000,
+    "long_accuracy": 0.016922900453209877,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r3_L2048_B0_s1_cap24000",
+    "group": "r3_L2048_B0",
+    "seed": 1,
+    "steps": 24000,
+    "long_accuracy": 0.03258688375353813,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r3_L2048_B0_s2_cap24000",
+    "group": "r3_L2048_B0",
+    "seed": 2,
+    "steps": 24000,
+    "long_accuracy": 0.02362949587404728,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r3_L2048_S1_s0_cap24000",
+    "group": "r3_L2048_S1",
+    "seed": 0,
+    "steps": 24000,
+    "long_accuracy": 0.01493152230978012,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r3_L2048_S1_s1_cap24000",
+    "group": "r3_L2048_S1",
+    "seed": 1,
+    "steps": 24000,
+    "long_accuracy": 0.01152100134640932,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r3_L2048_S1_s2_cap24000",
+    "group": "r3_L2048_S1",
+    "seed": 2,
+    "steps": 13250,
+    "long_accuracy": 0.9951856136322021,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r3_L2048_T1a_s0_cap12000",
+    "group": "r3_L2048_T1a",
+    "seed": 0,
+    "steps": 12000,
+    "long_accuracy": 0.9975584745407104,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r3_L2048_T1a_s1_cap12000",
+    "group": "r3_L2048_T1a",
+    "seed": 1,
+    "steps": 12000,
+    "long_accuracy": 0.8033571243286133,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  },
+  {
+    "origin": "colab",
+    "record_id": "current:r3_L2048_T1a_s2_cap12000",
+    "group": "r3_L2048_T1a",
+    "seed": 2,
+    "steps": 12000,
+    "long_accuracy": 0.35217639803886414,
+    "use": "Existing evidence / checkpoint inference / design pilot. Not counted as a new run or substituted for a new fixed-budget matched control."
+  }
+]

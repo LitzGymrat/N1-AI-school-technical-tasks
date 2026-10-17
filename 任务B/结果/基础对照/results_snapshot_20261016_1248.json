@@ -1,0 +1,4968 @@
+{
+  "schema": "fixed50-scientific-results-snapshot-v1",
+  "captured": "2026-10-16T04:48:19.587Z",
+  "captured_beijing": "2026-10-16 12:48:19",
+  "created_utc": "2026-10-16T04:50:08.146453+00:00",
+  "source": {
+    "eta_live": "resume_3gpu_20261016/eta_live.json",
+    "eta_live_sha256": "32c8f45ef35f81c067b09dbe5abf26f1bc91a9dcb5ae53aad4310549f037e33f",
+    "jobs": "resume_3gpu_20261016/runtime/jobs.json",
+    "previous_snapshot": "resume_3gpu_20261016/results_snapshot_20261016_1138.json",
+    "previous_snapshot_sha256": "a6f3491d2eb0d12acd54846ecd27803ac0d414cdc8dd1e41faef33557199422d"
+  },
+  "summary": {
+    "completed": 49,
+    "running": 1,
+    "pending": 0,
+    "total": 50,
+    "added_completed_since_1138": 9,
+    "added_early_stop_successes_since_1138": 5,
+    "completed_with_early_stop": 18,
+    "completed_final_valid_ge_98_percent": 20,
+    "completed_long_benchmark_ge_95_percent": 17,
+    "count_threshold_note": "最终单点valid、long阈值与连续3次valid早停是独立口径。",
+    "cap64000": {
+      "planned": 19,
+      "completed": 18,
+      "running": 1,
+      "early_stop_successes": 11,
+      "completed_without_early_stop": 7,
+      "successes_stopping_after_24000": 5,
+      "successes_stopping_after_24000_names": [
+        "r1_H16_s2_cap64000",
+        "r1_M4h256_s1_cap64000",
+        "r1_M4h512_s1_cap64000",
+        "r1_M4h512_s2_cap64000",
+        "r1_M4h64_s1_cap64000"
+      ]
+    }
+  },
+  "metric_definitions": [
+    "49项完成包括达到预算上限但未学会的结果；完成状态不等于收敛。",
+    "valid是训练距离分布上的固定验证集，早停只看valid连续3次>=98%；benchmark使用相同上下文统计、距离均匀U[4,L-2]，long只统计距离>=L/2，不能用valid替代long。",
+    "T1a固定12k并关闭早停：stopped_early=false不能单独用作失败判据；这里分别报告最终valid和long。",
+    "q8/d56最终valid98.97%但stopped_early=false，说明没有触发所定的连续3次早停；单次最终分数不等于已满足完整早停协议。",
+    "L2048中的long阈值为1024，L1024中的long阈值为512；不同上下文长度的long不是同一距离区间。",
+    "本批T1b的seed1/2是重新初始化的新尝试，分别在21.5k/9.5k收敛；不能写成从原24k状态继续后才收敛。",
+    "位置编码/密度/干扰项变体目前各只有seed0，结果只代表本次探索，不能据此宣布稳定排序。",
+    "dmax256的训练分布验证高而long近机会水平，支持本配置下未见长距泛化不足；dmax512已完成seed0/1的训练分布验证本身低，不能把低long单独归因于外推。",
+    "dmax512的long包含已见的距离512；本快照没有另算严格未见[513,1022]分数。",
+    "该快照来自已落盘的远端采集结果；无新增联网、训练或测试；运行中quick benchmark只作过程读数，不与完成后的完整benchmark混写。",
+    "新增5项中H16 seed2和单头512维seed2是真正从旧24k完整状态续训后收敛；单头256维seed1和单头512维seed0/1是同seed从原初始化重跑，不能把后者写成旧轨迹延长。",
+    "单头512维三个种子均完成并收敛：停止步数19,750/44,250/39,500；前两个重跑，第三个从24k续训。",
+    "本批19项64k预算任务已有18项完成：11项触发收敛早停、7项跑满仍未触发；剩余8层seed0还在运行。",
+    "这11项成功中5项在24k之后才停止，但其中真正连续旧24k轨迹后成功的为H16 seed2、单头512维seed2两项。"
+  ],
+  "groups": [
+    {
+      "group": "r1_B0",
+      "meaning_from_arguments": "L1024；4层、隐藏宽256、4头×64；训练距离U[4,1022]基线",
+      "completed_seeds": [
+        1
+      ],
+      "completed_count": 1,
+      "current_batch_total_jobs": 1,
+      "seed_results": [
+        {
+          "seed": 1,
+          "steps_done": 64000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.052734375,
+          "distance_uniform_benchmark": {
+            "short": 0.02497526817023754,
+            "long": 0.08544066548347473,
+            "all": 0.0551300048828125
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "64k重跑尝试内从1k完整中断点恢复；不是原24k状态续训"
+        }
+      ]
+    },
+    {
+      "group": "r1_H16",
+      "meaning_from_arguments": "L1024；4层、隐藏宽256、16头，自动head_dim=16；原24k完整状态续训",
+      "completed_seeds": [
+        2
+      ],
+      "completed_count": 1,
+      "current_batch_total_jobs": 1,
+      "seed_results": [
+        {
+          "seed": 2,
+          "steps_done": 60000,
+          "first_valid_98_step": 59500,
+          "training_distribution_final_valid_acc": 0.99267578125,
+          "distance_uniform_benchmark": {
+            "short": 0.9922075867652893,
+            "long": 0.9936512112617493,
+            "all": 0.9929275512695312
+          },
+          "stopped_early": true,
+          "attempt_interpretation": "原24k完整训练状态续训"
+        }
+      ]
+    },
+    {
+      "group": "r1_M1d1",
+      "meaning_from_arguments": "L1024；1层，隐藏宽256，4头",
+      "completed_seeds": [
+        0,
+        1,
+        2
+      ],
+      "completed_count": 3,
+      "current_batch_total_jobs": 3,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 64000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.0556640625,
+          "distance_uniform_benchmark": {
+            "short": 0.04509550333023071,
+            "long": 0.06556825339794159,
+            "all": 0.05530548095703125
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "同seed原初始化重跑"
+        },
+        {
+          "seed": 1,
+          "steps_done": 64000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.03759765625,
+          "distance_uniform_benchmark": {
+            "short": 0.03159577026963234,
+            "long": 0.0445178747177124,
+            "all": 0.0380401611328125
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "同seed原初始化重跑"
+        },
+        {
+          "seed": 2,
+          "steps_done": 64000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.0396728515625,
+          "distance_uniform_benchmark": {
+            "short": 0.03071303479373455,
+            "long": 0.0432022288441658,
+            "all": 0.0369415283203125
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "原24k完整训练状态续训"
+        }
+      ]
+    },
+    {
+      "group": "r1_M1d2",
+      "meaning_from_arguments": "L1024；2层，隐藏宽256，4头",
+      "completed_seeds": [
+        1
+      ],
+      "completed_count": 1,
+      "current_batch_total_jobs": 1,
+      "seed_results": [
+        {
+          "seed": 1,
+          "steps_done": 64000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.069580078125,
+          "distance_uniform_benchmark": {
+            "short": 0.040925346314907074,
+            "long": 0.10578732192516327,
+            "all": 0.073272705078125
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "同seed原初始化重跑"
+        }
+      ]
+    },
+    {
+      "group": "r1_M4h256",
+      "meaning_from_arguments": "L1024；4层、隐藏宽256；单头，head_dim=256",
+      "completed_seeds": [
+        0,
+        1,
+        2
+      ],
+      "completed_count": 3,
+      "current_batch_total_jobs": 3,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 9250,
+          "first_valid_98_step": 8750,
+          "training_distribution_final_valid_acc": 0.994140625,
+          "distance_uniform_benchmark": {
+            "short": 0.9929837584495544,
+            "long": 0.9933758974075317,
+            "all": 0.9931793212890625
+          },
+          "stopped_early": true,
+          "attempt_interpretation": "同seed原初始化重跑"
+        },
+        {
+          "seed": 1,
+          "steps_done": 24750,
+          "first_valid_98_step": 24250,
+          "training_distribution_final_valid_acc": 0.998046875,
+          "distance_uniform_benchmark": {
+            "short": 0.9982040524482727,
+            "long": 0.9979347586631775,
+            "all": 0.9980697631835938
+          },
+          "stopped_early": true,
+          "attempt_interpretation": "同seed原初始化重跑"
+        },
+        {
+          "seed": 2,
+          "steps_done": 64000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.04931640625,
+          "distance_uniform_benchmark": {
+            "short": 0.026329807937145233,
+            "long": 0.07098382711410522,
+            "all": 0.0485992431640625
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "原24k完整训练状态续训"
+        }
+      ]
+    },
+    {
+      "group": "r1_M4h512",
+      "meaning_from_arguments": "L1024；4层、隐藏宽256；单头，head_dim=512（不是512个头）",
+      "completed_seeds": [
+        0,
+        1,
+        2
+      ],
+      "completed_count": 3,
+      "current_batch_total_jobs": 3,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 19750,
+          "first_valid_98_step": 19250,
+          "training_distribution_final_valid_acc": 0.996826171875,
+          "distance_uniform_benchmark": {
+            "short": 0.995723307132721,
+            "long": 0.9950739741325378,
+            "all": 0.9953994750976562
+          },
+          "stopped_early": true,
+          "attempt_interpretation": "同seed原初始化重跑"
+        },
+        {
+          "seed": 1,
+          "steps_done": 44250,
+          "first_valid_98_step": 43750,
+          "training_distribution_final_valid_acc": 0.994140625,
+          "distance_uniform_benchmark": {
+            "short": 0.9929990172386169,
+            "long": 0.9919378161430359,
+            "all": 0.9924697875976562
+          },
+          "stopped_early": true,
+          "attempt_interpretation": "同seed原初始化重跑"
+        },
+        {
+          "seed": 2,
+          "steps_done": 39500,
+          "first_valid_98_step": 39000,
+          "training_distribution_final_valid_acc": 0.9971923828125,
+          "distance_uniform_benchmark": {
+            "short": 0.9955254197120667,
+            "long": 0.9964049458503723,
+            "all": 0.9959640502929688
+          },
+          "stopped_early": true,
+          "attempt_interpretation": "原24k完整训练状态续训"
+        }
+      ]
+    },
+    {
+      "group": "r1_M4h64",
+      "meaning_from_arguments": "L1024；4层、隐藏宽256；单头，head_dim=64（不是64个头）",
+      "completed_seeds": [
+        0,
+        1,
+        2
+      ],
+      "completed_count": 3,
+      "current_batch_total_jobs": 3,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 14000,
+          "first_valid_98_step": 13500,
+          "training_distribution_final_valid_acc": 0.992919921875,
+          "distance_uniform_benchmark": {
+            "short": 0.9924206733703613,
+            "long": 0.9948139190673828,
+            "all": 0.9936141967773438
+          },
+          "stopped_early": true,
+          "attempt_interpretation": "同seed原初始化重跑"
+        },
+        {
+          "seed": 1,
+          "steps_done": 35750,
+          "first_valid_98_step": 35250,
+          "training_distribution_final_valid_acc": 0.9945068359375,
+          "distance_uniform_benchmark": {
+            "short": 0.9957080483436584,
+            "long": 0.9956094026565552,
+            "all": 0.9956588745117188
+          },
+          "stopped_early": true,
+          "attempt_interpretation": "同seed原初始化重跑"
+        },
+        {
+          "seed": 2,
+          "steps_done": 16250,
+          "first_valid_98_step": 15750,
+          "training_distribution_final_valid_acc": 0.99462890625,
+          "distance_uniform_benchmark": {
+            "short": 0.9938360452651978,
+            "long": 0.9946609139442444,
+            "all": 0.9942474365234375
+          },
+          "stopped_early": true,
+          "attempt_interpretation": "同seed原初始化重跑"
+        }
+      ]
+    },
+    {
+      "group": "r1_T1b",
+      "meaning_from_arguments": "L1024；训练距离U[128,1022]；本批seed1/2从原初始化重新训练的新尝试",
+      "completed_seeds": [
+        1,
+        2
+      ],
+      "completed_count": 2,
+      "current_batch_total_jobs": 2,
+      "seed_results": [
+        {
+          "seed": 1,
+          "steps_done": 21500,
+          "first_valid_98_step": 21000,
+          "training_distribution_final_valid_acc": 0.9931640625,
+          "distance_uniform_benchmark": {
+            "short": 0.8435431122779846,
+            "long": 0.9922897219657898,
+            "all": 0.917724609375
+          },
+          "stopped_early": true,
+          "attempt_interpretation": "同seed原初始化重跑"
+        },
+        {
+          "seed": 2,
+          "steps_done": 9500,
+          "first_valid_98_step": 9000,
+          "training_distribution_final_valid_acc": 0.993408203125,
+          "distance_uniform_benchmark": {
+            "short": 0.8664332628250122,
+            "long": 0.992901623249054,
+            "all": 0.92950439453125
+          },
+          "stopped_early": true,
+          "attempt_interpretation": "同seed原初始化重跑"
+        }
+      ]
+    },
+    {
+      "group": "r1_W128",
+      "meaning_from_arguments": "L1024；4层，隐藏宽128，4头",
+      "completed_seeds": [
+        1,
+        2
+      ],
+      "completed_count": 2,
+      "current_batch_total_jobs": 2,
+      "seed_results": [
+        {
+          "seed": 1,
+          "steps_done": 64000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.0496826171875,
+          "distance_uniform_benchmark": {
+            "short": 0.02301194705069065,
+            "long": 0.08426269888877869,
+            "all": 0.053558349609375
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "原24k完整训练状态续训"
+        },
+        {
+          "seed": 2,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.0482177734375,
+          "distance_uniform_benchmark": {
+            "short": 0.022281408309936523,
+            "long": 0.07471659779548645,
+            "all": 0.048431396484375
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "同一尝试的完整中断状态恢复"
+        }
+      ]
+    },
+    {
+      "group": "r1_W512",
+      "meaning_from_arguments": "L1024；4层，隐藏宽512，4头",
+      "completed_seeds": [
+        1,
+        2
+      ],
+      "completed_count": 2,
+      "current_batch_total_jobs": 2,
+      "seed_results": [
+        {
+          "seed": 1,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.0345458984375,
+          "distance_uniform_benchmark": {
+            "short": 0.022281408309936523,
+            "long": 0.045894719660282135,
+            "all": 0.0340576171875
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "同一尝试的完整中断状态恢复"
+        },
+        {
+          "seed": 2,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.029296875,
+          "distance_uniform_benchmark": {
+            "short": 0.02212921343743801,
+            "long": 0.03368672356009483,
+            "all": 0.02789306640625
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "同一尝试的完整中断状态恢复"
+        }
+      ]
+    },
+    {
+      "group": "r2_density_q64_d0",
+      "meaning_from_arguments": "L1024；每序列64个查询、0个非查询干扰KV；共64个不同key",
+      "completed_seeds": [
+        0
+      ],
+      "completed_count": 1,
+      "current_batch_total_jobs": 1,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 3000,
+          "first_valid_98_step": 2500,
+          "training_distribution_final_valid_acc": 0.9964599609375,
+          "distance_uniform_benchmark": {
+            "short": 0.9959098696708679,
+            "long": 0.9959800839424133,
+            "all": 0.9959449768066406
+          },
+          "stopped_early": true,
+          "attempt_interpretation": "新计划从头训练"
+        }
+      ]
+    },
+    {
+      "group": "r2_density_q8_d56",
+      "meaning_from_arguments": "L1024；每序列8个查询、56个非查询干扰KV；共64个不同key",
+      "completed_seeds": [
+        0
+      ],
+      "completed_count": 1,
+      "current_batch_total_jobs": 1,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 24000,
+          "first_valid_98_step": 23750,
+          "training_distribution_final_valid_acc": 0.98974609375,
+          "distance_uniform_benchmark": {
+            "short": 0.9840754866600037,
+            "long": 0.9871662259101868,
+            "all": 0.985626220703125
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        }
+      ]
+    },
+    {
+      "group": "r2_distractors_0",
+      "meaning_from_arguments": "L1024；32个查询、0个非查询干扰KV",
+      "completed_seeds": [
+        0
+      ],
+      "completed_count": 1,
+      "current_batch_total_jobs": 1,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.145751953125,
+          "distance_uniform_benchmark": {
+            "short": 0.1084396243095398,
+            "long": 0.17772872745990753,
+            "all": 0.14316558837890625
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        }
+      ]
+    },
+    {
+      "group": "r2_distractors_96",
+      "meaning_from_arguments": "L1024；32个查询、96个非查询干扰KV",
+      "completed_seeds": [
+        0
+      ],
+      "completed_count": 1,
+      "current_batch_total_jobs": 1,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 17250,
+          "first_valid_98_step": 16750,
+          "training_distribution_final_valid_acc": 0.993896484375,
+          "distance_uniform_benchmark": {
+            "short": 0.9927965402603149,
+            "long": 0.9942668676376343,
+            "all": 0.9935302734375
+          },
+          "stopped_early": true,
+          "attempt_interpretation": "新计划从头训练"
+        }
+      ]
+    },
+    {
+      "group": "r2_pos_alibi",
+      "meaning_from_arguments": "L1024；ALiBi",
+      "completed_seeds": [
+        0
+      ],
+      "completed_count": 1,
+      "current_batch_total_jobs": 1,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.0260009765625,
+          "distance_uniform_benchmark": {
+            "short": 0.020318087190389633,
+            "long": 0.03510946035385132,
+            "all": 0.0276947021484375
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        }
+      ]
+    },
+    {
+      "group": "r2_pos_nope",
+      "meaning_from_arguments": "L1024；无位置编码",
+      "completed_seeds": [
+        0
+      ],
+      "completed_count": 1,
+      "current_batch_total_jobs": 1,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.04052734375,
+          "distance_uniform_benchmark": {
+            "short": 0.021307358518242836,
+            "long": 0.05960194021463394,
+            "all": 0.0404052734375
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        }
+      ]
+    },
+    {
+      "group": "r2_pos_partial25",
+      "meaning_from_arguments": "L1024；仅25%的head维度使用RoPE",
+      "completed_seeds": [
+        0
+      ],
+      "completed_count": 1,
+      "current_batch_total_jobs": 1,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.17724609375,
+          "distance_uniform_benchmark": {
+            "short": 0.14772087335586548,
+            "long": 0.2161182314157486,
+            "all": 0.18183135986328125
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        }
+      ]
+    },
+    {
+      "group": "r2_pos_partial50",
+      "meaning_from_arguments": "L1024；仅50%的head维度使用RoPE",
+      "completed_seeds": [
+        0
+      ],
+      "completed_count": 1,
+      "current_batch_total_jobs": 1,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.044921875,
+          "distance_uniform_benchmark": {
+            "short": 0.021840041503310204,
+            "long": 0.06559885293245316,
+            "all": 0.04366302490234375
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        }
+      ]
+    },
+    {
+      "group": "r2_pos_rope100k",
+      "meaning_from_arguments": "L1024；RoPE base=100000",
+      "completed_seeds": [
+        0
+      ],
+      "completed_count": 1,
+      "current_batch_total_jobs": 1,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 12000,
+          "first_valid_98_step": 11500,
+          "training_distribution_final_valid_acc": 0.9991455078125,
+          "distance_uniform_benchmark": {
+            "short": 0.999315083026886,
+            "long": 0.9994951486587524,
+            "all": 0.9994049072265625
+          },
+          "stopped_early": true,
+          "attempt_interpretation": "新计划从头训练"
+        }
+      ]
+    },
+    {
+      "group": "r2_pos_rope1m",
+      "meaning_from_arguments": "L1024；RoPE base=1000000",
+      "completed_seeds": [
+        0
+      ],
+      "completed_count": 1,
+      "current_batch_total_jobs": 1,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.0574951171875,
+          "distance_uniform_benchmark": {
+            "short": 0.02362072840332985,
+            "long": 0.08280936628580093,
+            "all": 0.05313873291015625
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        }
+      ]
+    },
+    {
+      "group": "r3_L2048_B0",
+      "meaning_from_arguments": "L2048；64查询、64干扰KV；训练距离U[4,2046]；普通基线",
+      "completed_seeds": [
+        0,
+        1,
+        2
+      ],
+      "completed_count": 3,
+      "current_batch_total_jobs": 3,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.0146484375,
+          "distance_uniform_benchmark": {
+            "short": 0.01334309857338667,
+            "long": 0.016922900453209877,
+            "all": 0.015132904052734375
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        },
+        {
+          "seed": 1,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.02606201171875,
+          "distance_uniform_benchmark": {
+            "short": 0.01850792206823826,
+            "long": 0.03258688375353813,
+            "all": 0.025547027587890625
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        },
+        {
+          "seed": 2,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.0189208984375,
+          "distance_uniform_benchmark": {
+            "short": 0.013205776922404766,
+            "long": 0.02362949587404728,
+            "all": 0.0184173583984375
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        }
+      ]
+    },
+    {
+      "group": "r3_L2048_S1",
+      "meaning_from_arguments": "L2048；64查询、64干扰KV；训练距离U[4,2046]；S1=smear，相邻token embedding输入叠加",
+      "completed_seeds": [
+        0,
+        1,
+        2
+      ],
+      "completed_count": 3,
+      "current_batch_total_jobs": 3,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.01416015625,
+          "distance_uniform_benchmark": {
+            "short": 0.01312185823917389,
+            "long": 0.01493152230978012,
+            "all": 0.014026641845703125
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        },
+        {
+          "seed": 1,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.0106201171875,
+          "distance_uniform_benchmark": {
+            "short": 0.010947596281766891,
+            "long": 0.01152100134640932,
+            "all": 0.011234283447265625
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        },
+        {
+          "seed": 2,
+          "steps_done": 13250,
+          "first_valid_98_step": 12750,
+          "training_distribution_final_valid_acc": 0.9942626953125,
+          "distance_uniform_benchmark": {
+            "short": 0.9923023581504822,
+            "long": 0.9951856136322021,
+            "all": 0.993743896484375
+          },
+          "stopped_early": true,
+          "attempt_interpretation": "新计划从头训练"
+        }
+      ]
+    },
+    {
+      "group": "r3_L2048_T1a",
+      "meaning_from_arguments": "L2048；64查询、64干扰KV；训练距离loguniform[4,2046]；固定12000步，关闭早停",
+      "completed_seeds": [
+        0,
+        1,
+        2
+      ],
+      "completed_count": 3,
+      "current_batch_total_jobs": 3,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 12000,
+          "first_valid_98_step": 8250,
+          "training_distribution_final_valid_acc": 0.99932861328125,
+          "distance_uniform_benchmark": {
+            "short": 0.9989777207374573,
+            "long": 0.9975584745407104,
+            "all": 0.9982681274414062
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        },
+        {
+          "seed": 1,
+          "steps_done": 12000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.97015380859375,
+          "distance_uniform_benchmark": {
+            "short": 0.9513576030731201,
+            "long": 0.8033571243286133,
+            "all": 0.8773612976074219
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        },
+        {
+          "seed": 2,
+          "steps_done": 12000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.89691162109375,
+          "distance_uniform_benchmark": {
+            "short": 0.8339703679084778,
+            "long": 0.35217639803886414,
+            "all": 0.5930862426757812
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        }
+      ]
+    },
+    {
+      "group": "r3_L2048_T1b",
+      "meaning_from_arguments": "L2048；64查询、64干扰KV；训练距离U[128,2046]",
+      "completed_seeds": [
+        0,
+        1,
+        2
+      ],
+      "completed_count": 3,
+      "current_batch_total_jobs": 3,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.02655029296875,
+          "distance_uniform_benchmark": {
+            "short": 0.019133498892188072,
+            "long": 0.03322015702724457,
+            "all": 0.02617645263671875
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        },
+        {
+          "seed": 1,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.0277099609375,
+          "distance_uniform_benchmark": {
+            "short": 0.02039228193461895,
+            "long": 0.03505130857229233,
+            "all": 0.027721405029296875
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        },
+        {
+          "seed": 2,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.02703857421875,
+          "distance_uniform_benchmark": {
+            "short": 0.019179273396730423,
+            "long": 0.03460878133773804,
+            "all": 0.02689361572265625
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        }
+      ]
+    },
+    {
+      "group": "r3_extrap_dmax256",
+      "meaning_from_arguments": "L1024；训练距离U[4,256]；benchmark.long=[512,1022]全部未见",
+      "completed_seeds": [
+        0,
+        1,
+        2
+      ],
+      "completed_count": 3,
+      "current_batch_total_jobs": 3,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 4250,
+          "first_valid_98_step": 3750,
+          "training_distribution_final_valid_acc": 0.9874267578125,
+          "distance_uniform_benchmark": {
+            "short": 0.5280267596244812,
+            "long": 0.008169259876012802,
+            "all": 0.268768310546875
+          },
+          "stopped_early": true,
+          "attempt_interpretation": "新计划从头训练"
+        },
+        {
+          "seed": 1,
+          "steps_done": 8250,
+          "first_valid_98_step": 7750,
+          "training_distribution_final_valid_acc": 0.9912109375,
+          "distance_uniform_benchmark": {
+            "short": 0.5566547513008118,
+            "long": 0.009102452546358109,
+            "all": 0.2835845947265625
+          },
+          "stopped_early": true,
+          "attempt_interpretation": "新计划从头训练"
+        },
+        {
+          "seed": 2,
+          "steps_done": 3750,
+          "first_valid_98_step": 3250,
+          "training_distribution_final_valid_acc": 0.9842529296875,
+          "distance_uniform_benchmark": {
+            "short": 0.4947873055934906,
+            "long": 0.008016277104616165,
+            "all": 0.2520294189453125
+          },
+          "stopped_early": true,
+          "attempt_interpretation": "新计划从头训练"
+        }
+      ]
+    },
+    {
+      "group": "r3_extrap_dmax512",
+      "meaning_from_arguments": "L1024；训练距离U[4,512]；benchmark.long=[512,1022]包含已见边界512；严格未见应另算[513,1022]",
+      "completed_seeds": [
+        0,
+        1,
+        2
+      ],
+      "completed_count": 3,
+      "current_batch_total_jobs": 3,
+      "seed_results": [
+        {
+          "seed": 0,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.056640625,
+          "distance_uniform_benchmark": {
+            "short": 0.04016437008976936,
+            "long": 0.0011167714837938547,
+            "all": 0.02069091796875
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        },
+        {
+          "seed": 1,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.05810546875,
+          "distance_uniform_benchmark": {
+            "short": 0.040362223982810974,
+            "long": 0.0005048419116064906,
+            "all": 0.02048492431640625
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        },
+        {
+          "seed": 2,
+          "steps_done": 24000,
+          "first_valid_98_step": null,
+          "training_distribution_final_valid_acc": 0.0556640625,
+          "distance_uniform_benchmark": {
+            "short": 0.0417928621172905,
+            "long": 0.0006119295721873641,
+            "all": 0.0212554931640625
+          },
+          "stopped_early": false,
+          "attempt_interpretation": "新计划从头训练"
+        }
+      ]
+    }
+  ],
+  "completed": [
+    {
+      "name": "r1_B0_s1_cap64000",
+      "group": "r1_B0",
+      "seed": 1,
+      "role": "A",
+      "cap": 64000,
+      "steps_done": 64000,
+      "start_step": 1000,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.052734375,
+      "distance_uniform_benchmark": {
+        "short": 0.02497526817023754,
+        "long": 0.08544066548347473,
+        "all": 0.0551300048828125
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "1"
+      },
+      "resume_mode": "continue_interrupted_full_state",
+      "resume_step": 1000,
+      "attempt_interpretation": "64k重跑尝试内从1k完整中断点恢复；不是原24k状态续训",
+      "parent_wandb_run_id": "c3c3631afb3d43ee",
+      "wandb_run_id": "c3c3631afb3d43ee",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/c3c3631afb3d43ee"
+    },
+    {
+      "name": "r1_H16_s2_cap64000",
+      "group": "r1_H16",
+      "seed": 2,
+      "role": "B",
+      "cap": 64000,
+      "steps_done": 60000,
+      "start_step": 24000,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.99267578125,
+      "distance_uniform_benchmark": {
+        "short": 0.9922075867652893,
+        "long": 0.9936512112617493,
+        "all": 0.9929275512695312
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 59000,
+          "0.9": 59000,
+          "0.98": 59500
+        },
+        "bench_long": {
+          "0.5": 59000,
+          "0.9": 59000,
+          "0.98": 59500
+        }
+      },
+      "first_valid_98_step": 59500,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "16",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "0",
+        "seed": "2"
+      },
+      "resume_mode": "continue_completed_24k_full_state_to_total_64k",
+      "resume_step": 24000,
+      "attempt_interpretation": "原24k完整训练状态续训",
+      "parent_wandb_run_id": "6becab67f7aa20c3",
+      "wandb_run_id": "2dc11ecb3e0131a1",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/2dc11ecb3e0131a1"
+    },
+    {
+      "name": "r1_M1d1_s0_cap64000",
+      "group": "r1_M1d1",
+      "seed": 0,
+      "role": "C",
+      "cap": 64000,
+      "steps_done": 64000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.0556640625,
+      "distance_uniform_benchmark": {
+        "short": 0.04509550333023071,
+        "long": 0.06556825339794159,
+        "all": 0.05530548095703125
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "1",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "0"
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "resume_step": 0,
+      "attempt_interpretation": "同seed原初始化重跑",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "212f4ba37e7b90b8",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/212f4ba37e7b90b8"
+    },
+    {
+      "name": "r1_M1d1_s1_cap64000",
+      "group": "r1_M1d1",
+      "seed": 1,
+      "role": "C",
+      "cap": 64000,
+      "steps_done": 64000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.03759765625,
+      "distance_uniform_benchmark": {
+        "short": 0.03159577026963234,
+        "long": 0.0445178747177124,
+        "all": 0.0380401611328125
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "1",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "1"
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "resume_step": 0,
+      "attempt_interpretation": "同seed原初始化重跑",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "958f2101edddde67",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/958f2101edddde67"
+    },
+    {
+      "name": "r1_M1d1_s2_cap64000",
+      "group": "r1_M1d1",
+      "seed": 2,
+      "role": "C",
+      "cap": 64000,
+      "steps_done": 64000,
+      "start_step": 24000,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.0396728515625,
+      "distance_uniform_benchmark": {
+        "short": 0.03071303479373455,
+        "long": 0.0432022288441658,
+        "all": 0.0369415283203125
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "1",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "2"
+      },
+      "resume_mode": "continue_completed_24k_full_state_to_total_64k",
+      "resume_step": 24000,
+      "attempt_interpretation": "原24k完整训练状态续训",
+      "parent_wandb_run_id": "fc2fdd344eb8334a",
+      "wandb_run_id": "513e2d546f389735",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/513e2d546f389735"
+    },
+    {
+      "name": "r1_M1d2_s1_cap64000",
+      "group": "r1_M1d2",
+      "seed": 1,
+      "role": "C",
+      "cap": 64000,
+      "steps_done": 64000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.069580078125,
+      "distance_uniform_benchmark": {
+        "short": 0.040925346314907074,
+        "long": 0.10578732192516327,
+        "all": 0.073272705078125
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "2",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "1"
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "resume_step": 0,
+      "attempt_interpretation": "同seed原初始化重跑",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "0b4786fbc726bb95",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/0b4786fbc726bb95"
+    },
+    {
+      "name": "r1_M4h256_s0_cap64000",
+      "group": "r1_M4h256",
+      "seed": 0,
+      "role": "C",
+      "cap": 64000,
+      "steps_done": 9250,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.994140625,
+      "distance_uniform_benchmark": {
+        "short": 0.9929837584495544,
+        "long": 0.9933758974075317,
+        "all": 0.9931793212890625
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 8250,
+          "0.9": 8500,
+          "0.98": 8750
+        },
+        "bench_long": {
+          "0.5": 8250,
+          "0.9": 8500,
+          "0.98": 8750
+        }
+      },
+      "first_valid_98_step": 8750,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "1",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "256",
+        "seed": "0"
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "resume_step": 0,
+      "attempt_interpretation": "同seed原初始化重跑",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "0cbf741995014369",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/0cbf741995014369"
+    },
+    {
+      "name": "r1_M4h256_s1_cap64000",
+      "group": "r1_M4h256",
+      "seed": 1,
+      "role": "B",
+      "cap": 64000,
+      "steps_done": 24750,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.998046875,
+      "distance_uniform_benchmark": {
+        "short": 0.9982040524482727,
+        "long": 0.9979347586631775,
+        "all": 0.9980697631835938
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 23000,
+          "0.9": 24000,
+          "0.98": 24250
+        },
+        "bench_long": {
+          "0.5": 22750,
+          "0.9": 24000,
+          "0.98": 24250
+        }
+      },
+      "first_valid_98_step": 24250,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "1",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "256",
+        "seed": "1"
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "resume_step": 0,
+      "attempt_interpretation": "同seed原初始化重跑",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "7b2e111ee61c14bb",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/7b2e111ee61c14bb"
+    },
+    {
+      "name": "r1_M4h256_s2_cap64000",
+      "group": "r1_M4h256",
+      "seed": 2,
+      "role": "C",
+      "cap": 64000,
+      "steps_done": 64000,
+      "start_step": 24000,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.04931640625,
+      "distance_uniform_benchmark": {
+        "short": 0.026329807937145233,
+        "long": 0.07098382711410522,
+        "all": 0.0485992431640625
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "1",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "256",
+        "seed": "2"
+      },
+      "resume_mode": "continue_completed_24k_full_state_to_total_64k",
+      "resume_step": 24000,
+      "attempt_interpretation": "原24k完整训练状态续训",
+      "parent_wandb_run_id": "91326a5eed9ba7d4",
+      "wandb_run_id": "6f5c35c1af83eb7e",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/6f5c35c1af83eb7e"
+    },
+    {
+      "name": "r1_M4h512_s0_cap64000",
+      "group": "r1_M4h512",
+      "seed": 0,
+      "role": "C",
+      "cap": 64000,
+      "steps_done": 19750,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.996826171875,
+      "distance_uniform_benchmark": {
+        "short": 0.995723307132721,
+        "long": 0.9950739741325378,
+        "all": 0.9953994750976562
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 18250,
+          "0.9": 19000,
+          "0.98": 19250
+        },
+        "bench_long": {
+          "0.5": 18250,
+          "0.9": 19000,
+          "0.98": 19250
+        }
+      },
+      "first_valid_98_step": 19250,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "1",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "512",
+        "seed": "0"
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "resume_step": 0,
+      "attempt_interpretation": "同seed原初始化重跑",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "068aa28c1a3db503",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/068aa28c1a3db503"
+    },
+    {
+      "name": "r1_M4h512_s1_cap64000",
+      "group": "r1_M4h512",
+      "seed": 1,
+      "role": "A",
+      "cap": 64000,
+      "steps_done": 44250,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.994140625,
+      "distance_uniform_benchmark": {
+        "short": 0.9929990172386169,
+        "long": 0.9919378161430359,
+        "all": 0.9924697875976562
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 42500,
+          "0.9": 43500,
+          "0.98": 43750
+        },
+        "bench_long": {
+          "0.5": 42500,
+          "0.9": 43500,
+          "0.98": 43750
+        }
+      },
+      "first_valid_98_step": 43750,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "1",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "512",
+        "seed": "1"
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "resume_step": 0,
+      "attempt_interpretation": "同seed原初始化重跑",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "0541c2ede75dceb5",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/0541c2ede75dceb5"
+    },
+    {
+      "name": "r1_M4h512_s2_cap64000",
+      "group": "r1_M4h512",
+      "seed": 2,
+      "role": "B",
+      "cap": 64000,
+      "steps_done": 39500,
+      "start_step": 24000,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.9971923828125,
+      "distance_uniform_benchmark": {
+        "short": 0.9955254197120667,
+        "long": 0.9964049458503723,
+        "all": 0.9959640502929688
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 38750,
+          "0.9": 39000,
+          "0.98": 39000
+        },
+        "bench_long": {
+          "0.5": 38750,
+          "0.9": 38750,
+          "0.98": 39000
+        }
+      },
+      "first_valid_98_step": 39000,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "1",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "512",
+        "seed": "2"
+      },
+      "resume_mode": "continue_completed_24k_full_state_to_total_64k",
+      "resume_step": 24000,
+      "attempt_interpretation": "原24k完整训练状态续训",
+      "parent_wandb_run_id": "02facda0e9e37ae6",
+      "wandb_run_id": "6ea14666743e30be",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/6ea14666743e30be"
+    },
+    {
+      "name": "r1_M4h64_s0_cap64000",
+      "group": "r1_M4h64",
+      "seed": 0,
+      "role": "C",
+      "cap": 64000,
+      "steps_done": 14000,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.992919921875,
+      "distance_uniform_benchmark": {
+        "short": 0.9924206733703613,
+        "long": 0.9948139190673828,
+        "all": 0.9936141967773438
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 13250,
+          "0.9": 13500,
+          "0.98": 13500
+        },
+        "bench_long": {
+          "0.5": 13250,
+          "0.9": 13500,
+          "0.98": 13750
+        }
+      },
+      "first_valid_98_step": 13500,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "1",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "64",
+        "seed": "0"
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "resume_step": 0,
+      "attempt_interpretation": "同seed原初始化重跑",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "286f718a2ab13bba",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/286f718a2ab13bba"
+    },
+    {
+      "name": "r1_M4h64_s1_cap64000",
+      "group": "r1_M4h64",
+      "seed": 1,
+      "role": "C",
+      "cap": 64000,
+      "steps_done": 35750,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.9945068359375,
+      "distance_uniform_benchmark": {
+        "short": 0.9957080483436584,
+        "long": 0.9956094026565552,
+        "all": 0.9956588745117188
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 34500,
+          "0.9": 35000,
+          "0.98": 35250
+        },
+        "bench_long": {
+          "0.5": 34500,
+          "0.9": 35000,
+          "0.98": 35250
+        }
+      },
+      "first_valid_98_step": 35250,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "1",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "64",
+        "seed": "1"
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "resume_step": 0,
+      "attempt_interpretation": "同seed原初始化重跑",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "90b22e231aa00401",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/90b22e231aa00401"
+    },
+    {
+      "name": "r1_M4h64_s2_cap64000",
+      "group": "r1_M4h64",
+      "seed": 2,
+      "role": "C",
+      "cap": 64000,
+      "steps_done": 16250,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.99462890625,
+      "distance_uniform_benchmark": {
+        "short": 0.9938360452651978,
+        "long": 0.9946609139442444,
+        "all": 0.9942474365234375
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 15500,
+          "0.9": 15500,
+          "0.98": 15750
+        },
+        "bench_long": {
+          "0.5": 15500,
+          "0.9": 15500,
+          "0.98": 15750
+        }
+      },
+      "first_valid_98_step": 15750,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "1",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "64",
+        "seed": "2"
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "resume_step": 0,
+      "attempt_interpretation": "同seed原初始化重跑",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "2827908bc9c16c09",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/2827908bc9c16c09"
+    },
+    {
+      "name": "r1_T1b_s1_cap64000",
+      "group": "r1_T1b",
+      "seed": 1,
+      "role": "B",
+      "cap": 64000,
+      "steps_done": 21500,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.9931640625,
+      "distance_uniform_benchmark": {
+        "short": 0.8435431122779846,
+        "long": 0.9922897219657898,
+        "all": 0.917724609375
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 20000,
+          "0.9": 20750,
+          "0.98": 21000
+        },
+        "bench_long": {
+          "0.5": 20250,
+          "0.9": 20750,
+          "0.98": 21000
+        }
+      },
+      "first_valid_98_step": 21000,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "128",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "1"
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "resume_step": 0,
+      "attempt_interpretation": "同seed原初始化重跑",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "7c027ae4afb829bb",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/7c027ae4afb829bb"
+    },
+    {
+      "name": "r1_T1b_s2_cap64000",
+      "group": "r1_T1b",
+      "seed": 2,
+      "role": "A",
+      "cap": 64000,
+      "steps_done": 9500,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.993408203125,
+      "distance_uniform_benchmark": {
+        "short": 0.8664332628250122,
+        "long": 0.992901623249054,
+        "all": 0.92950439453125
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 8250,
+          "0.9": 8500,
+          "0.98": 9000
+        },
+        "bench_long": {
+          "0.5": 8500,
+          "0.9": 8500,
+          "0.98": 9000
+        }
+      },
+      "first_valid_98_step": 9000,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "128",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "2"
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "resume_step": 0,
+      "attempt_interpretation": "同seed原初始化重跑",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "854614a2cb566b7c",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/854614a2cb566b7c"
+    },
+    {
+      "name": "r1_W128_s1_cap64000",
+      "group": "r1_W128",
+      "seed": 1,
+      "role": "C",
+      "cap": 64000,
+      "steps_done": 64000,
+      "start_step": 24000,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.0496826171875,
+      "distance_uniform_benchmark": {
+        "short": 0.02301194705069065,
+        "long": 0.08426269888877869,
+        "all": 0.053558349609375
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "128",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "0",
+        "seed": "1"
+      },
+      "resume_mode": "continue_completed_24k_full_state_to_total_64k",
+      "resume_step": 24000,
+      "attempt_interpretation": "原24k完整训练状态续训",
+      "parent_wandb_run_id": "c6c1632076c0433f",
+      "wandb_run_id": "397179de44307df2",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/397179de44307df2"
+    },
+    {
+      "name": "r1_W128_s2_cap24000",
+      "group": "r1_W128",
+      "seed": 2,
+      "role": "C",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 22000,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.0482177734375,
+      "distance_uniform_benchmark": {
+        "short": 0.022281408309936523,
+        "long": 0.07471659779548645,
+        "all": 0.048431396484375
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "128",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "0",
+        "seed": "2"
+      },
+      "resume_mode": "continue_interrupted_full_state",
+      "resume_step": 22000,
+      "attempt_interpretation": "同一尝试的完整中断状态恢复",
+      "parent_wandb_run_id": "f11b9ef95c6520c2",
+      "wandb_run_id": "f11b9ef95c6520c2",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/f11b9ef95c6520c2"
+    },
+    {
+      "name": "r1_W512_s1_cap24000",
+      "group": "r1_W512",
+      "seed": 1,
+      "role": "A",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 10000,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.0345458984375,
+      "distance_uniform_benchmark": {
+        "short": 0.022281408309936523,
+        "long": 0.045894719660282135,
+        "all": 0.0340576171875
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "512",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "0",
+        "seed": "1"
+      },
+      "resume_mode": "continue_interrupted_full_state",
+      "resume_step": 10000,
+      "attempt_interpretation": "同一尝试的完整中断状态恢复",
+      "parent_wandb_run_id": "dc42fa0b6d912132",
+      "wandb_run_id": "dc42fa0b6d912132",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/dc42fa0b6d912132"
+    },
+    {
+      "name": "r1_W512_s2_cap24000",
+      "group": "r1_W512",
+      "seed": 2,
+      "role": "B",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 1000,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.029296875,
+      "distance_uniform_benchmark": {
+        "short": 0.02212921343743801,
+        "long": 0.03368672356009483,
+        "all": 0.02789306640625
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "512",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "0",
+        "seed": "2"
+      },
+      "resume_mode": "continue_interrupted_full_state",
+      "resume_step": 1000,
+      "attempt_interpretation": "同一尝试的完整中断状态恢复",
+      "parent_wandb_run_id": "83225e1d5e76499f",
+      "wandb_run_id": "83225e1d5e76499f",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/83225e1d5e76499f"
+    },
+    {
+      "name": "r2_density_q64_d0_s0_cap24000",
+      "group": "r2_density_q64_d0",
+      "seed": 0,
+      "role": "B",
+      "cap": 24000,
+      "steps_done": 3000,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.9964599609375,
+      "distance_uniform_benchmark": {
+        "short": 0.9959098696708679,
+        "long": 0.9959800839424133,
+        "all": 0.9959449768066406
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 2250,
+          "0.9": 2250,
+          "0.98": 2500
+        },
+        "bench_long": {
+          "0.5": 2250,
+          "0.9": 2250,
+          "0.98": 2500
+        }
+      },
+      "first_valid_98_step": 2500,
+      "arguments": {
+        "L": "1024",
+        "n_q": "64",
+        "n_dis": "0",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "bench_queries": "262144",
+        "seed": "0"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "9df026252e05f226",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/9df026252e05f226"
+    },
+    {
+      "name": "r2_density_q8_d56_s0_cap24000",
+      "group": "r2_density_q8_d56",
+      "seed": 0,
+      "role": "B",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.98974609375,
+      "distance_uniform_benchmark": {
+        "short": 0.9840754866600037,
+        "long": 0.9871662259101868,
+        "all": 0.985626220703125
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 23000,
+          "0.9": 23250,
+          "0.98": 23750
+        },
+        "bench_long": {
+          "0.5": 23000,
+          "0.9": 23250,
+          "0.98": 23750
+        }
+      },
+      "first_valid_98_step": 23750,
+      "arguments": {
+        "L": "1024",
+        "n_q": "8",
+        "n_dis": "56",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "bench_queries": "32768",
+        "seed": "0"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "f807f756b1ba955e",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/f807f756b1ba955e"
+    },
+    {
+      "name": "r2_distractors_0_s0_cap24000",
+      "group": "r2_distractors_0",
+      "seed": 0,
+      "role": "A",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.145751953125,
+      "distance_uniform_benchmark": {
+        "short": 0.1084396243095398,
+        "long": 0.17772872745990753,
+        "all": 0.14316558837890625
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "0",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "0"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "88a59c50c0c13c75",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/88a59c50c0c13c75"
+    },
+    {
+      "name": "r2_distractors_96_s0_cap24000",
+      "group": "r2_distractors_96",
+      "seed": 0,
+      "role": "B",
+      "cap": 24000,
+      "steps_done": 17250,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.993896484375,
+      "distance_uniform_benchmark": {
+        "short": 0.9927965402603149,
+        "long": 0.9942668676376343,
+        "all": 0.9935302734375
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 16000,
+          "0.9": 16750,
+          "0.98": 16750
+        },
+        "bench_long": {
+          "0.5": 16000,
+          "0.9": 16750,
+          "0.98": 16750
+        }
+      },
+      "first_valid_98_step": 16750,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "96",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "0"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "568a7bae920ea64f",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/568a7bae920ea64f"
+    },
+    {
+      "name": "r2_pos_alibi_s0_cap24000",
+      "group": "r2_pos_alibi",
+      "seed": 0,
+      "role": "A",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.0260009765625,
+      "distance_uniform_benchmark": {
+        "short": 0.020318087190389633,
+        "long": 0.03510946035385132,
+        "all": 0.0276947021484375
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "alibi",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "0"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "e358806e2e3a839c",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/e358806e2e3a839c"
+    },
+    {
+      "name": "r2_pos_nope_s0_cap24000",
+      "group": "r2_pos_nope",
+      "seed": 0,
+      "role": "B",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.04052734375,
+      "distance_uniform_benchmark": {
+        "short": 0.021307358518242836,
+        "long": 0.05960194021463394,
+        "all": 0.0404052734375
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "nope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "0"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "6dd8fab4c69b99e2",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/6dd8fab4c69b99e2"
+    },
+    {
+      "name": "r2_pos_partial25_s0_cap24000",
+      "group": "r2_pos_partial25",
+      "seed": 0,
+      "role": "A",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.17724609375,
+      "distance_uniform_benchmark": {
+        "short": 0.14772087335586548,
+        "long": 0.2161182314157486,
+        "all": 0.18183135986328125
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "rope_frac": "0.25",
+        "seed": "0"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "2e7fba4fef30f3cc",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/2e7fba4fef30f3cc"
+    },
+    {
+      "name": "r2_pos_partial50_s0_cap24000",
+      "group": "r2_pos_partial50",
+      "seed": 0,
+      "role": "B",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.044921875,
+      "distance_uniform_benchmark": {
+        "short": 0.021840041503310204,
+        "long": 0.06559885293245316,
+        "all": 0.04366302490234375
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "rope_frac": "0.5",
+        "seed": "0"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "4e87d2c84bbe3f0d",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/4e87d2c84bbe3f0d"
+    },
+    {
+      "name": "r2_pos_rope100k_s0_cap24000",
+      "group": "r2_pos_rope100k",
+      "seed": 0,
+      "role": "A",
+      "cap": 24000,
+      "steps_done": 12000,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.9991455078125,
+      "distance_uniform_benchmark": {
+        "short": 0.999315083026886,
+        "long": 0.9994951486587524,
+        "all": 0.9994049072265625
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 11250,
+          "0.9": 11250,
+          "0.98": 11500
+        },
+        "bench_long": {
+          "0.5": 11250,
+          "0.9": 11250,
+          "0.98": 11500
+        }
+      },
+      "first_valid_98_step": 11500,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "100000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "0"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "ded09802476662fa",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/ded09802476662fa"
+    },
+    {
+      "name": "r2_pos_rope1m_s0_cap24000",
+      "group": "r2_pos_rope1m",
+      "seed": 0,
+      "role": "B",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.0574951171875,
+      "distance_uniform_benchmark": {
+        "short": 0.02362072840332985,
+        "long": 0.08280936628580093,
+        "all": 0.05313873291015625
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "1000000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "0"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "ac9bf96bf0a4d098",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/ac9bf96bf0a4d098"
+    },
+    {
+      "name": "r3_L2048_B0_s0_cap24000",
+      "group": "r3_L2048_B0",
+      "seed": 0,
+      "role": "A",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.0146484375,
+      "distance_uniform_benchmark": {
+        "short": 0.01334309857338667,
+        "long": 0.016922900453209877,
+        "all": 0.015132904052734375
+      },
+      "benchmark_long_min_distance": 1024,
+      "benchmark_max_distance": 2046,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "2048",
+        "n_q": "64",
+        "n_dis": "64",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "bench_queries": "262144",
+        "seed": "0"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "de9b880414040d81",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/de9b880414040d81"
+    },
+    {
+      "name": "r3_L2048_B0_s1_cap24000",
+      "group": "r3_L2048_B0",
+      "seed": 1,
+      "role": "B",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.02606201171875,
+      "distance_uniform_benchmark": {
+        "short": 0.01850792206823826,
+        "long": 0.03258688375353813,
+        "all": 0.025547027587890625
+      },
+      "benchmark_long_min_distance": 1024,
+      "benchmark_max_distance": 2046,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "2048",
+        "n_q": "64",
+        "n_dis": "64",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "bench_queries": "262144",
+        "seed": "1"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "8865c49fc1233a91",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/8865c49fc1233a91"
+    },
+    {
+      "name": "r3_L2048_B0_s2_cap24000",
+      "group": "r3_L2048_B0",
+      "seed": 2,
+      "role": "A",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.0189208984375,
+      "distance_uniform_benchmark": {
+        "short": 0.013205776922404766,
+        "long": 0.02362949587404728,
+        "all": 0.0184173583984375
+      },
+      "benchmark_long_min_distance": 1024,
+      "benchmark_max_distance": 2046,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "2048",
+        "n_q": "64",
+        "n_dis": "64",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "bench_queries": "262144",
+        "seed": "2"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "ddf892088bd9c271",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/ddf892088bd9c271"
+    },
+    {
+      "name": "r3_L2048_S1_s0_cap24000",
+      "group": "r3_L2048_S1",
+      "seed": 0,
+      "role": "B",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.01416015625,
+      "distance_uniform_benchmark": {
+        "short": 0.01312185823917389,
+        "long": 0.01493152230978012,
+        "all": 0.014026641845703125
+      },
+      "benchmark_long_min_distance": 1024,
+      "benchmark_max_distance": 2046,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "2048",
+        "n_q": "64",
+        "n_dis": "64",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "bench_queries": "262144",
+        "smear": "1",
+        "seed": "0"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "d8a23b68cf6c3609",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/d8a23b68cf6c3609"
+    },
+    {
+      "name": "r3_L2048_S1_s1_cap24000",
+      "group": "r3_L2048_S1",
+      "seed": 1,
+      "role": "A",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.0106201171875,
+      "distance_uniform_benchmark": {
+        "short": 0.010947596281766891,
+        "long": 0.01152100134640932,
+        "all": 0.011234283447265625
+      },
+      "benchmark_long_min_distance": 1024,
+      "benchmark_max_distance": 2046,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "2048",
+        "n_q": "64",
+        "n_dis": "64",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "bench_queries": "262144",
+        "smear": "1",
+        "seed": "1"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "f62e6072433eb35b",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/f62e6072433eb35b"
+    },
+    {
+      "name": "r3_L2048_S1_s2_cap24000",
+      "group": "r3_L2048_S1",
+      "seed": 2,
+      "role": "B",
+      "cap": 24000,
+      "steps_done": 13250,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.9942626953125,
+      "distance_uniform_benchmark": {
+        "short": 0.9923023581504822,
+        "long": 0.9951856136322021,
+        "all": 0.993743896484375
+      },
+      "benchmark_long_min_distance": 1024,
+      "benchmark_max_distance": 2046,
+      "first_step": {
+        "valid": {
+          "0.5": 12250,
+          "0.9": 12500,
+          "0.98": 12750
+        },
+        "bench_long": {
+          "0.5": 12250,
+          "0.9": 12500,
+          "0.98": 12750
+        }
+      },
+      "first_valid_98_step": 12750,
+      "arguments": {
+        "L": "2048",
+        "n_q": "64",
+        "n_dis": "64",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "bench_queries": "262144",
+        "smear": "1",
+        "seed": "2"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "188164770c123e41",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/188164770c123e41"
+    },
+    {
+      "name": "r3_L2048_T1a_s0_cap12000",
+      "group": "r3_L2048_T1a",
+      "seed": 0,
+      "role": "A",
+      "cap": 12000,
+      "steps_done": 12000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.0,
+      "training_distribution_final_valid_acc": 0.99932861328125,
+      "distance_uniform_benchmark": {
+        "short": 0.9989777207374573,
+        "long": 0.9975584745407104,
+        "all": 0.9982681274414062
+      },
+      "benchmark_long_min_distance": 1024,
+      "benchmark_max_distance": 2046,
+      "first_step": {
+        "valid": {
+          "0.5": 1750,
+          "0.9": 6750,
+          "0.98": 8250
+        },
+        "bench_long": {
+          "0.5": 6750,
+          "0.9": 8250,
+          "0.98": 10500
+        }
+      },
+      "first_valid_98_step": 8250,
+      "arguments": {
+        "L": "2048",
+        "n_q": "64",
+        "n_dis": "64",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "12000",
+        "stop_acc": "0",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "loguniform",
+        "bench_queries": "262144",
+        "seed": "0"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "f732b6a247c6a6fa",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/f732b6a247c6a6fa"
+    },
+    {
+      "name": "r3_L2048_T1a_s1_cap12000",
+      "group": "r3_L2048_T1a",
+      "seed": 1,
+      "role": "A",
+      "cap": 12000,
+      "steps_done": 12000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.0,
+      "training_distribution_final_valid_acc": 0.97015380859375,
+      "distance_uniform_benchmark": {
+        "short": 0.9513576030731201,
+        "long": 0.8033571243286133,
+        "all": 0.8773612976074219
+      },
+      "benchmark_long_min_distance": 1024,
+      "benchmark_max_distance": 2046,
+      "first_step": {
+        "valid": {
+          "0.5": 1000,
+          "0.9": 4000
+        },
+        "bench_long": {
+          "0.5": 5000
+        }
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "2048",
+        "n_q": "64",
+        "n_dis": "64",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "12000",
+        "stop_acc": "0",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "loguniform",
+        "bench_queries": "262144",
+        "seed": "1"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "678cba7c2ded84bf",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/678cba7c2ded84bf"
+    },
+    {
+      "name": "r3_L2048_T1a_s2_cap12000",
+      "group": "r3_L2048_T1a",
+      "seed": 2,
+      "role": "B",
+      "cap": 12000,
+      "steps_done": 12000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.0,
+      "training_distribution_final_valid_acc": 0.89691162109375,
+      "distance_uniform_benchmark": {
+        "short": 0.8339703679084778,
+        "long": 0.35217639803886414,
+        "all": 0.5930862426757812
+      },
+      "benchmark_long_min_distance": 1024,
+      "benchmark_max_distance": 2046,
+      "first_step": {
+        "valid": {
+          "0.5": 1500
+        },
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "2048",
+        "n_q": "64",
+        "n_dis": "64",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "12000",
+        "stop_acc": "0",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "loguniform",
+        "bench_queries": "262144",
+        "seed": "2"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "afee90b0416a8485",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/afee90b0416a8485"
+    },
+    {
+      "name": "r3_L2048_T1b_s0_cap24000",
+      "group": "r3_L2048_T1b",
+      "seed": 0,
+      "role": "A",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.02655029296875,
+      "distance_uniform_benchmark": {
+        "short": 0.019133498892188072,
+        "long": 0.03322015702724457,
+        "all": 0.02617645263671875
+      },
+      "benchmark_long_min_distance": 1024,
+      "benchmark_max_distance": 2046,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "2048",
+        "n_q": "64",
+        "n_dis": "64",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "128",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "bench_queries": "262144",
+        "seed": "0"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "b701be829c7661fd",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/b701be829c7661fd"
+    },
+    {
+      "name": "r3_L2048_T1b_s1_cap24000",
+      "group": "r3_L2048_T1b",
+      "seed": 1,
+      "role": "B",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.0277099609375,
+      "distance_uniform_benchmark": {
+        "short": 0.02039228193461895,
+        "long": 0.03505130857229233,
+        "all": 0.027721405029296875
+      },
+      "benchmark_long_min_distance": 1024,
+      "benchmark_max_distance": 2046,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "2048",
+        "n_q": "64",
+        "n_dis": "64",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "128",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "bench_queries": "262144",
+        "seed": "1"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "6433f0d819c3d260",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/6433f0d819c3d260"
+    },
+    {
+      "name": "r3_L2048_T1b_s2_cap24000",
+      "group": "r3_L2048_T1b",
+      "seed": 2,
+      "role": "A",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.02703857421875,
+      "distance_uniform_benchmark": {
+        "short": 0.019179273396730423,
+        "long": 0.03460878133773804,
+        "all": 0.02689361572265625
+      },
+      "benchmark_long_min_distance": 1024,
+      "benchmark_max_distance": 2046,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "2048",
+        "n_q": "64",
+        "n_dis": "64",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "128",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "bench_queries": "262144",
+        "seed": "2"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "7f9937c16967ca5f",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/7f9937c16967ca5f"
+    },
+    {
+      "name": "r3_extrap_dmax256_s0_cap24000",
+      "group": "r3_extrap_dmax256",
+      "seed": 0,
+      "role": "C",
+      "cap": 24000,
+      "steps_done": 4250,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.9874267578125,
+      "distance_uniform_benchmark": {
+        "short": 0.5280267596244812,
+        "long": 0.008169259876012802,
+        "all": 0.268768310546875
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 1750,
+          "0.9": 2250,
+          "0.98": 3750
+        },
+        "bench_long": {}
+      },
+      "first_valid_98_step": 3750,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "256",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "0"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "20e920b6009fcf38",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/20e920b6009fcf38"
+    },
+    {
+      "name": "r3_extrap_dmax256_s1_cap24000",
+      "group": "r3_extrap_dmax256",
+      "seed": 1,
+      "role": "A",
+      "cap": 24000,
+      "steps_done": 8250,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.9912109375,
+      "distance_uniform_benchmark": {
+        "short": 0.5566547513008118,
+        "long": 0.009102452546358109,
+        "all": 0.2835845947265625
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 7000,
+          "0.9": 7250,
+          "0.98": 7750
+        },
+        "bench_long": {}
+      },
+      "first_valid_98_step": 7750,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "256",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "1"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "f0b244261e4d07d0",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/f0b244261e4d07d0"
+    },
+    {
+      "name": "r3_extrap_dmax256_s2_cap24000",
+      "group": "r3_extrap_dmax256",
+      "seed": 2,
+      "role": "B",
+      "cap": 24000,
+      "steps_done": 3750,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.9842529296875,
+      "distance_uniform_benchmark": {
+        "short": 0.4947873055934906,
+        "long": 0.008016277104616165,
+        "all": 0.2520294189453125
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 2000,
+          "0.9": 2250,
+          "0.98": 3250
+        },
+        "bench_long": {}
+      },
+      "first_valid_98_step": 3250,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "256",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "2"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "fea2bb9ce30ff268",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/fea2bb9ce30ff268"
+    },
+    {
+      "name": "r3_extrap_dmax512_s0_cap24000",
+      "group": "r3_extrap_dmax512",
+      "seed": 0,
+      "role": "C",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.056640625,
+      "distance_uniform_benchmark": {
+        "short": 0.04016437008976936,
+        "long": 0.0011167714837938547,
+        "all": 0.02069091796875
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "512",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "0"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "b75f1779126f357a",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/b75f1779126f357a"
+    },
+    {
+      "name": "r3_extrap_dmax512_s1_cap24000",
+      "group": "r3_extrap_dmax512",
+      "seed": 1,
+      "role": "B",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.05810546875,
+      "distance_uniform_benchmark": {
+        "short": 0.040362223982810974,
+        "long": 0.0005048419116064906,
+        "all": 0.02048492431640625
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "512",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "1"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "40f12860e56bc4ca",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/40f12860e56bc4ca"
+    },
+    {
+      "name": "r3_extrap_dmax512_s2_cap24000",
+      "group": "r3_extrap_dmax512",
+      "seed": 2,
+      "role": "A",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.0556640625,
+      "distance_uniform_benchmark": {
+        "short": 0.0417928621172905,
+        "long": 0.0006119295721873641,
+        "all": 0.0212554931640625
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "512",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "2"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "6670ca963d3fe816",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/6670ca963d3fe816"
+    }
+  ],
+  "newly_completed": [
+    {
+      "name": "r1_B0_s1_cap64000",
+      "group": "r1_B0",
+      "seed": 1,
+      "role": "A",
+      "cap": 64000,
+      "steps_done": 64000,
+      "start_step": 1000,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.052734375,
+      "distance_uniform_benchmark": {
+        "short": 0.02497526817023754,
+        "long": 0.08544066548347473,
+        "all": 0.0551300048828125
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "1"
+      },
+      "resume_mode": "continue_interrupted_full_state",
+      "resume_step": 1000,
+      "attempt_interpretation": "64k重跑尝试内从1k完整中断点恢复；不是原24k状态续训",
+      "parent_wandb_run_id": "c3c3631afb3d43ee",
+      "wandb_run_id": "c3c3631afb3d43ee",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/c3c3631afb3d43ee"
+    },
+    {
+      "name": "r1_H16_s2_cap64000",
+      "group": "r1_H16",
+      "seed": 2,
+      "role": "B",
+      "cap": 64000,
+      "steps_done": 60000,
+      "start_step": 24000,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.99267578125,
+      "distance_uniform_benchmark": {
+        "short": 0.9922075867652893,
+        "long": 0.9936512112617493,
+        "all": 0.9929275512695312
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 59000,
+          "0.9": 59000,
+          "0.98": 59500
+        },
+        "bench_long": {
+          "0.5": 59000,
+          "0.9": 59000,
+          "0.98": 59500
+        }
+      },
+      "first_valid_98_step": 59500,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "16",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "0",
+        "seed": "2"
+      },
+      "resume_mode": "continue_completed_24k_full_state_to_total_64k",
+      "resume_step": 24000,
+      "attempt_interpretation": "原24k完整训练状态续训",
+      "parent_wandb_run_id": "6becab67f7aa20c3",
+      "wandb_run_id": "2dc11ecb3e0131a1",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/2dc11ecb3e0131a1"
+    },
+    {
+      "name": "r1_M4h256_s1_cap64000",
+      "group": "r1_M4h256",
+      "seed": 1,
+      "role": "B",
+      "cap": 64000,
+      "steps_done": 24750,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.998046875,
+      "distance_uniform_benchmark": {
+        "short": 0.9982040524482727,
+        "long": 0.9979347586631775,
+        "all": 0.9980697631835938
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 23000,
+          "0.9": 24000,
+          "0.98": 24250
+        },
+        "bench_long": {
+          "0.5": 22750,
+          "0.9": 24000,
+          "0.98": 24250
+        }
+      },
+      "first_valid_98_step": 24250,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "1",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "256",
+        "seed": "1"
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "resume_step": 0,
+      "attempt_interpretation": "同seed原初始化重跑",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "7b2e111ee61c14bb",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/7b2e111ee61c14bb"
+    },
+    {
+      "name": "r1_M4h512_s0_cap64000",
+      "group": "r1_M4h512",
+      "seed": 0,
+      "role": "C",
+      "cap": 64000,
+      "steps_done": 19750,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.996826171875,
+      "distance_uniform_benchmark": {
+        "short": 0.995723307132721,
+        "long": 0.9950739741325378,
+        "all": 0.9953994750976562
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 18250,
+          "0.9": 19000,
+          "0.98": 19250
+        },
+        "bench_long": {
+          "0.5": 18250,
+          "0.9": 19000,
+          "0.98": 19250
+        }
+      },
+      "first_valid_98_step": 19250,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "1",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "512",
+        "seed": "0"
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "resume_step": 0,
+      "attempt_interpretation": "同seed原初始化重跑",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "068aa28c1a3db503",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/068aa28c1a3db503"
+    },
+    {
+      "name": "r1_M4h512_s1_cap64000",
+      "group": "r1_M4h512",
+      "seed": 1,
+      "role": "A",
+      "cap": 64000,
+      "steps_done": 44250,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.994140625,
+      "distance_uniform_benchmark": {
+        "short": 0.9929990172386169,
+        "long": 0.9919378161430359,
+        "all": 0.9924697875976562
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 42500,
+          "0.9": 43500,
+          "0.98": 43750
+        },
+        "bench_long": {
+          "0.5": 42500,
+          "0.9": 43500,
+          "0.98": 43750
+        }
+      },
+      "first_valid_98_step": 43750,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "1",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "512",
+        "seed": "1"
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "resume_step": 0,
+      "attempt_interpretation": "同seed原初始化重跑",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "0541c2ede75dceb5",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/0541c2ede75dceb5"
+    },
+    {
+      "name": "r1_M4h512_s2_cap64000",
+      "group": "r1_M4h512",
+      "seed": 2,
+      "role": "B",
+      "cap": 64000,
+      "steps_done": 39500,
+      "start_step": 24000,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.9971923828125,
+      "distance_uniform_benchmark": {
+        "short": 0.9955254197120667,
+        "long": 0.9964049458503723,
+        "all": 0.9959640502929688
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 38750,
+          "0.9": 39000,
+          "0.98": 39000
+        },
+        "bench_long": {
+          "0.5": 38750,
+          "0.9": 38750,
+          "0.98": 39000
+        }
+      },
+      "first_valid_98_step": 39000,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "1",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "512",
+        "seed": "2"
+      },
+      "resume_mode": "continue_completed_24k_full_state_to_total_64k",
+      "resume_step": 24000,
+      "attempt_interpretation": "原24k完整训练状态续训",
+      "parent_wandb_run_id": "02facda0e9e37ae6",
+      "wandb_run_id": "6ea14666743e30be",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/6ea14666743e30be"
+    },
+    {
+      "name": "r3_L2048_T1b_s0_cap24000",
+      "group": "r3_L2048_T1b",
+      "seed": 0,
+      "role": "A",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.02655029296875,
+      "distance_uniform_benchmark": {
+        "short": 0.019133498892188072,
+        "long": 0.03322015702724457,
+        "all": 0.02617645263671875
+      },
+      "benchmark_long_min_distance": 1024,
+      "benchmark_max_distance": 2046,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "2048",
+        "n_q": "64",
+        "n_dis": "64",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "128",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "bench_queries": "262144",
+        "seed": "0"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "b701be829c7661fd",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/b701be829c7661fd"
+    },
+    {
+      "name": "r3_L2048_T1b_s2_cap24000",
+      "group": "r3_L2048_T1b",
+      "seed": 2,
+      "role": "A",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.02703857421875,
+      "distance_uniform_benchmark": {
+        "short": 0.019179273396730423,
+        "long": 0.03460878133773804,
+        "all": 0.02689361572265625
+      },
+      "benchmark_long_min_distance": 1024,
+      "benchmark_max_distance": 2046,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "2048",
+        "n_q": "64",
+        "n_dis": "64",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "128",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "bench_queries": "262144",
+        "seed": "2"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "7f9937c16967ca5f",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/7f9937c16967ca5f"
+    },
+    {
+      "name": "r3_extrap_dmax512_s2_cap24000",
+      "group": "r3_extrap_dmax512",
+      "seed": 2,
+      "role": "A",
+      "cap": 24000,
+      "steps_done": 24000,
+      "start_step": 0,
+      "stopped_early": false,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.0556640625,
+      "distance_uniform_benchmark": {
+        "short": 0.0417928621172905,
+        "long": 0.0006119295721873641,
+        "all": 0.0212554931640625
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {},
+        "bench_long": {}
+      },
+      "first_valid_98_step": null,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "512",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "4",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "24000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "seed": "2"
+      },
+      "resume_mode": "fresh_planned_run",
+      "resume_step": 0,
+      "attempt_interpretation": "新计划从头训练",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "6670ca963d3fe816",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/6670ca963d3fe816"
+    }
+  ],
+  "newly_converged": [
+    {
+      "name": "r1_H16_s2_cap64000",
+      "group": "r1_H16",
+      "seed": 2,
+      "role": "B",
+      "cap": 64000,
+      "steps_done": 60000,
+      "start_step": 24000,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.99267578125,
+      "distance_uniform_benchmark": {
+        "short": 0.9922075867652893,
+        "long": 0.9936512112617493,
+        "all": 0.9929275512695312
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 59000,
+          "0.9": 59000,
+          "0.98": 59500
+        },
+        "bench_long": {
+          "0.5": 59000,
+          "0.9": 59000,
+          "0.98": 59500
+        }
+      },
+      "first_valid_98_step": 59500,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "16",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "0",
+        "seed": "2"
+      },
+      "resume_mode": "continue_completed_24k_full_state_to_total_64k",
+      "resume_step": 24000,
+      "attempt_interpretation": "原24k完整训练状态续训",
+      "parent_wandb_run_id": "6becab67f7aa20c3",
+      "wandb_run_id": "2dc11ecb3e0131a1",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/2dc11ecb3e0131a1"
+    },
+    {
+      "name": "r1_M4h256_s1_cap64000",
+      "group": "r1_M4h256",
+      "seed": 1,
+      "role": "B",
+      "cap": 64000,
+      "steps_done": 24750,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.998046875,
+      "distance_uniform_benchmark": {
+        "short": 0.9982040524482727,
+        "long": 0.9979347586631775,
+        "all": 0.9980697631835938
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 23000,
+          "0.9": 24000,
+          "0.98": 24250
+        },
+        "bench_long": {
+          "0.5": 22750,
+          "0.9": 24000,
+          "0.98": 24250
+        }
+      },
+      "first_valid_98_step": 24250,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "1",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "256",
+        "seed": "1"
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "resume_step": 0,
+      "attempt_interpretation": "同seed原初始化重跑",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "7b2e111ee61c14bb",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/7b2e111ee61c14bb"
+    },
+    {
+      "name": "r1_M4h512_s0_cap64000",
+      "group": "r1_M4h512",
+      "seed": 0,
+      "role": "C",
+      "cap": 64000,
+      "steps_done": 19750,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.996826171875,
+      "distance_uniform_benchmark": {
+        "short": 0.995723307132721,
+        "long": 0.9950739741325378,
+        "all": 0.9953994750976562
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 18250,
+          "0.9": 19000,
+          "0.98": 19250
+        },
+        "bench_long": {
+          "0.5": 18250,
+          "0.9": 19000,
+          "0.98": 19250
+        }
+      },
+      "first_valid_98_step": 19250,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "1",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "512",
+        "seed": "0"
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "resume_step": 0,
+      "attempt_interpretation": "同seed原初始化重跑",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "068aa28c1a3db503",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/068aa28c1a3db503"
+    },
+    {
+      "name": "r1_M4h512_s1_cap64000",
+      "group": "r1_M4h512",
+      "seed": 1,
+      "role": "A",
+      "cap": 64000,
+      "steps_done": 44250,
+      "start_step": 0,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.994140625,
+      "distance_uniform_benchmark": {
+        "short": 0.9929990172386169,
+        "long": 0.9919378161430359,
+        "all": 0.9924697875976562
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 42500,
+          "0.9": 43500,
+          "0.98": 43750
+        },
+        "bench_long": {
+          "0.5": 42500,
+          "0.9": 43500,
+          "0.98": 43750
+        }
+      },
+      "first_valid_98_step": 43750,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "1",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "512",
+        "seed": "1"
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "resume_step": 0,
+      "attempt_interpretation": "同seed原初始化重跑",
+      "parent_wandb_run_id": null,
+      "wandb_run_id": "0541c2ede75dceb5",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/0541c2ede75dceb5"
+    },
+    {
+      "name": "r1_M4h512_s2_cap64000",
+      "group": "r1_M4h512",
+      "seed": 2,
+      "role": "B",
+      "cap": 64000,
+      "steps_done": 39500,
+      "start_step": 24000,
+      "stopped_early": true,
+      "stop_acc": 0.98,
+      "training_distribution_final_valid_acc": 0.9971923828125,
+      "distance_uniform_benchmark": {
+        "short": 0.9955254197120667,
+        "long": 0.9964049458503723,
+        "all": 0.9959640502929688
+      },
+      "benchmark_long_min_distance": 512,
+      "benchmark_max_distance": 1022,
+      "first_step": {
+        "valid": {
+          "0.5": 38750,
+          "0.9": 39000,
+          "0.98": 39000
+        },
+        "bench_long": {
+          "0.5": 38750,
+          "0.9": 38750,
+          "0.98": 39000
+        }
+      },
+      "first_valid_98_step": 39000,
+      "arguments": {
+        "L": "1024",
+        "n_q": "32",
+        "n_dis": "32",
+        "background": "iid",
+        "Vb": "256",
+        "K": "512",
+        "Vv": "128",
+        "d_min": "4",
+        "d_max": "0",
+        "n_layer": "4",
+        "d_model": "256",
+        "n_head": "1",
+        "pos": "rope",
+        "rope_base": "10000",
+        "steps": "64000",
+        "stop_acc": "0.98",
+        "stop_patience": "3",
+        "eval_every": "250",
+        "diag_every": "1000",
+        "dist": "uniform",
+        "head_dim": "512",
+        "seed": "2"
+      },
+      "resume_mode": "continue_completed_24k_full_state_to_total_64k",
+      "resume_step": 24000,
+      "attempt_interpretation": "原24k完整训练状态续训",
+      "parent_wandb_run_id": "02facda0e9e37ae6",
+      "wandb_run_id": "6ea14666743e30be",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/6ea14666743e30be"
+    }
+  ],
+  "cap64000_results": [
+    {
+      "name": "r1_B0_s1_cap64000",
+      "group": "r1_B0",
+      "seed": 1,
+      "status": "completed",
+      "steps_done": 64000,
+      "stopped_early": false,
+      "first_valid_98_step": null,
+      "training_distribution_final_valid_acc": 0.052734375,
+      "distance_uniform_benchmark": {
+        "short": 0.02497526817023754,
+        "long": 0.08544066548347473,
+        "all": 0.0551300048828125
+      },
+      "resume_mode": "continue_interrupted_full_state",
+      "attempt_interpretation": "64k重跑尝试内从1k完整中断点恢复；不是原24k状态续训"
+    },
+    {
+      "name": "r1_H16_s2_cap64000",
+      "group": "r1_H16",
+      "seed": 2,
+      "status": "completed",
+      "steps_done": 60000,
+      "stopped_early": true,
+      "first_valid_98_step": 59500,
+      "training_distribution_final_valid_acc": 0.99267578125,
+      "distance_uniform_benchmark": {
+        "short": 0.9922075867652893,
+        "long": 0.9936512112617493,
+        "all": 0.9929275512695312
+      },
+      "resume_mode": "continue_completed_24k_full_state_to_total_64k",
+      "attempt_interpretation": "原24k完整训练状态续训"
+    },
+    {
+      "name": "r1_M1d1_s0_cap64000",
+      "group": "r1_M1d1",
+      "seed": 0,
+      "status": "completed",
+      "steps_done": 64000,
+      "stopped_early": false,
+      "first_valid_98_step": null,
+      "training_distribution_final_valid_acc": 0.0556640625,
+      "distance_uniform_benchmark": {
+        "short": 0.04509550333023071,
+        "long": 0.06556825339794159,
+        "all": 0.05530548095703125
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "attempt_interpretation": "同seed原初始化重跑"
+    },
+    {
+      "name": "r1_M1d1_s1_cap64000",
+      "group": "r1_M1d1",
+      "seed": 1,
+      "status": "completed",
+      "steps_done": 64000,
+      "stopped_early": false,
+      "first_valid_98_step": null,
+      "training_distribution_final_valid_acc": 0.03759765625,
+      "distance_uniform_benchmark": {
+        "short": 0.03159577026963234,
+        "long": 0.0445178747177124,
+        "all": 0.0380401611328125
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "attempt_interpretation": "同seed原初始化重跑"
+    },
+    {
+      "name": "r1_M1d1_s2_cap64000",
+      "group": "r1_M1d1",
+      "seed": 2,
+      "status": "completed",
+      "steps_done": 64000,
+      "stopped_early": false,
+      "first_valid_98_step": null,
+      "training_distribution_final_valid_acc": 0.0396728515625,
+      "distance_uniform_benchmark": {
+        "short": 0.03071303479373455,
+        "long": 0.0432022288441658,
+        "all": 0.0369415283203125
+      },
+      "resume_mode": "continue_completed_24k_full_state_to_total_64k",
+      "attempt_interpretation": "原24k完整训练状态续训"
+    },
+    {
+      "name": "r1_M1d2_s1_cap64000",
+      "group": "r1_M1d2",
+      "seed": 1,
+      "status": "completed",
+      "steps_done": 64000,
+      "stopped_early": false,
+      "first_valid_98_step": null,
+      "training_distribution_final_valid_acc": 0.069580078125,
+      "distance_uniform_benchmark": {
+        "short": 0.040925346314907074,
+        "long": 0.10578732192516327,
+        "all": 0.073272705078125
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "attempt_interpretation": "同seed原初始化重跑"
+    },
+    {
+      "name": "r1_M1d8_s0_cap64000",
+      "group": "r1_M1d8",
+      "seed": 0,
+      "status": "running",
+      "steps_done": 51000,
+      "stopped_early": null,
+      "first_valid_98_step": null,
+      "training_distribution_final_valid_acc": null,
+      "distance_uniform_benchmark": null,
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "attempt_interpretation": "同seed原初始化重跑"
+    },
+    {
+      "name": "r1_M4h256_s0_cap64000",
+      "group": "r1_M4h256",
+      "seed": 0,
+      "status": "completed",
+      "steps_done": 9250,
+      "stopped_early": true,
+      "first_valid_98_step": 8750,
+      "training_distribution_final_valid_acc": 0.994140625,
+      "distance_uniform_benchmark": {
+        "short": 0.9929837584495544,
+        "long": 0.9933758974075317,
+        "all": 0.9931793212890625
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "attempt_interpretation": "同seed原初始化重跑"
+    },
+    {
+      "name": "r1_M4h256_s1_cap64000",
+      "group": "r1_M4h256",
+      "seed": 1,
+      "status": "completed",
+      "steps_done": 24750,
+      "stopped_early": true,
+      "first_valid_98_step": 24250,
+      "training_distribution_final_valid_acc": 0.998046875,
+      "distance_uniform_benchmark": {
+        "short": 0.9982040524482727,
+        "long": 0.9979347586631775,
+        "all": 0.9980697631835938
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "attempt_interpretation": "同seed原初始化重跑"
+    },
+    {
+      "name": "r1_M4h256_s2_cap64000",
+      "group": "r1_M4h256",
+      "seed": 2,
+      "status": "completed",
+      "steps_done": 64000,
+      "stopped_early": false,
+      "first_valid_98_step": null,
+      "training_distribution_final_valid_acc": 0.04931640625,
+      "distance_uniform_benchmark": {
+        "short": 0.026329807937145233,
+        "long": 0.07098382711410522,
+        "all": 0.0485992431640625
+      },
+      "resume_mode": "continue_completed_24k_full_state_to_total_64k",
+      "attempt_interpretation": "原24k完整训练状态续训"
+    },
+    {
+      "name": "r1_M4h512_s0_cap64000",
+      "group": "r1_M4h512",
+      "seed": 0,
+      "status": "completed",
+      "steps_done": 19750,
+      "stopped_early": true,
+      "first_valid_98_step": 19250,
+      "training_distribution_final_valid_acc": 0.996826171875,
+      "distance_uniform_benchmark": {
+        "short": 0.995723307132721,
+        "long": 0.9950739741325378,
+        "all": 0.9953994750976562
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "attempt_interpretation": "同seed原初始化重跑"
+    },
+    {
+      "name": "r1_M4h512_s1_cap64000",
+      "group": "r1_M4h512",
+      "seed": 1,
+      "status": "completed",
+      "steps_done": 44250,
+      "stopped_early": true,
+      "first_valid_98_step": 43750,
+      "training_distribution_final_valid_acc": 0.994140625,
+      "distance_uniform_benchmark": {
+        "short": 0.9929990172386169,
+        "long": 0.9919378161430359,
+        "all": 0.9924697875976562
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "attempt_interpretation": "同seed原初始化重跑"
+    },
+    {
+      "name": "r1_M4h512_s2_cap64000",
+      "group": "r1_M4h512",
+      "seed": 2,
+      "status": "completed",
+      "steps_done": 39500,
+      "stopped_early": true,
+      "first_valid_98_step": 39000,
+      "training_distribution_final_valid_acc": 0.9971923828125,
+      "distance_uniform_benchmark": {
+        "short": 0.9955254197120667,
+        "long": 0.9964049458503723,
+        "all": 0.9959640502929688
+      },
+      "resume_mode": "continue_completed_24k_full_state_to_total_64k",
+      "attempt_interpretation": "原24k完整训练状态续训"
+    },
+    {
+      "name": "r1_M4h64_s0_cap64000",
+      "group": "r1_M4h64",
+      "seed": 0,
+      "status": "completed",
+      "steps_done": 14000,
+      "stopped_early": true,
+      "first_valid_98_step": 13500,
+      "training_distribution_final_valid_acc": 0.992919921875,
+      "distance_uniform_benchmark": {
+        "short": 0.9924206733703613,
+        "long": 0.9948139190673828,
+        "all": 0.9936141967773438
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "attempt_interpretation": "同seed原初始化重跑"
+    },
+    {
+      "name": "r1_M4h64_s1_cap64000",
+      "group": "r1_M4h64",
+      "seed": 1,
+      "status": "completed",
+      "steps_done": 35750,
+      "stopped_early": true,
+      "first_valid_98_step": 35250,
+      "training_distribution_final_valid_acc": 0.9945068359375,
+      "distance_uniform_benchmark": {
+        "short": 0.9957080483436584,
+        "long": 0.9956094026565552,
+        "all": 0.9956588745117188
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "attempt_interpretation": "同seed原初始化重跑"
+    },
+    {
+      "name": "r1_M4h64_s2_cap64000",
+      "group": "r1_M4h64",
+      "seed": 2,
+      "status": "completed",
+      "steps_done": 16250,
+      "stopped_early": true,
+      "first_valid_98_step": 15750,
+      "training_distribution_final_valid_acc": 0.99462890625,
+      "distance_uniform_benchmark": {
+        "short": 0.9938360452651978,
+        "long": 0.9946609139442444,
+        "all": 0.9942474365234375
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "attempt_interpretation": "同seed原初始化重跑"
+    },
+    {
+      "name": "r1_T1b_s1_cap64000",
+      "group": "r1_T1b",
+      "seed": 1,
+      "status": "completed",
+      "steps_done": 21500,
+      "stopped_early": true,
+      "first_valid_98_step": 21000,
+      "training_distribution_final_valid_acc": 0.9931640625,
+      "distance_uniform_benchmark": {
+        "short": 0.8435431122779846,
+        "long": 0.9922897219657898,
+        "all": 0.917724609375
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "attempt_interpretation": "同seed原初始化重跑"
+    },
+    {
+      "name": "r1_T1b_s2_cap64000",
+      "group": "r1_T1b",
+      "seed": 2,
+      "status": "completed",
+      "steps_done": 9500,
+      "stopped_early": true,
+      "first_valid_98_step": 9000,
+      "training_distribution_final_valid_acc": 0.993408203125,
+      "distance_uniform_benchmark": {
+        "short": 0.8664332628250122,
+        "long": 0.992901623249054,
+        "all": 0.92950439453125
+      },
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "attempt_interpretation": "同seed原初始化重跑"
+    },
+    {
+      "name": "r1_W128_s1_cap64000",
+      "group": "r1_W128",
+      "seed": 1,
+      "status": "completed",
+      "steps_done": 64000,
+      "stopped_early": false,
+      "first_valid_98_step": null,
+      "training_distribution_final_valid_acc": 0.0496826171875,
+      "distance_uniform_benchmark": {
+        "short": 0.02301194705069065,
+        "long": 0.08426269888877869,
+        "all": 0.053558349609375
+      },
+      "resume_mode": "continue_completed_24k_full_state_to_total_64k",
+      "attempt_interpretation": "原24k完整训练状态续训"
+    }
+  ],
+  "running": [
+    {
+      "name": "r1_M1d8_s0_cap64000",
+      "group": "r1_M1d8",
+      "seed": 0,
+      "role": "C",
+      "step": 51000,
+      "cap": 64000,
+      "remaining_to_cap": 13000,
+      "latest_training_distribution_valid_acc": 0.055908203125,
+      "latest_quick_benchmark_long_acc": 0.08899815380573273,
+      "metrics_are_final": false,
+      "resume_mode": "restart_original_initialization_to_total_64k",
+      "attempt_interpretation": "同seed原初始化重跑",
+      "wandb_run_id": "36cdf25b69f03af5",
+      "wandb_url": "https://wandb.ai/litzgymrat-nanjing-university/n1-long-range/runs/36cdf25b69f03af5"
+    }
+  ]
+}

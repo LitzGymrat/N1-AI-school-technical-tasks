@@ -1,0 +1,2864 @@
+{
+  "captured_at": "2026-10-17T17:31:14+08:00",
+  "counts": {
+    "completed": 73,
+    "missing_input": 31
+  },
+  "by_length": {
+    "1024": {
+      "completed": 38
+    },
+    "4096": {
+      "completed": 33
+    },
+    "8192": {
+      "missing_input": 31,
+      "completed": 2
+    }
+  },
+  "packages": {
+    "MECH__M1_r1_M4h64_s0_final": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M1_r1_M4h64_s0_final",
+      "family": "M1",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M1": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M1_r1_M4h64_s0_final",
+        "elapsed_seconds": 54.875932931900024,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed"
+        }
+      },
+      "package_complete_sha256": "027c2b62566153ce264fe59e0493ddc3d3f58c5759d2074d9d5386ac3580919d"
+    },
+    "MECH__M1_r1_M4h64_s1_final": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M1_r1_M4h64_s1_final/result",
+      "family": "M1",
+      "length": 1024,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M1_r1_M4h64_s1_final",
+        "elapsed_seconds": 69.79142141342163,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed"
+        }
+      },
+      "package_complete_sha256": "0be8806fae94c2a788c1e43ae3865eedb6ab2f79e97ba7373ff9d63c21528d01"
+    },
+    "MECH__M1_r1_M4h64_s2_final": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M1_r1_M4h64_s2_final",
+      "family": "M1",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M1": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M1_r1_M4h64_s2_final",
+        "elapsed_seconds": 55.23262619972229,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed"
+        }
+      },
+      "package_complete_sha256": "fde6d2d7471dc092708ca7e91c5b694d828352dca16693b25aef44ffb6e48ac4"
+    },
+    "MECH__M2_r1_M4h64_s0_final": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M2_r1_M4h64_s0_final",
+      "family": "M2",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M2": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M2_r1_M4h64_s0_final",
+        "elapsed_seconds": 246.34324622154236,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M2": "completed"
+        }
+      },
+      "package_complete_sha256": "2360b8403ba4abfa99bf7d0e6d3df8c96f553bc5db17b69ea283ff8bfefc21be"
+    },
+    "MECH__M2_r1_M4h64_s1_final": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M2_r1_M4h64_s1_final/result",
+      "family": "M2",
+      "length": 1024,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M2": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M2_r1_M4h64_s1_final",
+        "elapsed_seconds": 190.59573650360107,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M2": "completed"
+        }
+      },
+      "package_complete_sha256": "892ae54dade817a588f351dbf5892136b9c9acb6dd920e46acafd1fdb7ccbe8b"
+    },
+    "MECH__M2_r1_M4h64_s2_final": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M2_r1_M4h64_s2_final",
+      "family": "M2",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M2": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M2_r1_M4h64_s2_final",
+        "elapsed_seconds": 257.7264828681946,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M2": "completed"
+        }
+      },
+      "package_complete_sha256": "5f1c0d6870ab95470ce2c4abcb13c821c5ef103e2c2759f766888824ea8edf6e"
+    },
+    "MECH__M3_r1_M4h64_s0_final": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M3_r1_M4h64_s0_final",
+      "family": "M3",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M3": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M3_r1_M4h64_s0_final",
+        "elapsed_seconds": 18.880043029785156,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M3": "completed"
+        }
+      },
+      "package_complete_sha256": "599c7e5f0255f62af2456e53627c0cc915107098c3241f4c93cf83ef4b0cafc3"
+    },
+    "MECH__M3_r1_M4h64_s1_final": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M3_r1_M4h64_s1_final/result",
+      "family": "M3",
+      "length": 1024,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M3": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M3_r1_M4h64_s1_final",
+        "elapsed_seconds": 52.12863636016846,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M3": "completed"
+        }
+      },
+      "package_complete_sha256": "0a47a8fbd80dcedfe4686877e00794a8b6d2f74aec11ef964aaa96c15f2403ff"
+    },
+    "MECH__M3_r1_M4h64_s2_final": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M3_r1_M4h64_s2_final",
+      "family": "M3",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M3": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M3_r1_M4h64_s2_final",
+        "elapsed_seconds": 20.240759134292603,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M3": "completed"
+        }
+      },
+      "package_complete_sha256": "134bd000010cea89789f3ce78af9d18e43fc43869350de8dc8b3616b1fad2256"
+    },
+    "MECH__M4_r1_M4h64_s0_final": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M4_r1_M4h64_s0_final",
+      "family": "M4",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "probe": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M4_r1_M4h64_s0_final",
+        "elapsed_seconds": 46.771259784698486,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": true,
+        "stage_statuses": {
+          "probe": "completed"
+        }
+      },
+      "package_complete_sha256": "f312cb1651b0cc8667d26a2dd58294f8f5675137fb8706fcbda70dac6f35bd40"
+    },
+    "MECH__M4_r1_M4h64_s1_final": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M4_r1_M4h64_s1_final/result",
+      "family": "M4",
+      "length": 1024,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "probe": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M4_r1_M4h64_s1_final",
+        "elapsed_seconds": 122.52811765670776,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": true,
+        "stage_statuses": {
+          "probe": "completed"
+        }
+      },
+      "package_complete_sha256": "cfa4bb0a0b98f86ec8805aa9c35bb79079290674c59fb69473578a94357250c2"
+    },
+    "MECH__M4_r1_M4h64_s2_final": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M4_r1_M4h64_s2_final",
+      "family": "M4",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "probe": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M4_r1_M4h64_s2_final",
+        "elapsed_seconds": 47.94116997718811,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": true,
+        "stage_statuses": {
+          "probe": "completed"
+        }
+      },
+      "package_complete_sha256": "e10d28f4784a1e1ab69b071127994548467d295013d0018cc918691d2d990d0a"
+    },
+    "MECH__M5_r1_M4h64_s0_step012000": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M5_r1_M4h64_s0_step012000",
+      "family": "M5",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M5": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M5_r1_M4h64_s0_step012000",
+        "elapsed_seconds": 22.763277053833008,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M5": "completed"
+        }
+      },
+      "package_complete_sha256": "c342d12e07ba92baefeb1fbc0a834294b21d9110735997251e7cf8c78f0f606b"
+    },
+    "MECH__M5_r1_M4h64_s0_step013000": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M5_r1_M4h64_s0_step013000",
+      "family": "M5",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M5": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M5_r1_M4h64_s0_step013000",
+        "elapsed_seconds": 22.669190883636475,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M5": "completed"
+        }
+      },
+      "package_complete_sha256": "cc73e2a8e88740228f6705aaa3347a77986e4331be61b28bc75c3beb72abea9f"
+    },
+    "MECH__M5_r1_M4h64_s0_step014000": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M5_r1_M4h64_s0_step014000",
+      "family": "M5",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M5": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M5_r1_M4h64_s0_step014000",
+        "elapsed_seconds": 23.325900077819824,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M5": "completed"
+        }
+      },
+      "package_complete_sha256": "f540170876569acc70d82801f51342ea053f29e21ee27997c44fdfe9db6fb7f8"
+    },
+    "MECH__M5_r1_M4h64_s1_step033000": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M5_r1_M4h64_s1_step033000/result",
+      "family": "M5",
+      "length": 1024,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M5": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M5_r1_M4h64_s1_step033000",
+        "elapsed_seconds": 120.52987456321716,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M5": "completed"
+        }
+      },
+      "package_complete_sha256": "3e3cd8ae42adf851de3c9f194838cb92e0e9f1504864ded3bd6edc0ed8cde60f"
+    },
+    "MECH__M5_r1_M4h64_s1_step034000": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M5_r1_M4h64_s1_step034000/result",
+      "family": "M5",
+      "length": 1024,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M5": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M5_r1_M4h64_s1_step034000",
+        "elapsed_seconds": 89.41728186607361,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M5": "completed"
+        }
+      },
+      "package_complete_sha256": "36f48a14f5008cdc13cbde34c7a8b9ae7132923451e2e7bd2b86a3641f97ae0a"
+    },
+    "MECH__M5_r1_M4h64_s1_step035000": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M5_r1_M4h64_s1_step035000",
+      "family": "M5",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M5": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M5_r1_M4h64_s1_step035000",
+        "elapsed_seconds": 23.717175722122192,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M5": "completed"
+        }
+      },
+      "package_complete_sha256": "901e6f1d53c8239302290ea8e0f105383665f2ccbf7b1b6f8714fe4084eed1e9"
+    },
+    "MECH__M5_r1_M4h64_s1_step035750": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M5_r1_M4h64_s1_step035750/result",
+      "family": "M5",
+      "length": 1024,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M5": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M5_r1_M4h64_s1_step035750",
+        "elapsed_seconds": 21.096477508544922,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M5": "completed"
+        }
+      },
+      "package_complete_sha256": "da68099d0069d3bf411238a4f2878d61df8a2b26dabdebaae1086b3f56063c83"
+    },
+    "MECH__M5_r1_M4h64_s2_step014000": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M5_r1_M4h64_s2_step014000",
+      "family": "M5",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M5": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M5_r1_M4h64_s2_step014000",
+        "elapsed_seconds": 22.524513721466064,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M5": "completed"
+        }
+      },
+      "package_complete_sha256": "505c4d3b77675fd78b5e3459d73eca503a92760fb60ef48ce70682eabda1182c"
+    },
+    "MECH__M5_r1_M4h64_s2_step015000": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M5_r1_M4h64_s2_step015000",
+      "family": "M5",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M5": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M5_r1_M4h64_s2_step015000",
+        "elapsed_seconds": 24.11011290550232,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M5": "completed"
+        }
+      },
+      "package_complete_sha256": "70100cc0c075cc06b453397043f6c21a72963d98cd39a90d8be4c8699c321613"
+    },
+    "MECH__M5_r1_M4h64_s2_step016000": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M5_r1_M4h64_s2_step016000",
+      "family": "M5",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M5": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M5_r1_M4h64_s2_step016000",
+        "elapsed_seconds": 22.732007265090942,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M5": "completed"
+        }
+      },
+      "package_complete_sha256": "4599028fc5cc5575749d5f55081953aafb95bc9e867d9c21a9667ab79c1ba252"
+    },
+    "MECH__M5_r1_M4h64_s2_step016250": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M5_r1_M4h64_s2_step016250",
+      "family": "M5",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M5": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M5_r1_M4h64_s2_step016250",
+        "elapsed_seconds": 23.27015519142151,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M5": "completed"
+        }
+      },
+      "package_complete_sha256": "7b6a11470f1b7040133759cb46e3b6974d771bd824020e21959adf671c163212"
+    },
+    "MECH__M6_reuse_existing_48_KO": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/night_20261016/mechanism/results/M6_reuse_existing_48_KO",
+      "family": "M6",
+      "length": 1024,
+      "recording": "existing_verified_archive",
+      "stages": {},
+      "package_complete": {
+        "status": "reused_existing_results"
+      },
+      "package_complete_sha256": "7db22533512b0df534b57124fd326ce0c5c1f7d6680bb4aa0d3397795bb41350"
+    },
+    "MECH__M7_direct_B0_s0": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M7_direct_B0_s0/result",
+      "family": "M7",
+      "length": 1024,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "probe": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M7_direct_B0_s0",
+        "elapsed_seconds": 89.58423066139221,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": true,
+        "stage_statuses": {
+          "M1": "completed",
+          "probe": "completed"
+        }
+      },
+      "package_complete_sha256": "73ce430fec2fd8733041c90b3a69e1d1f9ba426a5f49abd64caba1de060fec4f"
+    },
+    "MECH__M7_relay_pure_long_s0": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M7_relay_pure_long_s0/result",
+      "family": "M7",
+      "length": 1024,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "probe": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M7_relay_pure_long_s0",
+        "elapsed_seconds": 29.215601921081543,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": true,
+        "stage_statuses": {
+          "M1": "completed",
+          "probe": "completed"
+        }
+      },
+      "package_complete_sha256": "f894877cf64eb327ece2084d09ee1696d79129477736cd2b4fee61190abf1644"
+    },
+    "MECH__M8_n2_M01_s0_original64000": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M8_n2_M01_s0_original64000",
+      "family": "M8",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M1": "completed",
+        "probe": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M8_n2_M01_s0_original64000",
+        "elapsed_seconds": 71.70188403129578,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": true,
+        "stage_statuses": {
+          "M1": "completed",
+          "probe": "completed"
+        }
+      },
+      "package_complete_sha256": "3033986fe99fd2ec099c267edc4893575802ccc08f6156100817de8aca02749a"
+    },
+    "MECH__M8_n2_M01_s1_original64000": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M8_n2_M01_s1_original64000",
+      "family": "M8",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M1": "completed",
+        "probe": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M8_n2_M01_s1_original64000",
+        "elapsed_seconds": 73.15126299858093,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": true,
+        "stage_statuses": {
+          "M1": "completed",
+          "probe": "completed"
+        }
+      },
+      "package_complete_sha256": "e7d833075176fd3ec04e0e1d1bcab8b558abbcc71922b53077ea9fc13e8b5dcc"
+    },
+    "MECH__M8_n2_M01_s2_original64000": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M8_n2_M01_s2_original64000",
+      "family": "M8",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M1": "completed",
+        "probe": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M8_n2_M01_s2_original64000",
+        "elapsed_seconds": 70.50433087348938,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": true,
+        "stage_statuses": {
+          "M1": "completed",
+          "probe": "completed"
+        }
+      },
+      "package_complete_sha256": "adf8d27cded0ecd48b73f9a68bbe08c954186ee11a41d8d90f9779e024ec5c00"
+    },
+    "MECH__M8_n2_M02_s0_original64000": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M8_n2_M02_s0_original64000/result",
+      "family": "M8",
+      "length": 1024,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "probe": "completed",
+        "M2": "completed",
+        "M3": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M8_n2_M02_s0_original64000",
+        "elapsed_seconds": 59.40034008026123,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": true,
+        "stage_statuses": {
+          "M1": "completed",
+          "probe": "completed",
+          "M2": "completed",
+          "M3": "completed"
+        }
+      },
+      "package_complete_sha256": "b5747a39ccd2e1c12188f4f49ce45c0f2f2abd56c19a5fa51200325e6521790d"
+    },
+    "MECH__M8_n2_M02_s1_original64000": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M8_n2_M02_s1_original64000/result",
+      "family": "M8",
+      "length": 1024,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "probe": "completed",
+        "M2": "completed",
+        "M3": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M8_n2_M02_s1_original64000",
+        "elapsed_seconds": 105.1302478313446,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": true,
+        "stage_statuses": {
+          "M1": "completed",
+          "probe": "completed",
+          "M2": "completed",
+          "M3": "completed"
+        }
+      },
+      "package_complete_sha256": "ca7f5e271cff3c85309ebb5533d8432334ddcd4cb0a8894b605dd782f027d573"
+    },
+    "MECH__M8_n2_M02_s2_original64000": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M8_n2_M02_s2_original64000",
+      "family": "M8",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M1": "completed",
+        "probe": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M8_n2_M02_s2_original64000",
+        "elapsed_seconds": 96.10609984397888,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": true,
+        "stage_statuses": {
+          "M1": "completed",
+          "probe": "completed"
+        }
+      },
+      "package_complete_sha256": "0770ad6d9b2403fb633e7f7a4dc30e18705e8de20dd7824eca7bcdc47b27694a"
+    },
+    "MECH__M9_n4prep_C01_s1000": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M9_n4prep_C01_s1000/result",
+      "family": "M9",
+      "length": 1024,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "3000": "completed",
+        "3250": "completed",
+        "4500": "completed",
+        "final": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M9_n4prep_C01_s1000",
+        "elapsed_seconds": 207.19841408729553,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "3000": "completed",
+          "3250": "completed",
+          "4500": "completed",
+          "final": "completed"
+        }
+      },
+      "package_complete_sha256": "0185a414c6228868d576840495f7baacf4045a74feabd8872a66f6003c79773e"
+    },
+    "MECH__M9_n4prep_C01_s1001": {
+      "path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M9_n4prep_C01_s1001",
+      "family": "M9",
+      "length": 1024,
+      "recording": "local_mac",
+      "stages": {
+        "M1": "completed",
+        "3000": "completed",
+        "3250": "completed",
+        "4500": "completed",
+        "final": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M9_n4prep_C01_s1001",
+        "elapsed_seconds": 364.9688079357147,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "3000": "completed",
+          "3250": "completed",
+          "4500": "completed",
+          "final": "completed"
+        }
+      },
+      "package_complete_sha256": "ca7a4f970600cb5da822a8d3554ab35b3f96ffaf12e155ef158562bf731859f2"
+    },
+    "MECH__M9_n4prep_C01_s1002": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M9_n4prep_C01_s1002/result",
+      "family": "M9",
+      "length": 1024,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "3000": "completed",
+        "3250": "completed",
+        "4500": "completed",
+        "final": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M9_n4prep_C01_s1002",
+        "elapsed_seconds": 156.06021404266357,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "3000": "completed",
+          "3250": "completed",
+          "4500": "completed",
+          "final": "completed"
+        }
+      },
+      "package_complete_sha256": "62ee6c4a0cd9f56f0871fc1a4a119c1c46be735b864cc8e4138f67421e792e37"
+    },
+    "MECH__M9_n4prep_C02_s1000": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M9_n4prep_C02_s1000/result",
+      "family": "M9",
+      "length": 1024,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "3000": "completed",
+        "3250": "completed",
+        "4500": "completed",
+        "final": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M9_n4prep_C02_s1000",
+        "elapsed_seconds": 358.9603741168976,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "3000": "completed",
+          "3250": "completed",
+          "4500": "completed",
+          "final": "completed"
+        }
+      },
+      "package_complete_sha256": "de7195908353c50c2e8d355fdad8e50bee26a1fa0fe883cf247195f5b869e6a2"
+    },
+    "MECH__M9_n4prep_C02_s1001": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M9_n4prep_C02_s1001/result",
+      "family": "M9",
+      "length": 1024,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "3000": "NA_unlocalized",
+        "3250": "NA_unlocalized",
+        "4500": "NA_unlocalized",
+        "final": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M9_n4prep_C02_s1001",
+        "elapsed_seconds": 91.99150085449219,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "3000": "NA_unlocalized",
+          "3250": "NA_unlocalized",
+          "4500": "NA_unlocalized",
+          "final": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "a4fddc57c83c53d628a0092da6e76a34c54915315bbe9b317c67439d57871d1f"
+    },
+    "MECH__M9_n4prep_C02_s1002": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M9_n4prep_C02_s1002/result",
+      "family": "M9",
+      "length": 1024,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "3000": "NA_unlocalized",
+        "3250": "NA_unlocalized",
+        "4500": "NA_unlocalized",
+        "final": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "M9_n4prep_C02_s1002",
+        "elapsed_seconds": 91.47586798667908,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "3000": "NA_unlocalized",
+          "3250": "NA_unlocalized",
+          "4500": "NA_unlocalized",
+          "final": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "b79a3a75d65980c91adf1fcde64ddf83abe5683ebbbb532e5dcf64a0001ed8e9"
+    },
+    "MECH__LONG_n4night_L4096_D00_s2000": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D00_s2000/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_D00_s2000",
+        "elapsed_seconds": 8.20525050163269,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "ab670e4e84da4bd3c46b4c2a593facee8ef9fcdfd6ca886beea8f6f8a9688780"
+    },
+    "MECH__LONG_n4night_L4096_D00_s2001": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D00_s2001/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_D00_s2001",
+        "elapsed_seconds": 9.996461153030396,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "7a02dac4d7a5a44a186e23ec5df55459ddd703a6a800a513f173ddff82497ada"
+    },
+    "MECH__LONG_n4night_L4096_D00_s2002": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D00_s2002/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_D00_s2002",
+        "elapsed_seconds": 13.647333145141602,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "22dafa64668e3296fabfa641251e5a604fa253a75294bbffd9369f173cf10989"
+    },
+    "MECH__LONG_n4night_L4096_D03_s2000": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D03_s2000/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_D03_s2000",
+        "elapsed_seconds": 12.590060710906982,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "bee364d0c3e291d96fa895d0c8ee6fceeda09620bb63793ff0d6c02bf09ac1dd"
+    },
+    "MECH__LONG_n4night_L4096_D03_s2001": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D03_s2001/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_D03_s2001",
+        "elapsed_seconds": 9.20120620727539,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "efc59b6d6b23c7b62856f0688b9db91e068456e15a32e33d3806b564ffb8a7d3"
+    },
+    "MECH__LONG_n4night_L4096_D03_s2002": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D03_s2002/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_D03_s2002",
+        "elapsed_seconds": 15.201377391815186,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "b4189c02a4858c96d027e7cfb95ba69d5fa40414d1094c46bf40e7a30bc84437"
+    },
+    "MECH__LONG_n4night_L4096_C01_s2000": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_C01_s2000/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_C01_s2000",
+        "elapsed_seconds": 27.65176033973694,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "c95313177486aa05bdeb457238e2465478209e36a12829f5315ff58dc7cf31fb"
+    },
+    "MECH__LONG_n4night_L4096_C01_s2001": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_C01_s2001/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_C01_s2001",
+        "elapsed_seconds": 13.525380373001099,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "61937fe02123623752c7f8e95624356160afc91ec4cbe85191b4ba8391d268af"
+    },
+    "MECH__LONG_n4night_L4096_C01_s2002": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_C01_s2002/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_C01_s2002",
+        "elapsed_seconds": 47.17089581489563,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "completed"
+        }
+      },
+      "package_complete_sha256": "5288404e2613db09ed0071dbac78462c2b4c756a132d11dfaaf47eba864f1650"
+    },
+    "MECH__LONG_n4night_L4096_C02_s2000": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_C02_s2000/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "completed"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_C02_s2000",
+        "elapsed_seconds": 25.946755409240723,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "completed"
+        }
+      },
+      "package_complete_sha256": "3af0489722286f444386bd924a33a27f9e3e5bea5830660bcd0fe60fb66b4fe9"
+    },
+    "MECH__LONG_n4night_L4096_C02_s2001": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_C02_s2001/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_C02_s2001",
+        "elapsed_seconds": 14.839877128601074,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "99a5e02edaf27e203dbd46e7327196d70af64b29aede617cd067232b8933bc38"
+    },
+    "MECH__LONG_n4night_L4096_C02_s2002": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_C02_s2002/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_C02_s2002",
+        "elapsed_seconds": 14.581687450408936,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "38cc9e18ca32718616c1342a1f5145740485ae58f6dcadd1b4585dc88b6f2baa"
+    },
+    "MECH__LONG_n4night_L4096_C00_s2000": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_C00_s2000/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_C00_s2000",
+        "elapsed_seconds": 23.65824317932129,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "efa3701004144416b380ff66f0b4cafd338ad3060be892980793c3447ed9246d"
+    },
+    "MECH__LONG_n4night_L4096_C00_s2001": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_C00_s2001/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_C00_s2001",
+        "elapsed_seconds": 15.058982849121094,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "ff566d2490a159473f45b620a0b97d99c0c4b27e39143a964940d66755025381"
+    },
+    "MECH__LONG_n4night_L4096_C00_s2002": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_C00_s2002/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_C00_s2002",
+        "elapsed_seconds": 19.490482807159424,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "0933721c12713418e68c1947fd12d059959d22ea21d598dc0c778b05330e5728"
+    },
+    "MECH__LONG_n4night_L4096_E00_s2000": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_E00_s2000/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_E00_s2000",
+        "elapsed_seconds": 9.05500340461731,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "e487b2183da2c7917cbdfcd7de973e789c29dd59e9491781f138b9ca8583ea79"
+    },
+    "MECH__LONG_n4night_L4096_E00_s2001": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_E00_s2001/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_E00_s2001",
+        "elapsed_seconds": 16.85465145111084,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "98a646f074323c183b1c139dcd57966d665e067afeae0c6bfc64cd619fdba75a"
+    },
+    "MECH__LONG_n4night_L4096_E00_s2002": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_E00_s2002/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_E00_s2002",
+        "elapsed_seconds": 13.835529565811157,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "2dd306a552cfc87af70be24c629e79ab746af252eae1d607ba6aaf75da231478"
+    },
+    "MECH__LONG_n4night_L4096_D25_s2000": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D25_s2000/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_D25_s2000",
+        "elapsed_seconds": 13.720545291900635,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "c42885ed1d875062b7a953ffa9e7ca473a47532ea3bc23831d230f5db6fe025a"
+    },
+    "MECH__LONG_n4night_L4096_D25_s2001": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D25_s2001/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_D25_s2001",
+        "elapsed_seconds": 14.492281436920166,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "bc84741db3d0bebd2c46cad275e25401c90477cc09f993d45dd253536e4d3abf"
+    },
+    "MECH__LONG_n4night_L4096_D25_s2002": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D25_s2002/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_D25_s2002",
+        "elapsed_seconds": 13.449803829193115,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "cbfa3ceb9b48d54fa5cb714989ceee71e7ff57d12d4a4f81eb838e77bbf30314"
+    },
+    "MECH__LONG_n4night_L4096_D100_s2000": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D100_s2000/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_D100_s2000",
+        "elapsed_seconds": 9.832569122314453,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "80b1149192eaf4fac423d43e484ebc20f9e07cb55919726b9b4eac60890d01e6"
+    },
+    "MECH__LONG_n4night_L4096_D100_s2001": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D100_s2001/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_D100_s2001",
+        "elapsed_seconds": 14.704309463500977,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "f300f1fd779379ba17b039428f1c15cf607a5aa53f8b29c4c6d95869b6bbcc5f"
+    },
+    "MECH__LONG_n4night_L4096_D100_s2002": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D100_s2002/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_D100_s2002",
+        "elapsed_seconds": 17.424432516098022,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "0d3500509ca737b1ca8b2ef33dd0a3a628ff6b123f172a059d8199b33be41943"
+    },
+    "MECH__LONG_n4night_L4096_M01_s2000": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_M01_s2000/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_M01_s2000",
+        "elapsed_seconds": 7.715716361999512,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "7ad4f6997e779428eafdcf96f6c11b95c56ca15eb458b3e247ab848f5098b627"
+    },
+    "MECH__LONG_n4night_L4096_M01_s2001": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_M01_s2001/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_M01_s2001",
+        "elapsed_seconds": 7.906694412231445,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "d2244ceb4c7068d942fe26d9f8daa6f21a078c0eeb018960cd70e5e6342c0657"
+    },
+    "MECH__LONG_n4night_L4096_M01_s2002": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_M01_s2002/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_M01_s2002",
+        "elapsed_seconds": 8.295982122421265,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "dd8e57cde82530b2cec37c824eb8df09d0c7f4c110eb07e457ecd1b3d5aa12ae"
+    },
+    "MECH__LONG_n4night_L4096_M02_s2000": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_M02_s2000/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_M02_s2000",
+        "elapsed_seconds": 7.158833980560303,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "7335419be01860ebb430a4e8aea68345294fd89417988f06806835564c5914ab"
+    },
+    "MECH__LONG_n4night_L4096_M02_s2001": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_M02_s2001/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_M02_s2001",
+        "elapsed_seconds": 14.972049713134766,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "25395ac1272199d0a021b6d76fc1ce5d5c22bac08a46c52887cf0e5989b13301"
+    },
+    "MECH__LONG_n4night_L4096_M02_s2002": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_M02_s2002/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_M02_s2002",
+        "elapsed_seconds": 17.258081197738647,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "a0dee588ed7d7a0aa08f6611983f022fd7aa040601a76846c905739d2c96387b"
+    },
+    "MECH__LONG_n4night_L4096_M01_SMEAR_s2000": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_M01_SMEAR_s2000/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_M01_SMEAR_s2000",
+        "elapsed_seconds": 6.13731575012207,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "ec4a583d4c4d5cdffdb5540335d5d467537190dfa5336d4b95b5afafa6bfadeb"
+    },
+    "MECH__LONG_n4night_L4096_M01_SMEAR_s2001": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_M01_SMEAR_s2001/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_M01_SMEAR_s2001",
+        "elapsed_seconds": 11.38152003288269,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "5e0d2c68b1cacdf9ad2f4f92e5342007046de027359be7815a520e1063152925"
+    },
+    "MECH__LONG_n4night_L4096_M01_SMEAR_s2002": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_M01_SMEAR_s2002/result",
+      "family": "LONG",
+      "length": 4096,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L4096_M01_SMEAR_s2002",
+        "elapsed_seconds": 13.317071437835693,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "2ff2a5a225de603727f6b2d6b17e08a01286b02d696944dbc2054c2fbb8943d3"
+    },
+    "MECH__LONG_n4night_L8192_M02_s2000": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L8192_M02_s2000/result",
+      "family": "LONG",
+      "length": 8192,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L8192_M02_s2000",
+        "elapsed_seconds": 71.57261300086975,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "f13976162b6c018d70787c970feb5ad6dbfcc3a99333437871167792234ef5d4"
+    },
+    "MECH__LONG_n4night_L8192_M02_s2001": {
+      "path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L8192_M02_s2001/result",
+      "family": "LONG",
+      "length": 8192,
+      "recording": "existing_verified_archive",
+      "stages": {
+        "M1": "completed",
+        "KO": "NA_unlocalized"
+      },
+      "package_complete": {
+        "status": "completed",
+        "job": "LONG_n4night_L8192_M02_s2001",
+        "elapsed_seconds": 68.45898938179016,
+        "transformer_training_performed": false,
+        "linear_probe_fits_performed": false,
+        "stage_statuses": {
+          "M1": "completed",
+          "KO": "NA_unlocalized"
+        }
+      },
+      "package_complete_sha256": "2e9b4758d6f93e73edecfc06a452ff6743f58e76e723a5ccf1526702553d01d8"
+    }
+  },
+  "rows": [
+    {
+      "job_id": "MECH__M1_r1_M4h64_s0_final",
+      "length": 1024,
+      "central_state": "failed",
+      "family": "M1",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M1_r1_M4h64_s0_final",
+      "mode": "local_mac",
+      "stages": "{\"M1\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M1_r1_M4h64_s1_final",
+      "length": 1024,
+      "central_state": "complete",
+      "family": "M1",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M1_r1_M4h64_s1_final/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M1_r1_M4h64_s2_final",
+      "length": 1024,
+      "central_state": "failed",
+      "family": "M1",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M1_r1_M4h64_s2_final",
+      "mode": "local_mac",
+      "stages": "{\"M1\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M2_r1_M4h64_s0_final",
+      "length": 1024,
+      "central_state": "pending",
+      "family": "M2",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M2_r1_M4h64_s0_final",
+      "mode": "local_mac",
+      "stages": "{\"M2\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M2_r1_M4h64_s1_final",
+      "length": 1024,
+      "central_state": "complete",
+      "family": "M2",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M2_r1_M4h64_s1_final/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M2\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M2_r1_M4h64_s2_final",
+      "length": 1024,
+      "central_state": "pending",
+      "family": "M2",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M2_r1_M4h64_s2_final",
+      "mode": "local_mac",
+      "stages": "{\"M2\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M3_r1_M4h64_s0_final",
+      "length": 1024,
+      "central_state": "pending",
+      "family": "M3",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M3_r1_M4h64_s0_final",
+      "mode": "local_mac",
+      "stages": "{\"M3\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M3_r1_M4h64_s1_final",
+      "length": 1024,
+      "central_state": "complete",
+      "family": "M3",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M3_r1_M4h64_s1_final/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M3\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M3_r1_M4h64_s2_final",
+      "length": 1024,
+      "central_state": "pending",
+      "family": "M3",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M3_r1_M4h64_s2_final",
+      "mode": "local_mac",
+      "stages": "{\"M3\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M4_r1_M4h64_s0_final",
+      "length": 1024,
+      "central_state": "pending",
+      "family": "M4",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M4_r1_M4h64_s0_final",
+      "mode": "local_mac",
+      "stages": "{\"probe\": \"completed\"}",
+      "linear_probe_fits": true
+    },
+    {
+      "job_id": "MECH__M4_r1_M4h64_s1_final",
+      "length": 1024,
+      "central_state": "complete",
+      "family": "M4",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M4_r1_M4h64_s1_final/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"probe\": \"completed\"}",
+      "linear_probe_fits": true
+    },
+    {
+      "job_id": "MECH__M4_r1_M4h64_s2_final",
+      "length": 1024,
+      "central_state": "pending",
+      "family": "M4",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M4_r1_M4h64_s2_final",
+      "mode": "local_mac",
+      "stages": "{\"probe\": \"completed\"}",
+      "linear_probe_fits": true
+    },
+    {
+      "job_id": "MECH__M5_r1_M4h64_s0_step012000",
+      "length": 1024,
+      "central_state": "pending",
+      "family": "M5",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M5_r1_M4h64_s0_step012000",
+      "mode": "local_mac",
+      "stages": "{\"M5\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M5_r1_M4h64_s0_step013000",
+      "length": 1024,
+      "central_state": "pending",
+      "family": "M5",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M5_r1_M4h64_s0_step013000",
+      "mode": "local_mac",
+      "stages": "{\"M5\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M5_r1_M4h64_s0_step014000",
+      "length": 1024,
+      "central_state": "pending",
+      "family": "M5",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M5_r1_M4h64_s0_step014000",
+      "mode": "local_mac",
+      "stages": "{\"M5\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M5_r1_M4h64_s1_step033000",
+      "length": 1024,
+      "central_state": "complete",
+      "family": "M5",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M5_r1_M4h64_s1_step033000/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M5\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M5_r1_M4h64_s1_step034000",
+      "length": 1024,
+      "central_state": "complete",
+      "family": "M5",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M5_r1_M4h64_s1_step034000/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M5\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M5_r1_M4h64_s1_step035000",
+      "length": 1024,
+      "central_state": "failed",
+      "family": "M5",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M5_r1_M4h64_s1_step035000",
+      "mode": "local_mac",
+      "stages": "{\"M5\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M5_r1_M4h64_s1_step035750",
+      "length": 1024,
+      "central_state": "complete",
+      "family": "M5",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M5_r1_M4h64_s1_step035750/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M5\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M5_r1_M4h64_s2_step014000",
+      "length": 1024,
+      "central_state": "pending",
+      "family": "M5",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M5_r1_M4h64_s2_step014000",
+      "mode": "local_mac",
+      "stages": "{\"M5\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M5_r1_M4h64_s2_step015000",
+      "length": 1024,
+      "central_state": "pending",
+      "family": "M5",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M5_r1_M4h64_s2_step015000",
+      "mode": "local_mac",
+      "stages": "{\"M5\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M5_r1_M4h64_s2_step016000",
+      "length": 1024,
+      "central_state": "pending",
+      "family": "M5",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M5_r1_M4h64_s2_step016000",
+      "mode": "local_mac",
+      "stages": "{\"M5\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M5_r1_M4h64_s2_step016250",
+      "length": 1024,
+      "central_state": "pending",
+      "family": "M5",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M5_r1_M4h64_s2_step016250",
+      "mode": "local_mac",
+      "stages": "{\"M5\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M6_reuse_existing_48_KO",
+      "length": 1024,
+      "central_state": "missing",
+      "family": "M6",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/night_20261016/mechanism/results/M6_reuse_existing_48_KO",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M7_direct_B0_s0",
+      "length": 1024,
+      "central_state": "complete",
+      "family": "M7",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M7_direct_B0_s0/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"probe\": \"completed\"}",
+      "linear_probe_fits": true
+    },
+    {
+      "job_id": "MECH__M7_relay_pure_long_s0",
+      "length": 1024,
+      "central_state": "complete",
+      "family": "M7",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M7_relay_pure_long_s0/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"probe\": \"completed\"}",
+      "linear_probe_fits": true
+    },
+    {
+      "job_id": "MECH__M8_n2_M01_s0_original64000",
+      "length": 1024,
+      "central_state": "waiting_input",
+      "family": "M8",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M8_n2_M01_s0_original64000",
+      "mode": "local_mac",
+      "stages": "{\"M1\": \"completed\", \"probe\": \"completed\"}",
+      "linear_probe_fits": true
+    },
+    {
+      "job_id": "MECH__M8_n2_M01_s1_original64000",
+      "length": 1024,
+      "central_state": "waiting_input",
+      "family": "M8",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M8_n2_M01_s1_original64000",
+      "mode": "local_mac",
+      "stages": "{\"M1\": \"completed\", \"probe\": \"completed\"}",
+      "linear_probe_fits": true
+    },
+    {
+      "job_id": "MECH__M8_n2_M01_s2_original64000",
+      "length": 1024,
+      "central_state": "waiting_input",
+      "family": "M8",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M8_n2_M01_s2_original64000",
+      "mode": "local_mac",
+      "stages": "{\"M1\": \"completed\", \"probe\": \"completed\"}",
+      "linear_probe_fits": true
+    },
+    {
+      "job_id": "MECH__M8_n2_M02_s0_original64000",
+      "length": 1024,
+      "central_state": "complete",
+      "family": "M8",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M8_n2_M02_s0_original64000/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"probe\": \"completed\", \"M2\": \"completed\", \"M3\": \"completed\"}",
+      "linear_probe_fits": true
+    },
+    {
+      "job_id": "MECH__M8_n2_M02_s1_original64000",
+      "length": 1024,
+      "central_state": "complete",
+      "family": "M8",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M8_n2_M02_s1_original64000/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"probe\": \"completed\", \"M2\": \"completed\", \"M3\": \"completed\"}",
+      "linear_probe_fits": true
+    },
+    {
+      "job_id": "MECH__M8_n2_M02_s2_original64000",
+      "length": 1024,
+      "central_state": "waiting_input",
+      "family": "M8",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M8_n2_M02_s2_original64000",
+      "mode": "local_mac",
+      "stages": "{\"M1\": \"completed\", \"probe\": \"completed\"}",
+      "linear_probe_fits": true
+    },
+    {
+      "job_id": "MECH__M9_n4prep_C01_s1000",
+      "length": 1024,
+      "central_state": "complete",
+      "family": "M9",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M9_n4prep_C01_s1000/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"3000\": \"completed\", \"3250\": \"completed\", \"4500\": \"completed\", \"final\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M9_n4prep_C01_s1001",
+      "length": 1024,
+      "central_state": "failed",
+      "family": "M9",
+      "local_action": "execute_on_mac",
+      "missing": [],
+      "status": "completed",
+      "result_path": "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_remaining_mechanisms_20261017/results/M9_n4prep_C01_s1001",
+      "mode": "local_mac",
+      "stages": "{\"M1\": \"completed\", \"3000\": \"completed\", \"3250\": \"completed\", \"4500\": \"completed\", \"final\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M9_n4prep_C01_s1002",
+      "length": 1024,
+      "central_state": "complete",
+      "family": "M9",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M9_n4prep_C01_s1002/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"3000\": \"completed\", \"3250\": \"completed\", \"4500\": \"completed\", \"final\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M9_n4prep_C02_s1000",
+      "length": 1024,
+      "central_state": "complete",
+      "family": "M9",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M9_n4prep_C02_s1000/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"3000\": \"completed\", \"3250\": \"completed\", \"4500\": \"completed\", \"final\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M9_n4prep_C02_s1001",
+      "length": 1024,
+      "central_state": "complete",
+      "family": "M9",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M9_n4prep_C02_s1001/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"3000\": \"NA_unlocalized\", \"3250\": \"NA_unlocalized\", \"4500\": \"NA_unlocalized\", \"final\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__M9_n4prep_C02_s1002",
+      "length": 1024,
+      "central_state": "complete",
+      "family": "M9",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__M9_n4prep_C02_s1002/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"3000\": \"NA_unlocalized\", \"3250\": \"NA_unlocalized\", \"4500\": \"NA_unlocalized\", \"final\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_D00_s2000",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D00_s2000/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_D00_s2001",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D00_s2001/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_D00_s2002",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D00_s2002/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_D03_s2000",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D03_s2000/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_D03_s2001",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D03_s2001/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_D03_s2002",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D03_s2002/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_C01_s2000",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_C01_s2000/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_C01_s2001",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_C01_s2001/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_C01_s2002",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_C01_s2002/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_C02_s2000",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_C02_s2000/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"completed\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_C02_s2001",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_C02_s2001/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_C02_s2002",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_C02_s2002/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_C00_s2000",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_C00_s2000/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_C00_s2001",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_C00_s2001/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_C00_s2002",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_C00_s2002/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_E00_s2000",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_E00_s2000/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_E00_s2001",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_E00_s2001/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_E00_s2002",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_E00_s2002/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_D25_s2000",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D25_s2000/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_D25_s2001",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D25_s2001/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_D25_s2002",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D25_s2002/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_D100_s2000",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D100_s2000/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_D100_s2001",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D100_s2001/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_D100_s2002",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_D100_s2002/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_M01_s2000",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_M01_s2000/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_M01_s2001",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_M01_s2001/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_M01_s2002",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_M01_s2002/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_M02_s2000",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_M02_s2000/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_M02_s2001",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_M02_s2001/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_M02_s2002",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_M02_s2002/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_M01_SMEAR_s2000",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_M01_SMEAR_s2000/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_M01_SMEAR_s2001",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_M01_SMEAR_s2001/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L4096_M01_SMEAR_s2002",
+      "length": 4096,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L4096_M01_SMEAR_s2002/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_D00_s2000",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_D00_s2001",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_D00_s2002",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_D03_s2000",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_D03_s2001",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_D03_s2002",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_C01_s2000",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_C01_s2001",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_C01_s2002",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_C02_s2000",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_C02_s2001",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_C02_s2002",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_C00_s2000",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_C00_s2001",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_C00_s2002",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_E00_s2000",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_E00_s2001",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_E00_s2002",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_D25_s2000",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_D25_s2001",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_D25_s2002",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_D100_s2000",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_D100_s2001",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_D100_s2002",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_M01_s2000",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_M01_s2001",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_M01_s2002",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_M02_s2000",
+      "length": 8192,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L8192_M02_s2000/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_M02_s2001",
+      "length": 8192,
+      "central_state": "complete",
+      "family": "LONG",
+      "local_action": "reuse_verified_archive",
+      "result_path": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/MECH__LONG_n4night_L8192_M02_s2001/result",
+      "status": "completed",
+      "mode": "existing_verified_archive",
+      "stages": "{\"M1\": \"completed\", \"KO\": \"NA_unlocalized\"}",
+      "linear_probe_fits": false
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_M02_s2002",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_M01_SMEAR_s2000",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_M01_SMEAR_s2001",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    },
+    {
+      "job_id": "MECH__LONG_n4night_L8192_M01_SMEAR_s2002",
+      "length": 8192,
+      "central_state": "future_work",
+      "family": "LONG",
+      "local_action": "not_runnable_without_trained_checkpoint",
+      "reason": "future length-extension training has no final weights",
+      "status": "missing_input",
+      "result_path": null,
+      "mode": null
+    }
+  ],
+  "errors": [],
+  "scope_note": "Registered frozen analysis packages; no new Transformer training. Missing 8192 weights remain unexecuted.",
+  "outline_gaps": [
+    {
+      "item": "five-level architecture per-head formation time",
+      "status": "missing_time_resolved_evidence",
+      "evidence": "Representative new depth/width/head archives contain final snapshot only; metrics have zero attention diagnostic rows.",
+      "not_replaced_by": "final-weight analysis cannot supply the missing formation trajectory"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "status": "completed",
+  "checks": [
+    {
+      "seed": 0,
+      "status": "completed",
+      "no_op_difference_pp": 0.0,
+      "identity_max_logit_error": 0.0,
+      "parameters_unchanged": true
+    },
+    {
+      "seed": 1,
+      "status": "completed",
+      "no_op_difference_pp": 0.0,
+      "identity_max_logit_error": 0.0,
+      "parameters_unchanged": true
+    },
+    {
+      "seed": 2,
+      "status": "completed",
+      "no_op_difference_pp": 0.0,
+      "identity_max_logit_error": 0.0,
+      "parameters_unchanged": true
+    }
+  ],
+  "restriction_conditions_including_native": 27,
+  "restoration_conditions": 18,
+  "per_query_readings_verified": true,
+  "source_sha256": {
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s0_original64000/restrictions/native.npz": "f92e1efa53547c167afb3f91673145667f8949c79891cb805d97f25532a0ce7b",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s0_original64000/restrictions/no_op_recompute.npz": "f92e1efa53547c167afb3f91673145667f8949c79891cb805d97f25532a0ce7b",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s0_original64000/restrictions/block_binding_edge.npz": "d9812b915f0afda356c6afd4a0bc03f77befb980362343f309418112c46bf08d",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s0_original64000/restrictions/block_retrieval_edge.npz": "dd75e1fc61fec25aa8aca091c2bceb0b74cef22a9de9c005ad89cc470b9ea4b1",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s0_original64000/restrictions/block_both.npz": "4c96963e2a24f1dcb98b5b14d4e4465118d285f92ec79257380b97899aef5e5f",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s0_original64000/restrictions/binding_control.npz": "27722c9d91ebeb92101f90d6dd1991d8afa7a91b46c5356ea0f4cee1b55d17f7",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s0_original64000/restrictions/retrieval_control.npz": "4a13bc1ee6b574c26bd85d738d661137f90176f5c994f18d873db49e7eb91012",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s0_original64000/restrictions/zero_retrieval_head_output.npz": "9e4e12578fc2a83666af8d34b7b4901e00f4c9925fffc2f1a2b4aadcd78f9854",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s0_original64000/restrictions/unrelated_head_or_layer_control.npz": "0434be33e6cf8c91523ec0718e90d08ca47f4cc1f4ebebe13b7952bc8e365d9d",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s0_original64000/source_manifest.json": "d112c1ac55e63e13e477761426bf0c1e2aa379bf0aab736ae0a3892454f79685",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s0_original64000/complete.json": "146069c2f23042430aadbbbe9fd7d9d091c826ad273fb42fec4265a42af8ed4d",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s0_original64000/restrictions/results.json": "ab6e0d0a6802959a26e2437b3a174fa44312cc0eceedfa5578e0fd821c4819a8",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s0_original64000/restoration/results.json": "4d0904635ba047f19025a79d956f5e3beba2ed1a167cb61b31e9c71daded5a94",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s0_original64000/restoration/pairs.npz": "689ae7295b3386340ff9aca94213acf96ab7e4d51333625cb92d3e088f30b997",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s1_original64000/restrictions/native.npz": "49173d2344e007040c2a5e3405fa9d2dfe52713d9757f36ae879b80859ec1bf8",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s1_original64000/restrictions/no_op_recompute.npz": "49173d2344e007040c2a5e3405fa9d2dfe52713d9757f36ae879b80859ec1bf8",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s1_original64000/restrictions/block_binding_edge.npz": "6c1503c2c77155234c71f6fe6e36f13ae1864c04149b02492114bb276ec35a21",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s1_original64000/restrictions/block_retrieval_edge.npz": "5a7f2f1a99f46460128484c6564c13e43aa9e570dcf84b77ff17c96992e054f5",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s1_original64000/restrictions/block_both.npz": "42dad66f4eae42424eb9bb9445d8f9482d3becd3e065a70ace20040220276543",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s1_original64000/restrictions/binding_control.npz": "235544e4e54810223210d6cd358b90869caf02858d88327c5ce26414e25fe824",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s1_original64000/restrictions/retrieval_control.npz": "83a6d3c33c0b10d72b26fbd826b4967500f995ca4c99a87f37736adc338c62b6",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s1_original64000/restrictions/zero_retrieval_head_output.npz": "d9eeff0fcbc5dd8e2d1928341b4d07b2827dcb69f7362bef58defacc69db7d8b",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s1_original64000/restrictions/unrelated_head_or_layer_control.npz": "05731f20dde588e3598f9482bac1df71c9b5c74bc8503fe8f00b2e5cea435e0b",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s1_original64000/source_manifest.json": "131d7b031934a651decdbbf85cafcf01a7672b11b3993be4e5ffa616afb0dd2e",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s1_original64000/complete.json": "13e5d547d1fb03a9bac8cf7bfec62e3ac3e9912870fd9e16fd653ed6f92e09d5",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s1_original64000/restrictions/results.json": "9e7dd8249800ae77d9c2f6c72fc8a9c7d5ccbe82bd9ce00e9846e62332b83805",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s1_original64000/restoration/results.json": "f12c7b7c6f93c5e7bf92865cd2b6e53148a8906587074d135084e7444d9cfeb7",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s1_original64000/restoration/pairs.npz": "bae441f6194a30436b6be26b168e1c3c8d374cf5e5b47f3d5568ad47315ff32c",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s2_original64000/restrictions/native.npz": "efbe65e22454eecafcc7482e3c7bd74e465e7a3a81316f94a263f736f6244dc9",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s2_original64000/restrictions/no_op_recompute.npz": "efbe65e22454eecafcc7482e3c7bd74e465e7a3a81316f94a263f736f6244dc9",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s2_original64000/restrictions/block_binding_edge.npz": "4d3d650b5b0f70e13d4f2b77e61f2db55046f40d8651d9bddcdf3856f0410c14",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s2_original64000/restrictions/block_retrieval_edge.npz": "2f612fbc619dacb61ab8201f6b70bc5bf61927a97987753d73015e25997f869c",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s2_original64000/restrictions/block_both.npz": "d7b8d937b76950dc83d39a04091a9e15aeca3168c984bc89f5707dc31d45cfbe",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s2_original64000/restrictions/binding_control.npz": "ba5b19cb5377bcc2c35c62b1e5681bc74436f3d0db88d42d7d762741bc1db270",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s2_original64000/restrictions/retrieval_control.npz": "03eb98d6b62b486327f6b59d838f75b155607b0c7a9ec3eca6f1b95b78c30815",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s2_original64000/restrictions/zero_retrieval_head_output.npz": "431a5b71ad1235bc476eb1908392e279e31c85fd18ca89f22af4249b53ef071d",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s2_original64000/restrictions/unrelated_head_or_layer_control.npz": "89e45e55cea247fecc09910941c993aa893fb4d3ddb76c7bf1a249ccffff1b95",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s2_original64000/source_manifest.json": "e317a3e16d54461aa81f585ae83511ccf53e9bf5c3329dcddb84beda0f9b9099",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s2_original64000/complete.json": "77b84b117bd5cc6c09c47dfea4190287c6457b6a3fbdda0e9ecc4da9a9eabd60",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s2_original64000/restrictions/results.json": "91f6c3266af9c070838b8621feb43396cad15d5448f51341cc67aad66c1e4c27",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s2_original64000/restoration/results.json": "843f90548856b01235edcc1fed78b4381026071b5d5651444cf9d709af0691ef",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_mechanisms_20261017/n2_M02_s2_original64000/restoration/pairs.npz": "3fce12ddb0df6807b5a519080fa889147f911d6758e5c5e32dc4342fd31f044e"
+  }
+}

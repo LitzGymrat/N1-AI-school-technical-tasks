@@ -1,0 +1,70 @@
+{
+  "status": "completed",
+  "model_seeds": [
+    0,
+    1,
+    2
+  ],
+  "classifiers": 48,
+  "steps_per_classifier": 400,
+  "transformer_parameters_unchanged": true,
+  "all_saved_predictions_verified": true,
+  "summaries": [
+    {
+      "seed": 0,
+      "source_key_after_layer1_percent": 49.462890625,
+      "answer_after_layer2_percent": 81.5673828125,
+      "source_key_after_layer1_long_percent": 49.877870082855225,
+      "answer_after_layer2_long_percent": 81.6316545009613,
+      "cpu_mps_parity": {
+        "max_abs_logit_error": 0.00018405914306640625,
+        "argmax_agreement": 1.0
+      },
+      "elapsed_seconds": 44.26641511917114,
+      "recording": "online"
+    },
+    {
+      "seed": 1,
+      "source_key_after_layer1_percent": 45.703125,
+      "answer_after_layer2_percent": 84.3017578125,
+      "source_key_after_layer1_long_percent": 52.173912525177,
+      "answer_after_layer2_long_percent": 83.43917727470398,
+      "cpu_mps_parity": {
+        "max_abs_logit_error": 0.000377655029296875,
+        "argmax_agreement": 1.0
+      },
+      "elapsed_seconds": 86.77910614013672,
+      "recording": "online"
+    },
+    {
+      "seed": 2,
+      "source_key_after_layer1_percent": 0.1708984375,
+      "answer_after_layer2_percent": 3.564453125,
+      "source_key_after_layer1_long_percent": 0.09770395699888468,
+      "answer_after_layer2_long_percent": 3.6638982594013214,
+      "cpu_mps_parity": {
+        "max_abs_logit_error": 3.0517578125e-05,
+        "argmax_agreement": 1.0
+      },
+      "elapsed_seconds": 36.36796188354492,
+      "recording": "local_only"
+    }
+  ],
+  "source_sha256": {
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_probes_20261017/n2_M02_s0_original64000/source_manifest.json": "6573408f55a89b287ab484d6899c998438cab201c30d6e1365555d4861a1999c",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_probes_20261017/n2_M02_s0_original64000/complete.json": "cca3f83538b5c12eb5244f9f663cc38825f30b79fac646639280ead688f3472e",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_probes_20261017/n2_M02_s0_original64000/probe/probe_metrics.json": "cc0b90a430d52098f4aa12b814f5a55ea3812268b68793ab49eedcc4f262b59c",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_probes_20261017/n2_M02_s0_original64000/probe/probe_predictions.npz": "19acda86c5e1171f7f99cf5eaec31d516847b431d2b2975ff6c584836291f184",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_probes_20261017/n2_M02_s0_original64000/probe_weights.pt": "ec02df881de99d67834357c02aa455b92966a63a777e2147be2c6e437f48df48",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_probes_20261017/n2_M02_s1_original64000/source_manifest.json": "e4ee37aa2b8f543796404222915cb92ae4a68c85243a1ef26f49fc45bebc8494",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_probes_20261017/n2_M02_s1_original64000/complete.json": "ea6d0406a080a64b2e4b82b172ff669feacb9d2e9551c235094369d6e49bc967",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_probes_20261017/n2_M02_s1_original64000/probe/probe_metrics.json": "4f9fc30fae65548e70c7833c7ca422dc0a0d16967f26bb2bda08c236e7ef3264",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_probes_20261017/n2_M02_s1_original64000/probe/probe_predictions.npz": "07ad42bf361804eb0ace5f173405122cf989aecd0b1268d04604f82695c34f4d",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_probes_20261017/n2_M02_s1_original64000/probe_weights.pt": "75678d00b2f3b280d55e61d6945b23f4253a5059811dd262dda8d96e8b005a36",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_probes_20261017/n2_M02_s2_original64000/source_manifest.json": "280ec5cfa2a4510cc8c237f05fcd34952a0ba60d8194266d98b303170d1dcb7a",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_probes_20261017/n2_M02_s2_original64000/complete.json": "2a201373f859fb87918832ad77b2b9a34e2e96785e5b09e5facf9fc9da196c63",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_probes_20261017/n2_M02_s2_original64000/probe/probe_metrics.json": "0a1a2441f0f86b3eb8d5d3586b63197f459bac65239e2e3b4ef751237630445a",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_probes_20261017/n2_M02_s2_original64000/probe/probe_predictions.npz": "ad94d50dd43670b5e49e586c953a83fefdfacc93f8cc9ecc3713b1eb96a99d04",
+    "/Users/mileszhu/Documents/个人项目/cs336/n1_experiments/colab_parallel_20261015/next_round_20261016/local_two_layer_probes_20261017/n2_M02_s2_original64000/probe_weights.pt": "cacd9b5528ba48903a91cdb46d9b1995bd7cac937e2a6a711fcaf4bdf02c39e5"
+  }
+}

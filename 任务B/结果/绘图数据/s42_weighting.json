@@ -1,0 +1,266 @@
+{
+  "source": "results_1024_20261017/results_snapshot.json",
+  "source_captured_at": "2026-10-17T12:00:06.056524+08:00",
+  "source_sha256": "c14c1780953cb600750e8b846ef30c9d069b69dd3f1c13f4897499b3fc7fc83e",
+  "metric": "First third consecutive development bench_long >= 0.98; measured every 250 updates.",
+  "censored_mark": "Hollow marker at budget with upward arrow; budget is not an observed learning time.",
+  "unregistered_combinations": "Omitted, not classified as failures.",
+  "x_axis": "seed",
+  "conditions": [
+    "C00",
+    "E00"
+  ],
+  "point_count": 25,
+  "rows": [
+    {
+      "task_id": "n4night_L1024_E00_s1000",
+      "condition": "E00",
+      "seed": 1000,
+      "budget": 12000,
+      "stable98_step": 5500,
+      "status": "reached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_E00_s1000/result",
+      "metrics_sha256": "d03de54ba0ebabdf7d728b5620f7265693d6df584bd02aafc0395d9c592cdaac"
+    },
+    {
+      "task_id": "n4night_L1024_E00_s1001",
+      "condition": "E00",
+      "seed": 1001,
+      "budget": 12000,
+      "stable98_step": 3750,
+      "status": "reached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_E00_s1001/result",
+      "metrics_sha256": "62ea5329936cd8171b849d89b0305dba291ac625a096a517ddc8e7c17c283d6d"
+    },
+    {
+      "task_id": "n4night_L1024_E00_s1002",
+      "condition": "E00",
+      "seed": 1002,
+      "budget": 12000,
+      "stable98_step": 4000,
+      "status": "reached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_E00_s1002/result",
+      "metrics_sha256": "e4a62ecf6476955a3b622bf1be7dc82c82d469fa6cbcb5a50a571993db1b6e3a"
+    },
+    {
+      "task_id": "n4night_L1024_E00_s1003",
+      "condition": "E00",
+      "seed": 1003,
+      "budget": 12000,
+      "stable98_step": 3000,
+      "status": "reached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_E00_s1003/result",
+      "metrics_sha256": "408ca83b96a8719d87d6a1bf7a79bfa923685983712322acd965ce78db4d6dab"
+    },
+    {
+      "task_id": "n4night_L1024_E00_s1004",
+      "condition": "E00",
+      "seed": 1004,
+      "budget": 12000,
+      "stable98_step": 4000,
+      "status": "reached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_E00_s1004/result",
+      "metrics_sha256": "494021402a0f575fc47dad82b5d7882798b76d80be12e66855a87a6791b300ca"
+    },
+    {
+      "task_id": "n4night_L1024_E00_s1005",
+      "condition": "E00",
+      "seed": 1005,
+      "budget": 12000,
+      "stable98_step": 5000,
+      "status": "reached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_E00_s1005/result",
+      "metrics_sha256": "f56c2d490a8143a55a64ae7bc68afd4b0c8c81a4ee4436401ff2affba9168b8c"
+    },
+    {
+      "task_id": "n4night_L1024_E00_s1006",
+      "condition": "E00",
+      "seed": 1006,
+      "budget": 12000,
+      "stable98_step": 3250,
+      "status": "reached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_E00_s1006/result",
+      "metrics_sha256": "767b52854ae38c4449db1609ab4557b65536d42deff77982c8488d3c4eaa7c71"
+    },
+    {
+      "task_id": "n4night_L1024_E00_s1007",
+      "condition": "E00",
+      "seed": 1007,
+      "budget": 12000,
+      "stable98_step": 4000,
+      "status": "reached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_E00_s1007/result",
+      "metrics_sha256": "b4166d53a4cc4cb670f5292334501bf1f3f2c26f085fc28f28909bb912cab66b"
+    },
+    {
+      "task_id": "n4night_L1024_E00_s1008",
+      "condition": "E00",
+      "seed": 1008,
+      "budget": 12000,
+      "stable98_step": 4500,
+      "status": "reached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_E00_s1008/result",
+      "metrics_sha256": "6612d60be16fc9430a3d681893d650d820c6dbdf84d69825cc3a4e21dab637dc"
+    },
+    {
+      "task_id": "n4night_L1024_E00_s1009",
+      "condition": "E00",
+      "seed": 1009,
+      "budget": 12000,
+      "stable98_step": null,
+      "status": "unreached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_E00_s1009/result",
+      "metrics_sha256": "b4f92420b11431b25255fda0f310a4367244e3017a2a7498ef06466611da2bfb"
+    },
+    {
+      "task_id": "n4night_L1024_E00_s1010",
+      "condition": "E00",
+      "seed": 1010,
+      "budget": 12000,
+      "stable98_step": 3500,
+      "status": "reached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_E00_s1010/result",
+      "metrics_sha256": "0fd62d174d7e21027b67f94e622ed093f5aa64b984831f0f717deb16518dbc03"
+    },
+    {
+      "task_id": "n4night_L1024_E00_s1011",
+      "condition": "E00",
+      "seed": 1011,
+      "budget": 12000,
+      "stable98_step": 4250,
+      "status": "reached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_E00_s1011/result",
+      "metrics_sha256": "7840eb9cb649abc6313c953e17bfee744b7783a710f80c43148c2c840cf81569"
+    },
+    {
+      "task_id": "n4night_L1024_E00_s1012",
+      "condition": "E00",
+      "seed": 1012,
+      "budget": 12000,
+      "stable98_step": 4750,
+      "status": "reached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_E00_s1012/result",
+      "metrics_sha256": "91885bc761459138edce9dba8114ebefbf48d4f4834cd072dc292dfe21ac2a84"
+    },
+    {
+      "task_id": "n4night_L1024_C00_s1000",
+      "condition": "C00",
+      "seed": 1000,
+      "budget": 12000,
+      "stable98_step": null,
+      "status": "unreached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_C00_s1000/result",
+      "metrics_sha256": "26865cb5526eddb22ca1bfcf0aa30f51dab76939efb038cca20daaa105c66b8f"
+    },
+    {
+      "task_id": "n4night_L1024_C00_s1001",
+      "condition": "C00",
+      "seed": 1001,
+      "budget": 12000,
+      "stable98_step": null,
+      "status": "unreached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_C00_s1001/result",
+      "metrics_sha256": "2a7e01eb273c5b7072e7f773ca64afb4412e99fddf8165547f91189dda8e9fe9"
+    },
+    {
+      "task_id": "n4night_L1024_C00_s1002",
+      "condition": "C00",
+      "seed": 1002,
+      "budget": 12000,
+      "stable98_step": null,
+      "status": "unreached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_C00_s1002/result",
+      "metrics_sha256": "f4d3d63923d8e03bb1d648785a3d7c4ec953e6e5d434605646b7be6b39ec3245"
+    },
+    {
+      "task_id": "n4night_L1024_C00_s1003",
+      "condition": "C00",
+      "seed": 1003,
+      "budget": 12000,
+      "stable98_step": null,
+      "status": "unreached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_C00_s1003/result",
+      "metrics_sha256": "28cbd7880d612012c0c64649402aa57eaf7e198272d4225f232a9688a6244241"
+    },
+    {
+      "task_id": "n4night_L1024_C00_s1004",
+      "condition": "C00",
+      "seed": 1004,
+      "budget": 12000,
+      "stable98_step": null,
+      "status": "unreached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_C00_s1004/result",
+      "metrics_sha256": "a32bb8069742cebbb47ca563a7ce8d66bdd8483b67f939d1dea8afc1f245856c"
+    },
+    {
+      "task_id": "n4night_L1024_C00_s1005",
+      "condition": "C00",
+      "seed": 1005,
+      "budget": 12000,
+      "stable98_step": null,
+      "status": "unreached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_C00_s1005/result",
+      "metrics_sha256": "d107220297a653a0f6ee28068c701db556cf9becf82d4c2964212db8fc789ca4"
+    },
+    {
+      "task_id": "n4night_L1024_C00_s1006",
+      "condition": "C00",
+      "seed": 1006,
+      "budget": 12000,
+      "stable98_step": null,
+      "status": "unreached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_C00_s1006/result",
+      "metrics_sha256": "add22684d2d6603e85546d225e46f062032bbbe8f733ef7ac6161583b0dad632"
+    },
+    {
+      "task_id": "n4night_L1024_C00_s1007",
+      "condition": "C00",
+      "seed": 1007,
+      "budget": 12000,
+      "stable98_step": null,
+      "status": "unreached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_C00_s1007/result",
+      "metrics_sha256": "9fe9146bdd56b6d5549846ace446cea32683e6f3fda67d23be9b95d0c78ba515"
+    },
+    {
+      "task_id": "n4night_L1024_C00_s1008",
+      "condition": "C00",
+      "seed": 1008,
+      "budget": 12000,
+      "stable98_step": null,
+      "status": "unreached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_C00_s1008/result",
+      "metrics_sha256": "2a0c6e71c9191f671ab3d21d95d1f5a1572ac4d3d4b5a5c83d0afb223751507a"
+    },
+    {
+      "task_id": "n4night_L1024_C00_s1009",
+      "condition": "C00",
+      "seed": 1009,
+      "budget": 12000,
+      "stable98_step": null,
+      "status": "unreached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_C00_s1009/result",
+      "metrics_sha256": "00528ab8fe7fa7d2d1e4566470317351162ce5d764b0a0c4f542cec692853466"
+    },
+    {
+      "task_id": "n4night_L1024_C00_s1010",
+      "condition": "C00",
+      "seed": 1010,
+      "budget": 12000,
+      "stable98_step": null,
+      "status": "unreached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_C00_s1010/result",
+      "metrics_sha256": "45cabde4d5b630721041cbad1d350d9d584cfd604a9a459ff355550cec656c29"
+    },
+    {
+      "task_id": "n4night_L1024_C00_s1011",
+      "condition": "C00",
+      "seed": 1011,
+      "budget": 12000,
+      "stable98_step": null,
+      "status": "unreached",
+      "source_directory": "/Users/mileszhu/Library/Application Support/CS336Night20261016/archive/n4night_L1024_C00_s1011/result",
+      "metrics_sha256": "fa0e5560415e7a6ec75354d16abca58da8d3883e1b30c79f62730eb7ce706ad0"
+    }
+  ]
+}

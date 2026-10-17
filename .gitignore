@@ -4,7 +4,8 @@ __pycache__/
 .venv/
 .env
 .env.*
-
-/2_实验和训练数据/training_data/**/*.npy
-/2_实验和训练数据/training_data/**/*.bin
-/2_实验和训练数据/training_data/**/rows.jsonl
+wandb/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
