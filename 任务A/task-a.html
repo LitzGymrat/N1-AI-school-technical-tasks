@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="report-publication" content="1">
-<meta name="source-sha256" content="ba4228c9c68c3e6322c8637be58e9b9dff2f9c91253d195ec10d304464b6d1ae">
+<meta name="source-sha256" content="20486425792cf5806b6a968f72a5bb2267676543e2128239ffe62d39eff61722">
 <title>任务A｜从头实现Transformer与长距离信息利用</title>
 <style>
 
@@ -98,12 +98,53 @@ math[display="block"] { margin:0; }
     border-radius:7pt; border-bottom-width:1.5pt; box-shadow:none; break-inside:avoid-page; }
 }
 
+/* Default screen reading size: equivalent to the supplied 150% view. */
+@media screen {
+  body { font-size:21px; }
+  main { width:min(100% - 72px, 1350px); margin:42px auto 72px; overflow-wrap:anywhere; }
+  h1 { font-size:34.5px; margin-bottom:13.5px; }
+  h2 { font-size:27px; margin:37.5px 0 15px; }
+  h3 { font-size:23.25px; margin:30px 0 12px; }
+  h4 { font-size:21px; margin:21px 0 9px; }
+  h3.condition-group { font-size:28.5px; margin:37.5px 0 18px; }
+  p { margin-bottom:13.5px; }
+  ul,ol { margin:9px 0 16.5px; }
+  li { margin:4.5px 0; }
+  li > p { margin-bottom:6px; }
+  blockquote { margin:15px 0; padding-left:18px; }
+  blockquote.finding-box { margin:18px 0 22.5px; padding:15px 21px; border-radius:15px; }
+  blockquote.finding-box > p + p { margin-top:7.5px; }
+  pre { margin:15px 0; padding:12px 15px; }
+  hr { margin:27px 0; }
+  .table-wrap { margin:15px 0 19.5px; }
+  table { font-size:17.25px; }
+  th,td { padding:6px 9px; }
+  p:has(> img:only-child) { margin:15px 0 7.5px; }
+  img { max-height:465px; }
+  img.task-figure { max-height:232.5px; }
+  p.figure-caption { margin-bottom:21px; font-size:18px; }
+  .math-display { margin:12px 0 18px; }
+}
+@media screen and (max-width:600px) {
+  main { width:calc(100% - 28px); margin:24px auto 48px; }
+  body { font-size:18px; }
+  h1 { font-size:27px; }
+  h2 { font-size:24px; margin-top:30px; }
+  h3 { font-size:21px; margin-top:24px; }
+  h3.condition-group { font-size:25px; margin-top:30px; }
+  table { font-size:14.5px; }
+  th,td { padding:5px 6px; }
+  img { max-height:360px; }
+  p.figure-caption { font-size:16px; }
+  blockquote.finding-box { padding:12px 15px; border-radius:11px; }
+}
+
 </style>
 </head>
 <body>
 <main>
-<h1 id="面试官你好我是miles-zhu这是我这两次任务的情况说明还请你过目了">面试官你好😊我是Miles Zhu，这是我这两次任务的情况说明，还请你过目了！</h1>
-<h1 id="任务一从头实现transformer并且构造一个必须依赖较远信息才能正确预测的-synthetic-task验证模型是否真正利用上下文">任务一：从头实现Transformer并且构造一个必须依赖较远信息才能正确预测的 synthetic task，验证模型是否真正利用上下文</h1>
+<h1 id="从头实现transformer与长距离信息利用">从头实现Transformer与长距离信息利用</h1>
+<p>N1 AI school任务A技术报告 MilesZhu</p>
 <h2 id="代码">代码</h2>
 <p><code>1_代码</code> 保存已有实现，按模块分为以下子文件夹。</p>
 <div class="table-wrap"><table>

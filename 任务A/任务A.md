@@ -1,5 +1,6 @@
-# 面试官你好😊我是Miles Zhu，这是我这两次任务的情况说明，还请你过目了！
-# 任务一：从头实现Transformer并且构造一个必须依赖较远信息才能正确预测的 synthetic task，验证模型是否真正利用上下文
+# 从头实现Transformer与长距离信息利用
+
+N1 AI school任务A技术报告 MilesZhu
 
 ## 代码
 
