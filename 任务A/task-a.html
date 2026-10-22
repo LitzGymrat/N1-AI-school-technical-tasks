@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="report-publication" content="1">
-<meta name="source-sha256" content="20486425792cf5806b6a968f72a5bb2267676543e2128239ffe62d39eff61722">
+<meta name="source-sha256" content="b2eb0d4546e9b51e1b150a777004167b4b5d0cb963f9dde14d5b4d29f0284d71">
 <title>任务A｜从头实现Transformer与长距离信息利用</title>
 <style>
 
@@ -503,9 +503,14 @@ math[display="block"] { margin:0; }
 <p>由于验证集中的长距离键值对匹配是模型没见过的，假如他并没有学会这样的能力，他不可能能够大量的匹配好没见过的组合，我认为这个分布外的能力测试是能够反映其学会了这样的利用。</p>
 <p>因此我选择构造这个任务，认为其可以测评模型是否在训练过后学会Long-range information利用。
 首先为了清楚说明，我们定义Long-range information为：</p>
+<p>设训练上下文长度为 <code>L</code>，完成信息利用所需要的距离为 <code>Δ</code>（信息依赖距离），我们将训练上下文内的“长距离”定义为</p>
+<div class="math-display"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>L</mi><mi mathvariant="normal">/</mi><mn>2</mn><mo>≤</mo><mi mathvariant="normal">Δ</mi><mo>&lt;</mo><mi>L</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">L/2\leq\Delta&lt;L.</annotation></semantics></math></span></div>
+<p>为了覆盖长距离，我们从 <code>L</code> 开始向前覆盖，跟随<a href="https://aclanthology.org/2024.tacl-1.9/">Lost in the Middle</a>里面关于模型在面对长上下文时性能的U型曲线（对于中间信息呈现性能下滑），我们将 <code>Δ</code> 覆盖到 <code>L/2</code>，认为该距离覆盖能较充分体现长距离信息利用的难度。</p>
+<p>我们把“学会利用长距离信息”定义为：模型在经过训练之后，能够在要求距离跨度 <code>L/2≤Δ&lt;L</code> 的未见信息利用任务上取得良好表现。</p>
+<p>在下面的实验中，<code>L=d=512</code>，信息依赖距离具体为：</p>
 <div class="math-display"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mo>=</mo><mtext>训练时的 </mtext><mrow><mi mathvariant="monospace">c</mi><mi mathvariant="monospace">o</mi><mi mathvariant="monospace">n</mi><mi mathvariant="monospace">t</mi><mi mathvariant="monospace">e</mi><mi mathvariant="monospace">x</mi><mi mathvariant="monospace">t</mi><mi mathvariant="monospace">_</mi><mi mathvariant="monospace">l</mi><mi mathvariant="monospace">e</mi><mi mathvariant="monospace">n</mi></mrow><mo>=</mo><mn>512</mn><mo separator="true">,</mo><mspace width="2em"/><mi mathvariant="normal">Δ</mi><mo>=</mo><mtext>query位置</mtext><mo>−</mo><mtext>对应key首次出现的位置</mtext><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">d=\text{训练时的 }\mathtt{context\_len}=512,\qquad
 \Delta=\text{query位置}-\text{对应key首次出现的位置}.</annotation></semantics></math></span></div>
-<p>这里把距离Δ≥d/2的信息定义为long-range information。</p>
+<p>因此，训练上下文内的长距离范围为 <code>[256,512)</code>；超出训练上下文的情况在后面的1024长度评测中另行检验。</p>
 <p>构造实验：</p>
 <p>我们重新从零训练Dense和MoE，train/valid/test分别是100000/3000/3000条，seed分别是0/10/20。</p>
 <div class="table-wrap"><table>
